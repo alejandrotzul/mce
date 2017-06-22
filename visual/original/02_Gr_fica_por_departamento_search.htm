@@ -1,0 +1,224 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel 02_Gr_fica_por_departamento search}</h2>
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN jefatura_fieldblock}		
+	<div class="container {$fielddispclass_jefatura}" data-fieldname="jefatura">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label 02_Gr_fica_por_departamento jefatura}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_jefatura}
+			</div>
+			<div class="col-md-4" >
+				{$jefatura_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$jefatura_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END jefatura_fieldblock}
+	{BEGIN area_fieldblock}		
+	<div class="container {$fielddispclass_area}" data-fieldname="area">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label 02_Gr_fica_por_departamento area}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_area}
+			</div>
+			<div class="col-md-4" >
+				{$area_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$area_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END area_fieldblock}
+	{BEGIN direccion_fieldblock}		
+	<div class="container {$fielddispclass_direccion}" data-fieldname="direccion">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label 02_Gr_fica_por_departamento direccion}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_direccion}
+			</div>
+			<div class="col-md-4" >
+				{$direccion_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$direccion_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END direccion_fieldblock}
+	{BEGIN COUNT_numero_pedido__fieldblock}		
+	<div class="container {$fielddispclass_COUNT_numero_pedido_}" data-fieldname="COUNT_numero_pedido_">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label 02_Gr_fica_por_departamento COUNT_numero_pedido_}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_COUNT_numero_pedido_}
+			</div>
+			<div class="col-md-4" >
+				{$COUNT_numero_pedido__editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$COUNT_numero_pedido__editcontrol1}
+			</div>
+		</div>
+	</div>
+{END COUNT_numero_pedido__fieldblock}
+	{BEGIN SUM_total_renglon__fieldblock}		
+	<div class="container {$fielddispclass_SUM_total_renglon_}" data-fieldname="SUM_total_renglon_">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label 02_Gr_fica_por_departamento SUM_total_renglon_}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_SUM_total_renglon_}
+			</div>
+			<div class="col-md-4" >
+				{$SUM_total_renglon__editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$SUM_total_renglon__editcontrol1}
+			</div>
+		</div>
+	</div>
+{END SUM_total_renglon__fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-4"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>Buscar</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>Reiniciar</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>Volver a la lista</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

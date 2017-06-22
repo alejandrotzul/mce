@@ -1,0 +1,414 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel detalle_antecedentelaboral add}</h2>
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>Volver a la lista</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>Ver</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>Editar</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+			{BEGIN institucion_empresa_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_institucion_empresa}" data-fieldname="institucion_empresa" data-signal-error-for="institucion_empresa{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_institucion_empresa}">
+		{BEGIN institucion_empresa_label}{$label detalle_antecedentelaboral institucion_empresa}{END institucion_empresa_label}
+	</label>
+	<div class="col-md-6" >
+		{$institucion_empresa_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="institucion_empresa">
+		<div class="text-muted" >
+		{$tooltip detalle_antecedentelaboral institucion_empresa}
+		</div>
+	</div>
+</div>
+</div>
+{END institucion_empresa_fieldblock}
+
+			{BEGIN direccion_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_direccion}" data-fieldname="direccion" data-signal-error-for="direccion{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_direccion}">
+		{BEGIN direccion_label}{$label detalle_antecedentelaboral direccion}{END direccion_label}
+	</label>
+	<div class="col-md-6" >
+		{$direccion_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="direccion">
+		<div class="text-muted" >
+		{$tooltip detalle_antecedentelaboral direccion}
+		</div>
+	</div>
+</div>
+</div>
+{END direccion_fieldblock}
+
+			{BEGIN telefono_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_telefono}" data-fieldname="telefono" data-signal-error-for="telefono{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_telefono}">
+		{BEGIN telefono_label}{$label detalle_antecedentelaboral telefono}{END telefono_label}
+	</label>
+	<div class="col-md-6" >
+		{$telefono_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="telefono">
+		<div class="text-muted" >
+		{$tooltip detalle_antecedentelaboral telefono}
+		</div>
+	</div>
+</div>
+</div>
+{END telefono_fieldblock}
+
+			{BEGIN jefe_inmediato_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_jefe_inmediato}" data-fieldname="jefe_inmediato" data-signal-error-for="jefe_inmediato{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_jefe_inmediato}">
+		{BEGIN jefe_inmediato_label}{$label detalle_antecedentelaboral jefe_inmediato}{END jefe_inmediato_label}
+	</label>
+	<div class="col-md-6" >
+		{$jefe_inmediato_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="jefe_inmediato">
+		<div class="text-muted" >
+		{$tooltip detalle_antecedentelaboral jefe_inmediato}
+		</div>
+	</div>
+</div>
+</div>
+{END jefe_inmediato_fieldblock}
+
+			{BEGIN fecha_inicio_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_fecha_inicio}" data-fieldname="fecha_inicio" data-signal-error-for="fecha_inicio{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_fecha_inicio}">
+		{BEGIN fecha_inicio_label}{$label detalle_antecedentelaboral fecha_inicio}{END fecha_inicio_label}
+	</label>
+	<div class="col-md-6" >
+		{$fecha_inicio_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="fecha_inicio">
+		<div class="text-muted" >
+		{$tooltip detalle_antecedentelaboral fecha_inicio}
+		</div>
+	</div>
+</div>
+</div>
+{END fecha_inicio_fieldblock}
+
+			{BEGIN fecha_fin_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_fecha_fin}" data-fieldname="fecha_fin" data-signal-error-for="fecha_fin{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_fecha_fin}">
+		{BEGIN fecha_fin_label}{$label detalle_antecedentelaboral fecha_fin}{END fecha_fin_label}
+	</label>
+	<div class="col-md-6" >
+		{$fecha_fin_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="fecha_fin">
+		<div class="text-muted" >
+		{$tooltip detalle_antecedentelaboral fecha_fin}
+		</div>
+	</div>
+</div>
+</div>
+{END fecha_fin_fieldblock}
+
+			{BEGIN salario_inicial_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_salario_inicial}" data-fieldname="salario_inicial" data-signal-error-for="salario_inicial{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_salario_inicial}">
+		{BEGIN salario_inicial_label}{$label detalle_antecedentelaboral salario_inicial}{END salario_inicial_label}
+	</label>
+	<div class="col-md-6" >
+		{$salario_inicial_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="salario_inicial">
+		<div class="text-muted" >
+		{$tooltip detalle_antecedentelaboral salario_inicial}
+		</div>
+	</div>
+</div>
+</div>
+{END salario_inicial_fieldblock}
+
+			{BEGIN salario_final_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_salario_final}" data-fieldname="salario_final" data-signal-error-for="salario_final{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_salario_final}">
+		{BEGIN salario_final_label}{$label detalle_antecedentelaboral salario_final}{END salario_final_label}
+	</label>
+	<div class="col-md-6" >
+		{$salario_final_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="salario_final">
+		<div class="text-muted" >
+		{$tooltip detalle_antecedentelaboral salario_final}
+		</div>
+	</div>
+</div>
+</div>
+{END salario_final_fieldblock}
+
+			{BEGIN idrelacion_laboral_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_idrelacion_laboral}" data-fieldname="idrelacion_laboral" data-signal-error-for="idrelacion_laboral{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_idrelacion_laboral}">
+		{BEGIN idrelacion_laboral_label}{$label detalle_antecedentelaboral idrelacion_laboral}{END idrelacion_laboral_label}
+	</label>
+	<div class="col-md-6" >
+		{$idrelacion_laboral_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="idrelacion_laboral">
+		<div class="text-muted" >
+		{$tooltip detalle_antecedentelaboral idrelacion_laboral}
+		</div>
+	</div>
+</div>
+</div>
+{END idrelacion_laboral_fieldblock}
+
+			{BEGIN idrenglon_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_idrenglon}" data-fieldname="idrenglon" data-signal-error-for="idrenglon{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_idrenglon}">
+		{BEGIN idrenglon_label}{$label detalle_antecedentelaboral idrenglon}{END idrenglon_label}
+	</label>
+	<div class="col-md-6" >
+		{$idrenglon_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="idrenglon">
+		<div class="text-muted" >
+		{$tooltip detalle_antecedentelaboral idrenglon}
+		</div>
+	</div>
+</div>
+</div>
+{END idrenglon_fieldblock}
+
+			{BEGIN titulo_puesto_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_titulo_puesto}" data-fieldname="titulo_puesto" data-signal-error-for="titulo_puesto{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_titulo_puesto}">
+		{BEGIN titulo_puesto_label}{$label detalle_antecedentelaboral titulo_puesto}{END titulo_puesto_label}
+	</label>
+	<div class="col-md-6" >
+		{$titulo_puesto_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="titulo_puesto">
+		<div class="text-muted" >
+		{$tooltip detalle_antecedentelaboral titulo_puesto}
+		</div>
+	</div>
+</div>
+</div>
+{END titulo_puesto_fieldblock}
+
+			{BEGIN funciones_puesto_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_funciones_puesto}" data-fieldname="funciones_puesto" data-signal-error-for="funciones_puesto{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_funciones_puesto}">
+		{BEGIN funciones_puesto_label}{$label detalle_antecedentelaboral funciones_puesto}{END funciones_puesto_label}
+	</label>
+	<div class="col-md-6" >
+		{$funciones_puesto_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="funciones_puesto">
+		<div class="text-muted" >
+		{$tooltip detalle_antecedentelaboral funciones_puesto}
+		</div>
+	</div>
+</div>
+</div>
+{END funciones_puesto_fieldblock}
+
+			{BEGIN motivo_retiro_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_motivo_retiro}" data-fieldname="motivo_retiro" data-signal-error-for="motivo_retiro{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_motivo_retiro}">
+		{BEGIN motivo_retiro_label}{$label detalle_antecedentelaboral motivo_retiro}{END motivo_retiro_label}
+	</label>
+	<div class="col-md-6" >
+		{$motivo_retiro_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="motivo_retiro">
+		<div class="text-muted" >
+		{$tooltip detalle_antecedentelaboral motivo_retiro}
+		</div>
+	</div>
+</div>
+</div>
+{END motivo_retiro_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>Guardar</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">Reiniciar</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">Volver a la lista</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">Cancelar</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

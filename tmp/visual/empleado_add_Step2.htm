@@ -1,0 +1,101 @@
+<DIV {$pageattrs}>
+  {BEGIN container_tabfields}
+    <DIV class="form-horizontal" data-container="tabfields" data-pageid="{$pageid}" {$tabfields_chiddenattr}>
+      {BEGIN ultimo_gradoacademico_tabfieldblock}
+        <DIV class="container">
+          <DIV class="form-group in-tab {$fielddispclass_ultimo_gradoacademico}" data-signal-error-for="ultimo_gradoacademico{$id}" data-fieldname="ultimo_gradoacademico">
+            <LABEL class="col-md-3 control-label" for="{$labelfor_ultimo_gradoacademico}">
+              {BEGIN ultimo_gradoacademico_label}
+                {$label empleado ultimo_gradoacademico}
+              {END ultimo_gradoacademico_label}
+            </LABEL>
+            <DIV class="col-md-6">
+              {$ultimo_gradoacademico_editcontrol}
+            </DIV>
+            <DIV class="col-md-3 help-block" data-helpfor="ultimo_gradoacademico">
+              <DIV class="text-muted">
+                {$tooltip empleado ultimo_gradoacademico}
+              </DIV>
+            </DIV>
+          </DIV>
+        </DIV>
+      {END ultimo_gradoacademico_tabfieldblock}
+      {BEGIN estudiante_tabfieldblock}
+        <DIV class="container">
+          <DIV class="form-group in-tab {$fielddispclass_estudiante}" data-signal-error-for="estudiante{$id}" data-fieldname="estudiante">
+            <LABEL class="col-md-3 control-label" for="{$labelfor_estudiante}">
+              {BEGIN estudiante_label}
+                {$label empleado estudiante}
+              {END estudiante_label}
+            </LABEL>
+            <DIV class="col-md-6">
+              {$estudiante_editcontrol}
+            </DIV>
+            <DIV class="col-md-3 help-block" data-helpfor="estudiante">
+              <DIV class="text-muted">
+                {$tooltip empleado estudiante}
+              </DIV>
+            </DIV>
+          </DIV>
+        </DIV>
+      {END estudiante_tabfieldblock}
+      {BEGIN establecimiento_educativo_tabfieldblock}
+        <DIV class="container">
+          <DIV class="form-group in-tab {$fielddispclass_establecimiento_educativo}" data-signal-error-for="establecimiento_educativo{$id}" data-fieldname="establecimiento_educativo">
+            <LABEL class="col-md-3 control-label" for="{$labelfor_establecimiento_educativo}">
+              {BEGIN establecimiento_educativo_label}
+                {$label empleado establecimiento_educativo}
+              {END establecimiento_educativo_label}
+            </LABEL>
+            <DIV class="col-md-6">
+              {$establecimiento_educativo_editcontrol}
+            </DIV>
+            <DIV class="col-md-3 help-block" data-helpfor="establecimiento_educativo">
+              <DIV class="text-muted">
+                {$tooltip empleado establecimiento_educativo}
+              </DIV>
+            </DIV>
+          </DIV>
+        </DIV>
+      {END establecimiento_educativo_tabfieldblock}
+      {BEGIN carrera_tabfieldblock}
+        <DIV class="container">
+          <DIV class="form-group in-tab {$fielddispclass_carrera}" data-signal-error-for="carrera{$id}" data-fieldname="carrera">
+            <LABEL class="col-md-3 control-label" for="{$labelfor_carrera}">
+              {BEGIN carrera_label}
+                {$label empleado carrera}
+              {END carrera_label}
+            </LABEL>
+            <DIV class="col-md-6">
+              {$carrera_editcontrol}
+            </DIV>
+            <DIV class="col-md-3 help-block" data-helpfor="carrera">
+              <DIV class="text-muted">
+                {$tooltip empleado carrera}
+              </DIV>
+            </DIV>
+          </DIV>
+        </DIV>
+      {END carrera_tabfieldblock}
+      {BEGIN cursos_aprobados_tabfieldblock}
+        <DIV class="container">
+          <DIV class="form-group in-tab {$fielddispclass_cursos_aprobados}" data-signal-error-for="cursos_aprobados{$id}" data-fieldname="cursos_aprobados">
+            <LABEL class="col-md-3 control-label" for="{$labelfor_cursos_aprobados}">
+              {BEGIN cursos_aprobados_label}
+                {$label empleado cursos_aprobados}
+              {END cursos_aprobados_label}
+            </LABEL>
+            <DIV class="col-xs-2">
+              {$cursos_aprobados_editcontrol}
+            </DIV>
+            <DIV class="col-md-3 help-block" data-helpfor="cursos_aprobados">
+              <DIV class="text-muted">
+                {$tooltip empleado cursos_aprobados}
+              </DIV>
+            </DIV>
+          </DIV>
+        </DIV>
+      {END cursos_aprobados_tabfieldblock}
+    </DIV>
+  {END container_tabfields}
+</DIV>

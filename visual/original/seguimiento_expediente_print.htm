@@ -1,0 +1,225 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+{BEGIN pdflink_block}
+<a href="#" class="pdflink btn btn-default" {$pdflink_attrs}>Vista PDF</a>
+{END pdflink_block}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div {$master_chiddenattr} data-pageid="{$pageid}" data-container="master" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+	{$master_heading}
+	</div>
+	<div class="panel-body">
+{$showmasterfile}
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_master}
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel seguimiento_expediente print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>Página <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN idexpediente_fieldheadercolumn}
+			<th class="{$idexpediente_class}" {$idexpediente_style}>
+				{$label seguimiento_expediente idexpediente}
+			</th>
+			{END idexpediente_fieldheadercolumn}
+			{BEGIN idestatus_fieldheadercolumn}
+			<th class="{$idestatus_class}" {$idestatus_style}>
+				{$label seguimiento_expediente idestatus}
+			</th>
+			{END idestatus_fieldheadercolumn}
+			{BEGIN fecha_estatus1_fieldheadercolumn}
+			<th class="{$fecha_estatus1_class}" {$fecha_estatus1_style}>
+				{$label seguimiento_expediente fecha_estatus1}
+			</th>
+			{END fecha_estatus1_fieldheadercolumn}
+			{BEGIN dias_habiles_fieldheadercolumn}
+			<th class="{$dias_habiles_class}" {$dias_habiles_style}>
+				{$label seguimiento_expediente dias_habiles}
+			</th>
+			{END dias_habiles_fieldheadercolumn}
+			{BEGIN fecha_limite_fieldheadercolumn}
+			<th class="{$fecha_limite_class}" {$fecha_limite_style}>
+				{$label seguimiento_expediente fecha_limite}
+			</th>
+			{END fecha_limite_fieldheadercolumn}
+			{BEGIN dias_restantes_fieldheadercolumn}
+			<th class="{$dias_restantes_class}" {$dias_restantes_style}>
+				{$label seguimiento_expediente dias_restantes}
+			</th>
+			{END dias_restantes_fieldheadercolumn}
+			{BEGIN dias_agregados_fieldheadercolumn}
+			<th class="{$dias_agregados_class}" {$dias_agregados_style}>
+				{$label seguimiento_expediente dias_agregados}
+			</th>
+			{END dias_agregados_fieldheadercolumn}
+			{BEGIN fecha_final_fieldheadercolumn}
+			<th class="{$fecha_final_class}" {$fecha_final_style}>
+				{$label seguimiento_expediente fecha_final}
+			</th>
+			{END fecha_final_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN idexpediente_fieldcolumn}
+			<td  class="{$idexpediente_class}" {$idexpediente_style} {$recordattrs}>
+				{$idexpediente_value}
+			</td>
+			{END idexpediente_fieldcolumn}
+			{BEGIN idestatus_fieldcolumn}
+			<td  class="{$idestatus_class}" {$idestatus_style} {$recordattrs}>
+				{$idestatus_value}
+			</td>
+			{END idestatus_fieldcolumn}
+			{BEGIN fecha_estatus1_fieldcolumn}
+			<td  class="{$fecha_estatus1_class}" {$fecha_estatus1_style} {$recordattrs}>
+				{$fecha_estatus1_value}
+			</td>
+			{END fecha_estatus1_fieldcolumn}
+			{BEGIN dias_habiles_fieldcolumn}
+			<td  class="{$dias_habiles_class}" {$dias_habiles_style} {$recordattrs}>
+				{$dias_habiles_value}
+			</td>
+			{END dias_habiles_fieldcolumn}
+			{BEGIN fecha_limite_fieldcolumn}
+			<td  class="{$fecha_limite_class}" {$fecha_limite_style} {$recordattrs}>
+				{$fecha_limite_value}
+			</td>
+			{END fecha_limite_fieldcolumn}
+			{BEGIN dias_restantes_fieldcolumn}
+			<td  class="{$dias_restantes_class}" {$dias_restantes_style} {$recordattrs}>
+				{$dias_restantes_value}
+			</td>
+			{END dias_restantes_fieldcolumn}
+			{BEGIN dias_agregados_fieldcolumn}
+			<td  class="{$dias_agregados_class}" {$dias_agregados_style} {$recordattrs}>
+				{$dias_agregados_value}
+			</td>
+			{END dias_agregados_fieldcolumn}
+			{BEGIN fecha_final_fieldcolumn}
+			<td  class="{$fecha_final_class}" {$fecha_final_style} {$recordattrs}>
+				{$fecha_final_value}
+			</td>
+			{END fecha_final_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

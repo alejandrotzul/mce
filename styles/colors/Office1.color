@@ -1,0 +1,1197 @@
+{
+    "globals" : {
+        "background" : {
+            "color" : {
+                "color" : "#E6E6E6"
+            }
+        },
+        "button1" : {
+            "bordercolor" : {
+                "button" : {
+                    "color" : "#696969"
+                },
+                "disabled" : {
+                    "color" : "#FE4F29"
+                },
+                "hovered" : {
+                    "color" : "#CE1F00"
+                },
+                "pressed" : {
+                    "color" : "#696969"
+                }
+            },
+            "color" : {
+                "button" : {
+                    "color" : "#2FA4E7"
+                },
+                "disabled" : {
+                    "color" : "#333333"
+                },
+                "hovered" : {
+                    "color" : "#DCDCDC"
+                },
+                "pressed" : {
+                    "color" : "#DDDDDD"
+                }
+            },
+            "textcolor" : {
+                "button" : {
+                    "color" : "#FFFFFF"
+                },
+                "disabled" : {
+                    "color" : "#FFFFFF"
+                },
+                "hovered" : {
+                    "color" : "#CE1F00"
+                },
+                "pressed" : {
+                    "color" : "#808080"
+                }
+            }
+        },
+        "button2" : {
+            "bordercolor" : {
+                "button" : {
+                    "color" : "#FF9900"
+                },
+                "disabled" : {
+                    "color" : "#DCDCDC"
+                },
+                "hovered" : {
+                    "color" : "#FF9900"
+                },
+                "pressed" : {
+                    "color" : "#C0C0C0"
+                }
+            },
+            "color" : {
+                "button" : {
+                    "color" : "#A80000"
+                },
+                "disabled" : {
+                    "color" : "#DCDCDC"
+                },
+                "hovered" : {
+                    "color" : "#C0C0C0"
+                },
+                "pressed" : {
+                    "color" : "#808080"
+                }
+            },
+            "textcolor" : {
+                "button" : {
+                    "color" : "#000000"
+                },
+                "disabled" : {
+                    "color" : "#404040"
+                },
+                "hovered" : {
+                    "color" : "#FE4F29"
+                },
+                "pressed" : {
+                    "color" : "#F66C13"
+                }
+            }
+        },
+        "button3" : {
+            "bordercolor" : {
+                "button" : {
+                    "color" : "#393939"
+                },
+                "disabled" : {
+                    "color" : "#FE4F29"
+                },
+                "hovered" : {
+                    "color" : "#CE1F00"
+                },
+                "pressed" : {
+                    "color" : "#696969"
+                }
+            },
+            "color" : {
+                "button" : {
+                    "color" : "#FE6F49"
+                },
+                "disabled" : {
+                    "color" : "#333333"
+                },
+                "hovered" : {
+                    "color" : "#DCDCDC"
+                },
+                "pressed" : {
+                    "color" : "#DDDDDD"
+                }
+            },
+            "textcolor" : {
+                "button" : {
+                    "color" : "#393939"
+                },
+                "disabled" : {
+                    "color" : "#FFFFFF"
+                },
+                "hovered" : {
+                    "color" : "#CE1F00"
+                },
+                "pressed" : {
+                    "color" : "#808080"
+                }
+            }
+        },
+        "common" : {
+            "bgcolor" : {
+                "color" : "#F2F2F2"
+            },
+            "border" : {
+                "color" : {
+                    "color" : "#A9A9A9"
+                }
+            },
+            "text" : {
+                "color" : {
+                    "color" : "#404040"
+                }
+            }
+        },
+        "dashboard" : {
+            "background" : {
+                "color" : {
+                    "color" : "#FFFFFF"
+                }
+            },
+            "border" : {
+                "color" : {
+                    "color" : "#C4B1A2"
+                }
+            },
+            "footer" : {
+                "bgcolor" : {
+                    "color" : {
+                        "color" : "D8D8D8"
+                    }
+                },
+                "text" : {
+                    "color" : {
+                        "color" : "000000"
+                    }
+                }
+            },
+            "gridsel" : {
+                "bgcolor" : {
+                    "color" : {
+                        "color" : "FFFACD"
+                    }
+                },
+                "text" : {
+                    "color" : {
+                        "color" : "4C4951"
+                    }
+                }
+            },
+            "header" : {
+                "bgcolor" : {
+                    "color" : {
+                        "color" : "#494949"
+                    }
+                },
+                "text" : {
+                    "color" : {
+                        "color" : "#FFFFFF"
+                    }
+                }
+            }
+        },
+        "grid" : {
+            "bgcolor" : {
+                "data" : {
+                    "color" : "#EDF1F3"
+                },
+                "dataalt" : {
+                    "color" : "#FFFFFF"
+                },
+                "footer" : {
+                    "color" : "#FFCD9B"
+                },
+                "header" : {
+                    "color" : "#FFCD9B"
+                },
+                "hover" : {
+                    "color" : "#FFCD9B"
+                },
+                "hoveralt" : {
+                    "color" : "#FFCD9B"
+                }
+            },
+            "border" : {
+                "color" : {
+                    "color" : "#C4B1A2"
+                }
+            },
+            "searchhighlight" : {
+                "background" : {
+                    "color" : ""
+                },
+                "textcolor" : {
+                    "color" : "FF0000"
+                }
+            },
+            "textcolor" : {
+                "data" : {
+                    "color" : "#333333"
+                },
+                "dataalt" : {
+                    "color" : "#333333"
+                },
+                "footer" : {
+                    "color" : "#070400"
+                },
+                "header" : {
+                    "color" : "#070400"
+                },
+                "hover" : {
+                    "color" : "#333333"
+                },
+                "hoveralt" : {
+                    "color" : "#333333"
+                }
+            }
+        },
+        "hmenu" : {
+            "item" : {
+                "bgcolor" : {
+                    "active" : {
+                        "color" : "#3E3E3E"
+                    },
+                    "expanded" : {
+                        "color" : "#3E3E3E"
+                    },
+                    "hover" : {
+                        "color" : "#3E3E3E"
+                    },
+                    "plain" : {
+                        "color" : "#494949"
+                    }
+                },
+                "border" : {
+                    "color" : {
+                        "color" : "#2B2A2A"
+                    }
+                },
+                "highlight" : {
+                    "active" : {
+                        "bcolor" : {
+                            "color" : "000000"
+                        }
+                    },
+                    "expanded" : {
+                        "bcolor" : {
+                            "color" : "000000"
+                        }
+                    },
+                    "hover" : {
+                        "bcolor" : {
+                            "color" : "000000"
+                        }
+                    },
+                    "plain" : {
+                        "bcolor" : {
+                            "color" : "000000"
+                        }
+                    }
+                },
+                "textcolor" : {
+                    "active" : {
+                        "color" : "#FE4F29"
+                    },
+                    "expanded" : {
+                        "color" : "#FE4F29"
+                    },
+                    "hover" : {
+                        "color" : "#FE4F29"
+                    },
+                    "plain" : {
+                        "color" : "#FBFAE8"
+                    }
+                }
+            },
+            "item2" : {
+                "bgcolor" : {
+                    "active" : {
+                        "color" : "#004080"
+                    },
+                    "expanded" : {
+                        "color" : "#F2F2F2"
+                    },
+                    "hover" : {
+                        "color" : "#F2F2F2"
+                    },
+                    "plain" : {
+                        "color" : "#E8E8E8"
+                    }
+                },
+                "border" : {
+                    "color" : {
+                        "color" : "#004080"
+                    }
+                },
+                "highlight" : {
+                    "active" : {
+                        "bcolor" : {
+                            "color" : "000000"
+                        }
+                    },
+                    "expanded" : {
+                        "bcolor" : {
+                            "color" : "000000"
+                        }
+                    },
+                    "hover" : {
+                        "bcolor" : {
+                            "color" : "000000"
+                        }
+                    },
+                    "plain" : {
+                        "bcolor" : {
+                            "color" : "000000"
+                        }
+                    }
+                },
+                "textcolor" : {
+                    "active" : {
+                        "color" : "#FFFFFF"
+                    },
+                    "expanded" : {
+                        "color" : "#6F6F6F"
+                    },
+                    "hover" : {
+                        "color" : "#6F6F6F"
+                    },
+                    "plain" : {
+                        "color" : "#6F6F6F"
+                    }
+                }
+            },
+            "subitem" : {
+                "bgcolor" : {
+                    "active" : {
+                        "color" : "#2C2D2D"
+                    },
+                    "expanded" : {
+                        "color" : "#2C2D2D"
+                    },
+                    "hover" : {
+                        "color" : "#2C2D2D"
+                    },
+                    "plain" : {
+                        "color" : "#2C2D2D"
+                    }
+                },
+                "box" : {
+                    "color" : {
+                        "color" : "000000"
+                    }
+                },
+                "highlight" : {
+                    "active" : {
+                        "bcolor" : {
+                            "color" : "000000"
+                        }
+                    },
+                    "expanded" : {
+                        "bcolor" : {
+                            "color" : "000000"
+                        }
+                    },
+                    "hover" : {
+                        "bcolor" : {
+                            "color" : "000000"
+                        }
+                    }
+                },
+                "textcolor" : {
+                    "active" : {
+                        "color" : "#FFFFFF"
+                    },
+                    "expanded" : {
+                        "color" : "#FFFFFF"
+                    },
+                    "hover" : {
+                        "color" : "#FFFFFF"
+                    },
+                    "plain" : {
+                        "color" : "#979696"
+                    }
+                }
+            },
+            "subitem2" : {
+                "bgcolor" : {
+                    "active" : {
+                        "color" : "#004080"
+                    },
+                    "expanded" : {
+                        "color" : "#F6F6F6"
+                    },
+                    "hover" : {
+                        "color" : "#F6F6F6"
+                    },
+                    "plain" : {
+                        "color" : "#E8E8E8"
+                    }
+                },
+                "box" : {
+                    "color" : {
+                        "color" : "000000"
+                    }
+                },
+                "highlight" : {
+                    "active" : {
+                        "bcolor" : {
+                            "color" : "000000"
+                        }
+                    },
+                    "expanded" : {
+                        "bcolor" : {
+                            "color" : "000000"
+                        }
+                    },
+                    "hover" : {
+                        "bcolor" : {
+                            "color" : "000000"
+                        }
+                    }
+                },
+                "textcolor" : {
+                    "active" : {
+                        "color" : "#FFFFFF"
+                    },
+                    "expanded" : {
+                        "color" : "#0000FF"
+                    },
+                    "hover" : {
+                        "color" : "#0000FF"
+                    },
+                    "plain" : {
+                        "color" : "#000080"
+                    }
+                }
+            }
+        },
+        "menu" : {
+            "item" : {
+                "bgcolor" : {
+                    "active" : {
+                        "color" : "#3E3E3E"
+                    },
+                    "expanded" : {
+                        "color" : "#3E3E3E"
+                    },
+                    "hover" : {
+                        "color" : "#3E3E3E"
+                    },
+                    "plain" : {
+                        "color" : "#494949"
+                    }
+                },
+                "border" : {
+                    "color" : {
+                        "color" : "#2B2A2A"
+                    }
+                },
+                "highlight" : {
+                    "active" : {
+                        "bcolor" : {
+                            "color" : "000000"
+                        }
+                    },
+                    "expanded" : {
+                        "bcolor" : {
+                            "color" : "000000"
+                        }
+                    },
+                    "hover" : {
+                        "bcolor" : {
+                            "color" : "000000"
+                        }
+                    }
+                },
+                "textcolor" : {
+                    "active" : {
+                        "color" : "#FE4F29"
+                    },
+                    "expanded" : {
+                        "color" : "#FE4F29"
+                    },
+                    "hover" : {
+                        "color" : "#FE4F29"
+                    },
+                    "plain" : {
+                        "color" : "#FBFAE8"
+                    }
+                }
+            },
+            "item2" : {
+                "bgcolor" : {
+                    "active" : {
+                        "color" : "#004080"
+                    },
+                    "expanded" : {
+                        "color" : "#F1F1F1"
+                    },
+                    "hover" : {
+                        "color" : "#F1F1F1"
+                    },
+                    "plain" : {
+                        "color" : "#E8E8E8"
+                    }
+                },
+                "border" : {
+                    "color" : {
+                        "color" : "000000"
+                    }
+                },
+                "highlight" : {
+                    "active" : {
+                        "bcolor" : {
+                            "color" : "000000"
+                        }
+                    },
+                    "expanded" : {
+                        "bcolor" : {
+                            "color" : "000000"
+                        }
+                    },
+                    "hover" : {
+                        "bcolor" : {
+                            "color" : "000000"
+                        }
+                    }
+                },
+                "textcolor" : {
+                    "active" : {
+                        "color" : "#FFFFFF"
+                    },
+                    "expanded" : {
+                        "color" : "#353535"
+                    },
+                    "hover" : {
+                        "color" : "#353535"
+                    },
+                    "plain" : {
+                        "color" : "#353535"
+                    }
+                }
+            },
+            "subitem" : {
+                "bgcolor" : {
+                    "active" : {
+                        "color" : "#2C2D2D"
+                    },
+                    "expanded" : {
+                        "color" : "#2C2D2D"
+                    },
+                    "hover" : {
+                        "color" : "#2C2D2D"
+                    },
+                    "plain" : {
+                        "color" : "#2C2D2D"
+                    }
+                },
+                "box" : {
+                    "color" : {
+                        "color" : "#2A2A2A"
+                    }
+                },
+                "highlight" : {
+                    "active" : {
+                        "bcolor" : {
+                            "color" : "000000"
+                        }
+                    },
+                    "expanded" : {
+                        "bcolor" : {
+                            "color" : "000000"
+                        }
+                    },
+                    "hover" : {
+                        "bcolor" : {
+                            "color" : "000000"
+                        }
+                    }
+                },
+                "textcolor" : {
+                    "active" : {
+                        "color" : "#FFFFFF"
+                    },
+                    "expanded" : {
+                        "color" : "#FFFFFF"
+                    },
+                    "hover" : {
+                        "color" : "#FFFFFF"
+                    },
+                    "plain" : {
+                        "color" : "#979696"
+                    }
+                }
+            },
+            "subitem2" : {
+                "bgcolor" : {
+                    "active" : {
+                        "color" : "#004080"
+                    },
+                    "expanded" : {
+                        "color" : "#F1F1F1"
+                    },
+                    "hover" : {
+                        "color" : "#F1F1F1"
+                    },
+                    "plain" : {
+                        "color" : "#E8E8E8"
+                    }
+                },
+                "box" : {
+                    "color" : {
+                        "color" : "000000"
+                    }
+                },
+                "highlight" : {
+                    "active" : {
+                        "bcolor" : {
+                            "color" : "000000"
+                        }
+                    },
+                    "expanded" : {
+                        "bcolor" : {
+                            "color" : "000000"
+                        }
+                    },
+                    "hover" : {
+                        "bcolor" : {
+                            "color" : "000000"
+                        }
+                    }
+                },
+                "textcolor" : {
+                    "active" : {
+                        "color" : "#FFFFFF"
+                    },
+                    "expanded" : {
+                        "color" : "#353535"
+                    },
+                    "hover" : {
+                        "color" : "#353535"
+                    },
+                    "plain" : {
+                        "color" : "#353535"
+                    }
+                }
+            }
+        },
+        "messages" : {
+            "bgcolor" : {
+                "color" : "#F3EBDE"
+            },
+            "border" : {
+                "color" : {
+                    "color" : "#FE6F49"
+                }
+            },
+            "error" : {
+                "color" : {
+                    "color" : "#A80000"
+                }
+            },
+            "text" : {
+                "color" : {
+                    "color" : "#393939"
+                }
+            }
+        },
+        "popup" : {
+            "border" : {
+                "color" : {
+                    "color" : "#C4B1A2"
+                }
+            },
+            "footer" : {
+                "bgcolor" : {
+                    "color" : {
+                        "color" : "#494949"
+                    }
+                },
+                "text" : {
+                    "color" : {
+                        "color" : "#FFFFFF"
+                    }
+                }
+            },
+            "header" : {
+                "bgcolor" : {
+                    "color" : {
+                        "color" : "#494949"
+                    }
+                },
+                "text" : {
+                    "color" : {
+                        "color" : "#FFFFFF"
+                    }
+                }
+            }
+        },
+        "progress" : {
+            "background" : {
+                "active" : {
+                    "color" : {
+                        "color" : "#2FA4E7"
+                    }
+                },
+                "inactive" : {
+                    "color" : {
+                        "color" : "#333333"
+                    }
+                },
+                "number" : {
+                    "color" : "#DCDCDC"
+                }
+            },
+            "text" : {
+                "active" : {
+                    "color" : "#FFFFFF"
+                },
+                "inactive" : {
+                    "color" : "#FFFFFF"
+                },
+                "number" : {
+                    "color" : "#CE1F00"
+                }
+            }
+        },
+        "tabs" : {
+            "background" : {
+                "active" : {
+                    "color" : "#494949"
+                },
+                "inactive" : {
+                    "color" : "#C0C0C0"
+                }
+            },
+            "border" : {
+                "color" : {
+                    "color" : "#000000"
+                }
+            },
+            "text" : {
+                "active" : {
+                    "color" : "#FFFFFF"
+                },
+                "inactive" : {
+                    "color" : "#000000"
+                }
+            }
+        }
+    },
+    "recentColors" : [
+        "#393939",
+        "#C9C9C9",
+        "#FE8F29",
+        "#1E4F29",
+        "#1E4F2A",
+        "#AE4F29",
+        "#AE0F29",
+        "#AE0F09",
+        "#FE4F00",
+        "#FE1F00",
+        "#CE1F00",
+        "#FE4F29",
+        "#FFCD9B",
+        "#FFBC9B",
+        "#FFBCAC",
+        "#494949",
+        "#F2F2F2",
+        "#FE8F69",
+        "#FE8F49",
+        "#3E3E3E",
+        null,
+        "#2FA4E7"
+    ],
+    "runner_build" : "10257",
+    "runner_version" : "8",
+    "skins" : [
+        {
+            "background" : {
+                "alternative" : {
+                    "color" : {
+                        "color" : "#6699CC"
+                    }
+                },
+                "highlight" : {
+                    "color" : {
+                        "color" : "#494949"
+                    }
+                },
+                "plain" : {
+                    "color" : {
+                        "color" : "#FFFFFF"
+                    }
+                }
+            },
+            "border" : {
+                "color" : {
+                    "color" : "FFFF00"
+                }
+            },
+            "name" : "empty",
+            "text" : {
+                "alternative" : {
+                    "color" : {
+                        "color" : "#333333"
+                    }
+                },
+                "highlight" : {
+                    "color" : {
+                        "color" : "#333333"
+                    }
+                },
+                "plain" : {
+                    "color" : {
+                        "color" : "#404040"
+                    }
+                }
+            }
+        },
+        {
+            "background" : {
+                "alternative" : {
+                    "color" : {
+                        "color" : "#3E3E3E"
+                    }
+                },
+                "highlight" : {
+                    "color" : {
+                        "color" : "#3E3E3E"
+                    }
+                },
+                "plain" : {
+                    "color" : {
+                        "color" : "#494949"
+                    }
+                }
+            },
+            "border" : {
+                "color" : {
+                    "color" : "#000000"
+                }
+            },
+            "name" : "menu",
+            "text" : {
+                "alternative" : {
+                    "color" : {
+                        "color" : "#DCDCDC"
+                    }
+                },
+                "highlight" : {
+                    "color" : {
+                        "color" : "#FFFFFF"
+                    }
+                },
+                "plain" : {
+                    "color" : {
+                        "color" : "#FFFFFF"
+                    }
+                }
+            }
+        },
+        {
+            "background" : {
+                "alternative" : {
+                    "color" : {
+                        "color" : "FFFF00"
+                    }
+                },
+                "highlight" : {
+                    "color" : {
+                        "color" : "FFFF00"
+                    }
+                },
+                "plain" : {
+                    "color" : {
+                        "color" : "#6699CC"
+                    }
+                }
+            },
+            "border" : {
+                "color" : {
+                    "color" : "FFFF00"
+                }
+            },
+            "name" : "hmenu",
+            "text" : {
+                "alternative" : {
+                    "color" : {
+                        "color" : "FFFF00"
+                    }
+                },
+                "highlight" : {
+                    "color" : {
+                        "color" : "FFFF00"
+                    }
+                },
+                "plain" : {
+                    "color" : {
+                        "color" : "FFFF00"
+                    }
+                }
+            }
+        },
+        {
+            "background" : {
+                "alternative" : {
+                    "color" : {
+                        "color" : "FFFF00"
+                    }
+                },
+                "highlight" : {
+                    "color" : {
+                        "color" : "FFFF00"
+                    }
+                },
+                "plain" : {
+                    "color" : {
+                        "color" : "#494949"
+                    }
+                }
+            },
+            "border" : {
+                "color" : {
+                    "color" : "#DCDCDC"
+                }
+            },
+            "name" : "undermenu",
+            "text" : {
+                "alternative" : {
+                    "color" : {
+                        "color" : "FFFF00"
+                    }
+                },
+                "highlight" : {
+                    "color" : {
+                        "color" : "FFFF00"
+                    }
+                },
+                "plain" : {
+                    "color" : {
+                        "color" : "#FFFFFF"
+                    }
+                }
+            }
+        },
+        {
+            "background" : {
+                "alternative" : {
+                    "color" : {
+                        "color" : "#2FA4E7"
+                    }
+                },
+                "highlight" : {
+                    "color" : {
+                        "color" : "#DCDCDC"
+                    }
+                },
+                "plain" : {
+                    "color" : {
+                        "color" : "#FFFFFF"
+                    }
+                }
+            },
+            "border" : {
+                "color" : {
+                    "color" : "#C4B1A2"
+                }
+            },
+            "name" : "fields",
+            "text" : {
+                "alternative" : {
+                    "color" : {
+                        "color" : "#696969"
+                    }
+                },
+                "highlight" : {
+                    "color" : {
+                        "color" : "#FFFFFF"
+                    }
+                },
+                "plain" : {
+                    "color" : {
+                        "color" : "#000000"
+                    }
+                }
+            }
+        },
+        {
+            "background" : {
+                "alternative" : {
+                    "color" : {
+                        "color" : "#6699CC"
+                    }
+                },
+                "highlight" : {
+                    "color" : {
+                        "color" : "#FF9900"
+                    }
+                },
+                "plain" : {
+                    "color" : {
+                        "color" : "#00CCCC"
+                    }
+                }
+            },
+            "border" : {
+                "color" : {
+                    "color" : "FFFF00"
+                }
+            },
+            "name" : "form",
+            "text" : {
+                "alternative" : {
+                    "color" : {
+                        "color" : "#003366"
+                    }
+                },
+                "highlight" : {
+                    "color" : {
+                        "color" : "#FFFFFF"
+                    }
+                },
+                "plain" : {
+                    "color" : {
+                        "color" : "#000080"
+                    }
+                }
+            }
+        },
+        {
+            "background" : {
+                "alternative" : {
+                    "color" : {
+                        "color" : "#494949"
+                    }
+                },
+                "highlight" : {
+                    "color" : {
+                        "color" : "#2FA4E7"
+                    }
+                },
+                "plain" : {
+                    "color" : {
+                        "color" : "#2FA4E7"
+                    }
+                }
+            },
+            "border" : {
+                "color" : {
+                    "color" : "#C4B1A2"
+                }
+            },
+            "name" : "1",
+            "text" : {
+                "alternative" : {
+                    "color" : {
+                        "color" : "#D1EEEE"
+                    }
+                },
+                "highlight" : {
+                    "color" : {
+                        "color" : "#FFFFFF"
+                    }
+                },
+                "plain" : {
+                    "color" : {
+                        "color" : "#DCDCDC"
+                    }
+                }
+            }
+        },
+        {
+            "background" : {
+                "alternative" : {
+                    "color" : {
+                        "color" : "#6699CC"
+                    }
+                },
+                "highlight" : {
+                    "color" : {
+                        "color" : "#EDF1F3"
+                    }
+                },
+                "plain" : {
+                    "color" : {
+                        "color" : "#F2F2F2"
+                    }
+                }
+            },
+            "border" : {
+                "color" : {
+                    "color" : "#C4B1A2"
+                }
+            },
+            "name" : "2",
+            "text" : {
+                "alternative" : {
+                    "color" : {
+                        "color" : "FFFF00"
+                    }
+                },
+                "highlight" : {
+                    "color" : {
+                        "color" : "#FFFFFF"
+                    }
+                },
+                "plain" : {
+                    "color" : {
+                        "color" : "#333333"
+                    }
+                }
+            }
+        },
+        {
+            "background" : {
+                "alternative" : {
+                    "color" : {
+                        "color" : "#FF9900"
+                    }
+                },
+                "highlight" : {
+                    "color" : {
+                        "color" : "#000080"
+                    }
+                },
+                "plain" : {
+                    "color" : {
+                        "color" : "#494949"
+                    }
+                }
+            },
+            "border" : {
+                "color" : {
+                    "color" : "FFFF00"
+                }
+            },
+            "name" : "3",
+            "text" : {
+                "alternative" : {
+                    "color" : {
+                        "color" : "#FFFFFF"
+                    }
+                },
+                "highlight" : {
+                    "color" : {
+                        "color" : "#FFFFFF"
+                    }
+                },
+                "plain" : {
+                    "color" : {
+                        "color" : "#FFFFFF"
+                    }
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<HTML {$html_attrs}><HEAD>
+<META content="IE=Edge" http-equiv="X-UA-Compatible">
+<META name="viewport" content="width=device-width, initial-scale=1.0"><TITLE>
+</TITLE>
+<META content="text/html; charset=utf-8" http-equiv="Content-Type">
+<LINK rel="stylesheet" type="text/css" href="styles/default.css">{BEGIN rtlCSS}<LINK rel="stylesheet" type="text/css" href="styles/defaultRTL.css">{END rtlCSS}{BEGIN styleCSSFiles}<LINK rel="stylesheet" type="text/css" href="{$stylepath}">{END styleCSSFiles}
+<META name="GENERATOR" content="MSHTML 9.00.8112.16684">
+</HEAD>
+<BODY class="{$stylename} function-rprint" {$bodyattrs}>{BEGIN body}
+
+{$header}
+<STYLE>
+        {$containerCss}
+      </STYLE>
+
+<DIV class="bs-top">
+{BEGIN container_pdf}<DIV class="col-md-12" data-container="pdf" data-pageid="{$pageid}" {$pdf_chiddenattr}>{BEGIN printbuttons}{END printbuttons}</DIV>
+{END container_pdf}{BEGIN container_pageheader}<DIV class=" " data-container="pageheader" data-pageid="{$pageid}" {$pageheader_chiddenattr}></DIV>
+{END container_pageheader}{BEGIN printheader}<H2 class=" " data-container="pageheader" data-brick="printheader" data-pageid="{$pageid}" {$printheader_hiddenattr}>
+</H2>
+{END printheader}{BEGIN container_pageheader}<DIV class=" " align="right" data-container="pageheader" data-pageid="{$pageid}" {$pageheader_chiddenattr}>
+<TABLE style="width: 279px;" border="1" cellSpacing="1" cellPadding="1" width="75%">
+  <TBODY>
+  <TR style="height: 33px;">
+    <TD style="width: 53px;" class="runner-cc" rowSpan="1" colSpan="1">
+      <P align="left"><FONT face="Arial">Fecha:</FONT></P></TD><FONT 
+    face="Arial"></FONT>
+    <TD style="width: 226px;" rowSpan="1" colSpan="1"><FONT 
+      face="Arial"></FONT>
+      <DIV align="left"><FONT face="Arial"></FONT>
+      {$event catalogo_insumo_Report_snippet12}<FONT face="Arial">&nbsp;</FONT>
+      </DIV></TD></TR><FONT face="Arial"></FONT>
+  <TR style="height: 59px;"><FONT face="Arial"></FONT>
+    <TD style="width: 53px;" class="runner-cc" rowSpan="1" colSpan="1"><FONT 
+      face="Arial"></FONT>
+      <P align="left"><FONT face="Arial">Hora:</FONT></P></TD><FONT 
+    face="Arial"></FONT>
+    <TD style="width: 226px;" rowSpan="1" colSpan="1"><FONT 
+      face="Arial"></FONT>
+      <DIV align="left"><FONT face="Arial"></FONT>
+      {$event catalogo_insumo_Report_snippet22}<FONT face="Arial">&nbsp;</FONT>
+      </DIV></TD></TR><FONT face="Arial"></FONT>
+  <TR style="height: 59px;"><FONT face="Arial"></FONT>
+    <TD style="width: 53px;" class="runner-cc" rowSpan="1" colSpan="1"><FONT 
+      face="Arial"></FONT>
+      <P align="left"><FONT face="Arial">Usuario:</FONT></P></TD><FONT face="Arial"></FONT>
+    <TD style="width: 226px;" rowSpan="1" colSpan="1"><FONT 
+      face="Arial"></FONT>
+      <DIV align="left"><FONT face="Arial"></FONT>
+      {$event catalogo_insumo_Report_snippet42}<FONT face="Arial">&nbsp;</FONT>
+      </DIV></TD></TR></TBODY></TABLE></DIV>
+{END container_pageheader}{BEGIN container_pageheader}<DIV class=" " align="right" data-container="pageheader" data-pageid="{$pageid}" {$pageheader_chiddenattr}></DIV>
+{END container_pageheader}<DIV align="right"></DIV>
+{BEGIN container_pageheader}<DIV class=" " align="left" data-container="pageheader" data-pageid="{$pageid}" {$pageheader_chiddenattr}>{BEGIN page_number}<SPAN>
+</SPAN>{END page_number}</DIV>{END container_pageheader}<FONT size="6">
+{BEGIN container_pageheader}<DIV class=" " align="center" data-container="pageheader" data-pageid="{$pageid}" {$pageheader_chiddenattr}><FONT color="#7d9ec0">
+{$pagetitlelabel 01_Reporte_por_departamento rprint}</FONT></DIV>
+{END container_pageheader}{BEGIN container_pageheader}<DIV class=" " align="center" data-container="pageheader" data-pageid="{$pageid}" {$pageheader_chiddenattr}> &nbsp;</DIV>{END container_pageheader}</FONT>
+{BEGIN container_pageheader}<DIV class=" " data-container="pageheader" data-pageid="{$pageid}" {$pageheader_chiddenattr}>{BEGIN page_number}<SPAN>
+</SPAN>{END page_number}</DIV>
+{END container_pageheader}{BEGIN container_grid}<STYLE>
+            td.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary {background-color:#ffffbb;}
+            td.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary {background-color:#ffe0b0;}
+          </STYLE>
+
+<DIV id="grid_block{$id}" class="rnr-report-gridblock">
+{BEGIN grid_block}<TABLE style="width: 1661px;" border="0" cellSpacing="2" cellPadding="0" data-brick="report_print" data-pageid="{$pageid}" {$report_print_hiddenattr}>
+  <THEAD>
+  <TR style="height: 31px;" class="rnr-toprow table-header style1">
+    <TH style="width: 146px; border-bottom-color: rgb(0, 0, 0); border-bottom-width: 1px; border-bottom-style: solid;" 
+    rowSpan="1" colSpan="1">
+      {$label 01_Reporte_por_departamento idjefatura}</TH>
+    <TH style="width: 183px; border-bottom-color: rgb(0, 0, 0); border-bottom-width: 1px; border-bottom-style: solid;" 
+    rowSpan="1" colSpan="1">
+      {$label 01_Reporte_por_departamento ultimo_estatus}</TH>
+    <TH style="width: 129px; border-bottom-color: rgb(0, 0, 0); border-bottom-width: 1px; border-bottom-style: solid;" 
+    rowSpan="1" colSpan="1">
+      {$label 01_Reporte_por_departamento idempleado}</TH>
+    <TH style="width: 150px; border-bottom-color: rgb(0, 0, 0); border-bottom-width: 1px; border-bottom-style: solid;" 
+    rowSpan="1" colSpan="1">
+      {$label 01_Reporte_por_departamento fecha_pedido}</TH>
+    <TH style="width: 172px; border-bottom-color: rgb(0, 0, 0); border-bottom-width: 1px; border-bottom-style: solid;" 
+    rowSpan="1" colSpan="1">
+      {$label 01_Reporte_por_departamento fecha_ingresocompras}</TH>
+    <TH style="width: 168px; border-bottom-color: rgb(0, 0, 0); border-bottom-width: 1px; border-bottom-style: solid;" 
+    rowSpan="1" colSpan="1">
+      {$label 01_Reporte_por_departamento fecha_entregaanalista}</TH>
+    <TH style="width: 147px; border-bottom-color: rgb(0, 0, 0); border-bottom-width: 1px; border-bottom-style: solid;" 
+    rowSpan="1" colSpan="1">
+      {$label 01_Reporte_por_departamento numero_pedido}</TH>
+    <TH style="width: 178px; border-bottom-color: rgb(0, 0, 0); border-bottom-width: 1px; border-bottom-style: solid;" 
+    rowSpan="1" colSpan="1">
+      {$label 01_Reporte_por_departamento idmodalidad_compra}</TH>
+    <TH style="width: 144px; border-bottom-color: rgb(0, 0, 0); border-bottom-width: 1px; border-bottom-style: solid;" 
+    rowSpan="1" colSpan="1">
+      {$label 01_Reporte_por_departamento idrenglon}
+    </TH>
+    <TH style="width: 140px; border-bottom-color: rgb(0, 0, 0); border-bottom-width: 1px; border-bottom-style: solid;" 
+    rowSpan="1" colSpan="1">
+      {$label 01_Reporte_por_departamento total_renglon}</TH>
+    <TH style="width: 104px; border-bottom-color: rgb(0, 0, 0); border-bottom-width: 1px; border-bottom-style: solid;" 
+    rowSpan="1" colSpan="1">
+      {$label 01_Reporte_por_departamento idproveedor}</TH></TR></THEAD>
+  <TBODY><!-------------------------------------  data ----------------------------------------->
+  {BEGIN grid_row}{BEGIN row_data}<TR style="height: 56px;" class="rnr-row style1" {$rowattrs}>
+    
+    <TD style="width: 146px;" rowSpan="1" colSpan="1" {$recordattrs}>
+      {$idjefatura_value}
+    </TD>
+    <TD style="width: 183px;" rowSpan="1" colSpan="1" {$recordattrs}>
+      {$ultimo_estatus_value}</TD>
+    <TD style="width: 129px;" rowSpan="1" colSpan="1" {$recordattrs}>
+      {$idempleado_value}</TD>
+    <TD style="width: 150px;" rowSpan="1" colSpan="1" {$recordattrs}>
+      {$fecha_pedido_value}</TD>
+    <TD style="width: 172px;" rowSpan="1" colSpan="1" {$recordattrs}>
+      {$fecha_ingresocompras_value}</TD>
+    <TD style="width: 168px;" rowSpan="1" colSpan="1" {$recordattrs}>
+      {$fecha_entregaanalista_value}</TD>
+    <TD style="width: 147px;" rowSpan="1" colSpan="1" {$recordattrs}>
+      {$numero_pedido_value}</TD>
+    <TD style="width: 178px;" rowSpan="1" colSpan="1" {$recordattrs}>
+      {$idmodalidad_compra_value}</TD>
+    <TD style="width: 144px;" rowSpan="1" colSpan="1" {$recordattrs}>
+      {$idrenglon_value}</TD>
+    <TD style="width: 140px;" rowSpan="1" colSpan="1" {$recordattrs}>
+      {$total_renglon_value}</TD>
+    <TD style="width: 104px;" rowSpan="1" colSpan="1" {$recordattrs}>
+      {$idproveedor_value}</TD>
+  </TR>{END row_data}{END grid_row}</TBODY></TABLE>{END grid_block}</DIV>{END container_grid}</DIV>
+<DIV class="bs-middle">
+<DIV class="bs-left" {$blockattr_left}></DIV>
+<DIV class="bs-center"></DIV>
+<DIV class="bs-right"></DIV></DIV>
+<DIV class="bs-bottom" align="right"> &nbsp;&nbsp;</DIV>
+<DIV class="bs-bottom" align="right"> &nbsp;</DIV>
+<DIV class="bs-bottom" align="right"> &nbsp;</DIV>
+{$footer}
+<DIV class="bs-bottom" align="right">   Página
+{$pagecount}&nbsp;/
+{$pageno}&nbsp;&nbsp;</DIV>{END body}</BODY></HTML>

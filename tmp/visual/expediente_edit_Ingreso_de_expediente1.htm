@@ -1,0 +1,201 @@
+<DIV {$pageattrs}>
+  {BEGIN container_tabfields}
+    <DIV class="form" data-container="tabfields" data-pageid="{$pageid}" {$tabfields_chiddenattr}>
+      <DIV class="container">
+        {BEGIN numero_pedido_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_numero_pedido}" data-signal-error-for="numero_pedido{$id}" data-fieldname="numero_pedido">
+            <LABEL class="control-label" for="{$labelfor_numero_pedido}">
+              {BEGIN numero_pedido_label}
+                {$label expediente numero_pedido}
+              {END numero_pedido_label}
+            </LABEL>
+            <DIV>
+              {$numero_pedido_editcontrol}
+            </DIV>
+            <DIV class="help-block" data-helpfor="numero_pedido">
+              <DIV class="text-muted">
+                {$tooltip expediente numero_pedido}
+              </DIV>
+            </DIV>
+          </DIV>
+        {END numero_pedido_tabfieldblock}
+        {BEGIN idjefatura_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_idjefatura}" data-signal-error-for="idjefatura{$id}" data-fieldname="idjefatura">
+            <LABEL class="control-label" for="{$labelfor_idjefatura}">
+              {BEGIN idjefatura_label}
+                {$label expediente idjefatura}
+              {END idjefatura_label}
+            </LABEL>
+            <DIV>
+              {$idjefatura_editcontrol}
+            </DIV>
+            <DIV class="help-block" data-helpfor="idjefatura">
+              <DIV class="text-muted">
+                {$tooltip expediente idjefatura}
+              </DIV>
+            </DIV>
+          </DIV>
+        {END idjefatura_tabfieldblock}
+        {BEGIN numero_referencia_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_numero_referencia}" data-signal-error-for="numero_referencia{$id}" data-fieldname="numero_referencia">
+            <LABEL class="control-label" for="{$labelfor_numero_referencia}">
+              {BEGIN numero_referencia_label}
+                {$label expediente numero_referencia}
+              {END numero_referencia_label}
+            </LABEL>
+            <DIV>
+              {$numero_referencia_editcontrol}
+            </DIV>
+            <DIV class="help-block" data-helpfor="numero_referencia">
+              <DIV class="text-muted">
+                {$tooltip expediente numero_referencia}
+              </DIV>
+            </DIV>
+          </DIV>
+        {END numero_referencia_tabfieldblock}
+        {BEGIN idmodalidad_compra_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_idmodalidad_compra}" data-signal-error-for="idmodalidad_compra{$id}" data-fieldname="idmodalidad_compra">
+            <LABEL class="control-label" for="{$labelfor_idmodalidad_compra}">
+              {BEGIN idmodalidad_compra_label}
+                {$label expediente idmodalidad_compra}
+              {END idmodalidad_compra_label}
+            </LABEL>
+            <DIV>
+              {$idmodalidad_compra_editcontrol}
+            </DIV>
+            <DIV class="help-block" data-helpfor="idmodalidad_compra">
+              <DIV class="text-muted">
+                {$tooltip expediente idmodalidad_compra}
+              </DIV>
+            </DIV>
+          </DIV>
+        {END idmodalidad_compra_tabfieldblock}
+        {BEGIN fecha_pedido_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_fecha_pedido}" data-signal-error-for="fecha_pedido{$id}" data-fieldname="fecha_pedido">
+            <LABEL class="control-label" for="{$labelfor_fecha_pedido}">
+              {BEGIN fecha_pedido_label}
+                {$label expediente fecha_pedido}
+              {END fecha_pedido_label}
+            </LABEL>
+            <DIV>
+              {$fecha_pedido_editcontrol}
+            </DIV>
+            <DIV class="help-block" data-helpfor="fecha_pedido">
+              <DIV class="text-muted">
+                {$tooltip expediente fecha_pedido}
+              </DIV>
+            </DIV>
+          </DIV>
+        {END fecha_pedido_tabfieldblock}
+        {BEGIN fecha_ingresocompras_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_fecha_ingresocompras}" data-signal-error-for="fecha_ingresocompras{$id}" data-fieldname="fecha_ingresocompras">
+            <LABEL class="control-label" for="{$labelfor_fecha_ingresocompras}">
+              {BEGIN fecha_ingresocompras_label}
+                {$label expediente fecha_ingresocompras}
+              {END fecha_ingresocompras_label}
+            </LABEL>
+            <DIV>
+              {$fecha_ingresocompras_editcontrol}
+            </DIV>
+            <DIV class="help-block" data-helpfor="fecha_ingresocompras">
+              <DIV class="text-muted">
+                {$tooltip expediente fecha_ingresocompras}
+              </DIV>
+            </DIV>
+          </DIV>
+        {END fecha_ingresocompras_tabfieldblock}
+        {BEGIN idempleado_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_idempleado}" data-signal-error-for="idempleado{$id}" data-fieldname="idempleado">
+            <LABEL class="control-label" for="{$labelfor_idempleado}">
+              {BEGIN idempleado_label}
+                {$label expediente idempleado}
+              {END idempleado_label}
+            </LABEL>
+            <DIV>
+              {$idempleado_editcontrol}
+            </DIV>
+            <DIV class="help-block" data-helpfor="idempleado">
+              <DIV class="text-muted">
+                {$tooltip expediente idempleado}
+              </DIV>
+            </DIV>
+          </DIV>
+        {END idempleado_tabfieldblock}
+        {BEGIN fecha_entregaanalista_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_fecha_entregaanalista}" data-signal-error-for="fecha_entregaanalista{$id}" data-fieldname="fecha_entregaanalista">
+            <LABEL class="control-label" for="{$labelfor_fecha_entregaanalista}">
+              {BEGIN fecha_entregaanalista_label}
+                {$label expediente fecha_entregaanalista}
+              {END fecha_entregaanalista_label}
+            </LABEL>
+            <DIV>
+              {$fecha_entregaanalista_editcontrol}
+            </DIV>
+            <DIV class="help-block" data-helpfor="fecha_entregaanalista">
+              <DIV class="text-muted">
+                {$tooltip expediente fecha_entregaanalista}
+              </DIV>
+            </DIV>
+          </DIV>
+        {END fecha_entregaanalista_tabfieldblock}
+        {BEGIN observaciones_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_observaciones}" data-signal-error-for="observaciones{$id}" data-fieldname="observaciones">
+            <LABEL class="control-label" for="{$labelfor_observaciones}">
+              {BEGIN observaciones_label}
+                {$label expediente observaciones}
+              {END observaciones_label}
+            </LABEL>
+            <DIV>
+              {$observaciones_editcontrol}
+            </DIV>
+            <DIV class="help-block" data-helpfor="observaciones">
+              <DIV class="text-muted">
+                {$tooltip expediente observaciones}
+              </DIV>
+            </DIV>
+          </DIV>
+        {END observaciones_tabfieldblock}
+      </DIV>
+      <DIV class="bs-gridintab-container">
+        {BEGIN details_detalle_expediente}
+          <DIV class="bs-details" data-pageid="1">
+            <DIV class="panel panel-info details-grid">
+              <DIV class="panel-heading">
+                <H4 class="panel-title">
+                  Producto o servicio
+                  <SPAN>
+                    {BEGIN details_add_detalle_expediente_link}
+                      <BUTTON class="btn btn-xs btn-info" type="button" {$details_add_detalle_expediente_attrs}>
+                        Añadir nuevo
+                      </BUTTON>
+                    {END details_add_detalle_expediente_link}
+                    {BEGIN details_delete_detalle_expediente_link}
+                      <BUTTON class="btn btn-xs btn-info bs-invisible-button" type="button" {$details_delete_detalle_expediente_attrs}>
+                        Borrar artículos seleccionados
+                      </BUTTON>
+                    {END details_delete_detalle_expediente_link}
+                    {BEGIN saveall_detalle_expediente_link}
+                      <BUTTON class="btn btn-xs btn-info" type="button" {$savealllink_detalle_expediente_attrs} {$savealllink_detalle_expediente_span}>
+                        Guardar todo
+                      </BUTTON>
+                    {END saveall_detalle_expediente_link}
+                    {BEGIN cancelall_detalle_expediente_link}
+                      <BUTTON class="btn btn-xs btn-info" type="button" {$cancelalllink_detalle_expediente_attrs} {$cancelalllink_detalle_expediente_span}>
+                        Cancelar
+                      </BUTTON>
+                    {END cancelall_detalle_expediente_link}
+                  </SPAN>
+                </H4>
+              </DIV>
+              <DIV class="panel-body">
+                {$displayDetailTable_detalle_expediente}
+              </DIV>
+            </DIV>
+          </DIV>
+        {END details_detalle_expediente}
+      </DIV>
+      <DIV class="container">
+      </DIV>
+    </DIV>
+  {END container_tabfields}
+</DIV>

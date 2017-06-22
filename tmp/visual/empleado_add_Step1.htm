@@ -1,0 +1,382 @@
+<DIV {$pageattrs}>
+  {BEGIN container_tabfields}
+    <DIV class="form" data-container="tabfields" data-pageid="{$pageid}" {$tabfields_chiddenattr}>
+      <DIV class="container">
+        {BEGIN primer_apellido_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_primer_apellido}" data-signal-error-for="primer_apellido{$id}" data-fieldname="primer_apellido">
+            <LABEL class="control-label" for="{$labelfor_primer_apellido}">
+              {BEGIN primer_apellido_label}
+                {$label empleado primer_apellido}
+              {END primer_apellido_label}
+            </LABEL>
+            <DIV>
+              {$primer_apellido_editcontrol}
+            </DIV>
+            <DIV class="help-block" data-helpfor="primer_apellido">
+              <DIV class="text-muted">
+                {$tooltip empleado primer_apellido}
+              </DIV>
+            </DIV>
+          </DIV>
+        {END primer_apellido_tabfieldblock}
+        {BEGIN segundo_apellido_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_segundo_apellido}" data-signal-error-for="segundo_apellido{$id}" data-fieldname="segundo_apellido">
+            <LABEL class="control-label" for="{$labelfor_segundo_apellido}">
+              {BEGIN segundo_apellido_label}
+                {$label empleado segundo_apellido}
+              {END segundo_apellido_label}
+            </LABEL>
+            <DIV>
+              {$segundo_apellido_editcontrol}
+            </DIV>
+            <DIV class="help-block" data-helpfor="segundo_apellido">
+              <DIV class="text-muted">
+                {$tooltip empleado segundo_apellido}
+              </DIV>
+            </DIV>
+          </DIV>
+        {END segundo_apellido_tabfieldblock}
+        {BEGIN apellido_casada_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_apellido_casada}" data-signal-error-for="apellido_casada{$id}" data-fieldname="apellido_casada">
+            <LABEL class="control-label" for="{$labelfor_apellido_casada}">
+              {BEGIN apellido_casada_label}
+                {$label empleado apellido_casada}
+              {END apellido_casada_label}
+            </LABEL>
+            <DIV>
+              {$apellido_casada_editcontrol}
+            </DIV>
+            <DIV class="help-block" data-helpfor="apellido_casada">
+              <DIV class="text-muted">
+                {$tooltip empleado apellido_casada}
+              </DIV>
+            </DIV>
+          </DIV>
+        {END apellido_casada_tabfieldblock}
+        {BEGIN primer_nombre_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_primer_nombre}" data-signal-error-for="primer_nombre{$id}" data-fieldname="primer_nombre">
+            <LABEL class="control-label" for="{$labelfor_primer_nombre}">
+              {BEGIN primer_nombre_label}
+                {$label empleado primer_nombre}
+              {END primer_nombre_label}
+            </LABEL>
+            <DIV>
+              {$primer_nombre_editcontrol}
+            </DIV>
+            <DIV class="help-block" data-helpfor="primer_nombre">
+              <DIV class="text-muted">
+                {$tooltip empleado primer_nombre}
+              </DIV>
+            </DIV>
+          </DIV>
+        {END primer_nombre_tabfieldblock}
+        {BEGIN segundo_nombre_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_segundo_nombre}" data-signal-error-for="segundo_nombre{$id}" data-fieldname="segundo_nombre">
+            <LABEL class="control-label" for="{$labelfor_segundo_nombre}">
+              {BEGIN segundo_nombre_label}
+                {$label empleado segundo_nombre}
+              {END segundo_nombre_label}
+            </LABEL>
+            <DIV>
+              {$segundo_nombre_editcontrol}
+            </DIV>
+            <DIV class="help-block" data-helpfor="segundo_nombre">
+              <DIV class="text-muted">
+                {$tooltip empleado segundo_nombre}
+              </DIV>
+            </DIV>
+          </DIV>
+        {END segundo_nombre_tabfieldblock}
+        {BEGIN tercer_nombre_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_tercer_nombre}" data-signal-error-for="tercer_nombre{$id}" data-fieldname="tercer_nombre">
+            <LABEL class="control-label" for="{$labelfor_tercer_nombre}">
+              {BEGIN tercer_nombre_label}
+                {$label empleado tercer_nombre}
+              {END tercer_nombre_label}
+            </LABEL>
+            <DIV>
+              {$tercer_nombre_editcontrol}
+            </DIV>
+            <DIV class="help-block" data-helpfor="tercer_nombre">
+              <DIV class="text-muted">
+                {$tooltip empleado tercer_nombre}
+              </DIV>
+            </DIV>
+          </DIV>
+        {END tercer_nombre_tabfieldblock}
+        {BEGIN email_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_email}" data-signal-error-for="email{$id}" data-fieldname="email">
+            <LABEL class="control-label" for="{$labelfor_email}">
+              {BEGIN email_label}
+                {$label empleado email}
+              {END email_label}
+            </LABEL>
+            <DIV>
+              {$email_editcontrol}
+            </DIV>
+            <DIV class="help-block" data-helpfor="email">
+              <DIV class="text-muted">
+                {$tooltip empleado email}
+              </DIV>
+            </DIV>
+          </DIV>
+        {END email_tabfieldblock}
+        {BEGIN celular_1_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_celular_1}" data-signal-error-for="celular_1{$id}" data-fieldname="celular_1">
+            <LABEL class="control-label" for="{$labelfor_celular_1}">
+              {BEGIN celular_1_label}
+                {$label empleado celular_1}
+              {END celular_1_label}
+            </LABEL>
+            <DIV>
+              {$celular_1_editcontrol}
+            </DIV>
+            <DIV class="help-block" data-helpfor="celular_1">
+              <DIV class="text-muted">
+                {$tooltip empleado celular_1}
+              </DIV>
+            </DIV>
+          </DIV>
+        {END celular_1_tabfieldblock}
+        {BEGIN telefono_1_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_telefono_1}" data-signal-error-for="telefono_1{$id}" data-fieldname="telefono_1">
+            <LABEL class="control-label" for="{$labelfor_telefono_1}">
+              {BEGIN telefono_1_label}
+                {$label empleado telefono_1}
+              {END telefono_1_label}
+            </LABEL>
+            <DIV>
+              {$telefono_1_editcontrol}
+            </DIV>
+            <DIV class="help-block" data-helpfor="telefono_1">
+              <DIV class="text-muted">
+                {$tooltip empleado telefono_1}
+              </DIV>
+            </DIV>
+          </DIV>
+        {END telefono_1_tabfieldblock}
+        {BEGIN idgenero_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_idgenero}" data-signal-error-for="idgenero{$id}" data-fieldname="idgenero">
+            <LABEL class="control-label" for="{$labelfor_idgenero}">
+              {BEGIN idgenero_label}
+                {$label empleado idgenero}
+              {END idgenero_label}
+            </LABEL>
+            <DIV>
+              {$idgenero_editcontrol}
+            </DIV>
+            <DIV class="help-block" data-helpfor="idgenero">
+              <DIV class="text-muted">
+                {$tooltip empleado idgenero}
+              </DIV>
+            </DIV>
+          </DIV>
+        {END idgenero_tabfieldblock}
+        {BEGIN idetnia_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_idetnia}" data-signal-error-for="idetnia{$id}" data-fieldname="idetnia">
+            <LABEL class="control-label" for="{$labelfor_idetnia}">
+              {BEGIN idetnia_label}
+                {$label empleado idetnia}
+              {END idetnia_label}
+            </LABEL>
+            <DIV>
+              {$idetnia_editcontrol}
+            </DIV>
+            <DIV class="help-block" data-helpfor="idetnia">
+              <DIV class="text-muted">
+                {$tooltip empleado idetnia}
+              </DIV>
+            </DIV>
+          </DIV>
+        {END idetnia_tabfieldblock}
+        {BEGIN idestado_civil_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_idestado_civil}" data-signal-error-for="idestado_civil{$id}" data-fieldname="idestado_civil">
+            <LABEL class="control-label" for="{$labelfor_idestado_civil}">
+              {BEGIN idestado_civil_label}
+                {$label empleado idestado_civil}
+              {END idestado_civil_label}
+            </LABEL>
+            <DIV>
+              {$idestado_civil_editcontrol}
+            </DIV>
+            <DIV class="help-block" data-helpfor="idestado_civil">
+              <DIV class="text-muted">
+                {$tooltip empleado idestado_civil}
+              </DIV>
+            </DIV>
+          </DIV>
+        {END idestado_civil_tabfieldblock}
+        {BEGIN estado_civilobservacion_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_estado_civilobservacion}" data-signal-error-for="estado_civilobservacion{$id}" data-fieldname="estado_civilobservacion">
+            <LABEL class="control-label" for="{$labelfor_estado_civilobservacion}">
+              {BEGIN estado_civilobservacion_label}
+                {$label empleado estado_civilobservacion}
+              {END estado_civilobservacion_label}
+            </LABEL>
+            <DIV>
+              {$estado_civilobservacion_editcontrol}
+            </DIV>
+            <DIV class="help-block" data-helpfor="estado_civilobservacion">
+              <DIV class="text-muted">
+                {$tooltip empleado estado_civilobservacion}
+              </DIV>
+            </DIV>
+          </DIV>
+        {END estado_civilobservacion_tabfieldblock}
+        {BEGIN idtipo_sangre_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_idtipo_sangre}" data-signal-error-for="idtipo_sangre{$id}" data-fieldname="idtipo_sangre">
+            <LABEL class="control-label" for="{$labelfor_idtipo_sangre}">
+              {BEGIN idtipo_sangre_label}
+                {$label empleado idtipo_sangre}
+              {END idtipo_sangre_label}
+            </LABEL>
+            <DIV>
+              {$idtipo_sangre_editcontrol}
+            </DIV>
+            <DIV class="help-block" data-helpfor="idtipo_sangre">
+              <DIV class="text-muted">
+                {$tooltip empleado idtipo_sangre}
+              </DIV>
+            </DIV>
+          </DIV>
+        {END idtipo_sangre_tabfieldblock}
+        {BEGIN cui_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_cui}" data-signal-error-for="cui{$id}" data-fieldname="cui">
+            <LABEL class="control-label" for="{$labelfor_cui}">
+              {BEGIN cui_label}
+                {$label empleado cui}
+              {END cui_label}
+            </LABEL>
+            <DIV>
+              {$cui_editcontrol}
+            </DIV>
+            <DIV class="help-block" data-helpfor="cui">
+              <DIV class="text-muted">
+                {$tooltip empleado cui}
+              </DIV>
+            </DIV>
+          </DIV>
+        {END cui_tabfieldblock}
+        {BEGIN cui_observacion_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_cui_observacion}" data-signal-error-for="cui_observacion{$id}" data-fieldname="cui_observacion">
+            <LABEL class="control-label" for="{$labelfor_cui_observacion}">
+              {BEGIN cui_observacion_label}
+                {$label empleado cui_observacion}
+              {END cui_observacion_label}
+            </LABEL>
+            <DIV>
+              {$cui_observacion_editcontrol}
+            </DIV>
+            <DIV class="help-block" data-helpfor="cui_observacion">
+              <DIV class="text-muted">
+                {$tooltip empleado cui_observacion}
+              </DIV>
+            </DIV>
+          </DIV>
+        {END cui_observacion_tabfieldblock}
+        {BEGIN igss_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_igss}" data-signal-error-for="igss{$id}" data-fieldname="igss">
+            <LABEL class="control-label" for="{$labelfor_igss}">
+              {BEGIN igss_label}
+                {$label empleado igss}
+              {END igss_label}
+            </LABEL>
+            <DIV>
+              {$igss_editcontrol}
+            </DIV>
+            <DIV class="help-block" data-helpfor="igss">
+              <DIV class="text-muted">
+                {$tooltip empleado igss}
+              </DIV>
+            </DIV>
+          </DIV>
+        {END igss_tabfieldblock}
+        {BEGIN nit_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_nit}" data-signal-error-for="nit{$id}" data-fieldname="nit">
+            <LABEL class="control-label" for="{$labelfor_nit}">
+              {BEGIN nit_label}
+                {$label empleado nit}
+              {END nit_label}
+            </LABEL>
+            <DIV>
+              {$nit_editcontrol}
+            </DIV>
+            <DIV class="help-block" data-helpfor="nit">
+              <DIV class="text-muted">
+                {$tooltip empleado nit}
+              </DIV>
+            </DIV>
+          </DIV>
+        {END nit_tabfieldblock}
+        {BEGIN emergencia_persona_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_emergencia_persona}" data-signal-error-for="emergencia_persona{$id}" data-fieldname="emergencia_persona">
+            <LABEL class="control-label" for="{$labelfor_emergencia_persona}">
+              {BEGIN emergencia_persona_label}
+                {$label empleado emergencia_persona}
+              {END emergencia_persona_label}
+            </LABEL>
+            <DIV>
+              {$emergencia_persona_editcontrol}
+            </DIV>
+            <DIV class="help-block" data-helpfor="emergencia_persona">
+              <DIV class="text-muted">
+                {$tooltip empleado emergencia_persona}
+              </DIV>
+            </DIV>
+          </DIV>
+        {END emergencia_persona_tabfieldblock}
+        {BEGIN emergencia_telefono_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_emergencia_telefono}" data-signal-error-for="emergencia_telefono{$id}" data-fieldname="emergencia_telefono">
+            <LABEL class="control-label" for="{$labelfor_emergencia_telefono}">
+              {BEGIN emergencia_telefono_label}
+                {$label empleado emergencia_telefono}
+              {END emergencia_telefono_label}
+            </LABEL>
+            <DIV>
+              {$emergencia_telefono_editcontrol}
+            </DIV>
+            <DIV class="help-block" data-helpfor="emergencia_telefono">
+              <DIV class="text-muted">
+                {$tooltip empleado emergencia_telefono}
+              </DIV>
+            </DIV>
+          </DIV>
+        {END emergencia_telefono_tabfieldblock}
+        {BEGIN fecha_nacimiento_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_fecha_nacimiento}" data-signal-error-for="fecha_nacimiento{$id}" data-fieldname="fecha_nacimiento">
+            <LABEL class="control-label" for="{$labelfor_fecha_nacimiento}">
+              {BEGIN fecha_nacimiento_label}
+                <FONT size="1"><FONT size="2">{$label empleado fecha_nacimiento}</FONT></FONT>
+              {END fecha_nacimiento_label}
+            </LABEL>
+            <DIV>
+              {$fecha_nacimiento_editcontrol}
+            </DIV>
+            <DIV class="help-block" data-helpfor="fecha_nacimiento">
+              <DIV class="text-muted">
+                {$tooltip empleado fecha_nacimiento}
+              </DIV>
+            </DIV>
+          </DIV>
+        {END fecha_nacimiento_tabfieldblock}
+        {BEGIN fotografia_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_fotografia}" data-signal-error-for="fotografia{$id}" data-fieldname="fotografia">
+            <LABEL class="control-label" for="{$labelfor_fotografia}">
+              {BEGIN fotografia_label}
+                {$label empleado fotografia}
+              {END fotografia_label}
+            </LABEL>
+            <DIV>
+              {$fotografia_editcontrol}
+            </DIV>
+            <DIV class="help-block" data-helpfor="fotografia">
+              <DIV class="text-muted">
+                {$tooltip empleado fotografia}
+              </DIV>
+            </DIV>
+          </DIV>
+        {END fotografia_tabfieldblock}
+      </DIV>
+    </DIV>
+  {END container_tabfields}
+</DIV>

@@ -1,0 +1,373 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_all}
+<div class="rnr-c rnr-cv rnr-c-all">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_view} rnr-wrapper rnr-cbw-view">
+
+{BEGIN container_view}
+<div class="rnr-c rnr-cv rnr-c-view">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_pdf} rnr-wrapper rnr-cbw-pdf">
+
+{BEGIN container_pdf}
+<div class="rnr-c rnr-cv rnr-c-pdf">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-viewpdf {$brickclass_viewpdf}">{BEGIN pdflink_block}
+<a href="#" class="pdflink rnr-button" {$pdflink_attrs}>Vista PDF</a>
+{END pdflink_block}
+
+</div>
+
+
+</div>
+{END container_pdf}
+
+</div>
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_master} rnr-wrapper rnr-cbw-master">
+
+{BEGIN container_master}
+<div class="rnr-c rnr-ch rnr-c-master">
+
+{BEGIN mastertable_block}
+<div  class="style1 rnr-bl rnr-b-masterinfo {$brickclass_masterinfo}">{$showmasterfile}
+<a class="runner-link" {$backtomasterlink_attrs}>
+	<b>Volver a {$backtomasterlink_caption}</b>
+</a></div>
+{END mastertable_block}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_master}
+
+</div>
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fview} rnr-wrapper rnr-cbw-fview">
+
+{BEGIN container_fview}
+<div class="rnr-c rnr-cv rnr-c-fview">
+
+{BEGIN viewheader}
+<div  class="rnr-brickcontents style2 rnr-b-viewheader {$brickclass_viewheader}"><span>	<h1>{$pagetitlelabel empleado view}</h1>
+</span></div>{END viewheader}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-viewfields4_atop {$brickclass_viewfields4_atop}"><table class="fieldGrid fieldGrid4">
+
+<tr>
+<td>
+	{BEGIN idempleado_fieldblock}
+<div data-fieldname="idempleado" class="rnr-field style1 {$fielddispclass_idempleado}">
+  <div class="rnr-label above">{$label empleado idempleado}:</div>
+  <div class="rnr-control style3">{$idempleado_value}</div>
+</div>
+{END idempleado_fieldblock}
+	{BEGIN primer_apellido_fieldblock}
+<div data-fieldname="primer_apellido" class="rnr-field style1 {$fielddispclass_primer_apellido}">
+  <div class="rnr-label above">{$label empleado primer_apellido}:</div>
+  <div class="rnr-control style3">{$primer_apellido_value}</div>
+</div>
+{END primer_apellido_fieldblock}
+	{BEGIN segundo_apellido_fieldblock}
+<div data-fieldname="segundo_apellido" class="rnr-field style1 {$fielddispclass_segundo_apellido}">
+  <div class="rnr-label above">{$label empleado segundo_apellido}:</div>
+  <div class="rnr-control style3">{$segundo_apellido_value}</div>
+</div>
+{END segundo_apellido_fieldblock}
+	{BEGIN apellido_casada_fieldblock}
+<div data-fieldname="apellido_casada" class="rnr-field style1 {$fielddispclass_apellido_casada}">
+  <div class="rnr-label above">{$label empleado apellido_casada}:</div>
+  <div class="rnr-control style3">{$apellido_casada_value}</div>
+</div>
+{END apellido_casada_fieldblock}
+	{BEGIN primer_nombre_fieldblock}
+<div data-fieldname="primer_nombre" class="rnr-field style1 {$fielddispclass_primer_nombre}">
+  <div class="rnr-label above">{$label empleado primer_nombre}:</div>
+  <div class="rnr-control style3">{$primer_nombre_value}</div>
+</div>
+{END primer_nombre_fieldblock}
+	{BEGIN segundo_nombre_fieldblock}
+<div data-fieldname="segundo_nombre" class="rnr-field style1 {$fielddispclass_segundo_nombre}">
+  <div class="rnr-label above">{$label empleado segundo_nombre}:</div>
+  <div class="rnr-control style3">{$segundo_nombre_value}</div>
+</div>
+{END segundo_nombre_fieldblock}
+	{BEGIN tercer_nombre_fieldblock}
+<div data-fieldname="tercer_nombre" class="rnr-field style1 {$fielddispclass_tercer_nombre}">
+  <div class="rnr-label above">{$label empleado tercer_nombre}:</div>
+  <div class="rnr-control style3">{$tercer_nombre_value}</div>
+</div>
+{END tercer_nombre_fieldblock}
+	{BEGIN email_fieldblock}
+<div data-fieldname="email" class="rnr-field style1 {$fielddispclass_email}">
+  <div class="rnr-label above">{$label empleado email}:</div>
+  <div class="rnr-control style3">{$email_value}</div>
+</div>
+{END email_fieldblock}
+	{BEGIN nit_fieldblock}
+<div data-fieldname="nit" class="rnr-field style1 {$fielddispclass_nit}">
+  <div class="rnr-label above">{$label empleado nit}:</div>
+  <div class="rnr-control style3">{$nit_value}</div>
+</div>
+{END nit_fieldblock}
+</td>
+<td>
+	{BEGIN igss_fieldblock}
+<div data-fieldname="igss" class="rnr-field style1 {$fielddispclass_igss}">
+  <div class="rnr-label above">{$label empleado igss}:</div>
+  <div class="rnr-control style3">{$igss_value}</div>
+</div>
+{END igss_fieldblock}
+	{BEGIN fecha_ingreso_fieldblock}
+<div data-fieldname="fecha_ingreso" class="rnr-field style1 {$fielddispclass_fecha_ingreso}">
+  <div class="rnr-label above">{$label empleado fecha_ingreso}:</div>
+  <div class="rnr-control style3">{$fecha_ingreso_value}</div>
+</div>
+{END fecha_ingreso_fieldblock}
+	{BEGIN idgenero_fieldblock}
+<div data-fieldname="idgenero" class="rnr-field style1 {$fielddispclass_idgenero}">
+  <div class="rnr-label above">{$label empleado idgenero}:</div>
+  <div class="rnr-control style3">{$idgenero_value}</div>
+</div>
+{END idgenero_fieldblock}
+	{BEGIN idtipo_sangre_fieldblock}
+<div data-fieldname="idtipo_sangre" class="rnr-field style1 {$fielddispclass_idtipo_sangre}">
+  <div class="rnr-label above">{$label empleado idtipo_sangre}:</div>
+  <div class="rnr-control style3">{$idtipo_sangre_value}</div>
+</div>
+{END idtipo_sangre_fieldblock}
+	{BEGIN cuenta_bancaria_fieldblock}
+<div data-fieldname="cuenta_bancaria" class="rnr-field style1 {$fielddispclass_cuenta_bancaria}">
+  <div class="rnr-label above">{$label empleado cuenta_bancaria}:</div>
+  <div class="rnr-control style3">{$cuenta_bancaria_value}</div>
+</div>
+{END cuenta_bancaria_fieldblock}
+	{BEGIN celular_1_fieldblock}
+<div data-fieldname="celular_1" class="rnr-field style1 {$fielddispclass_celular_1}">
+  <div class="rnr-label above">{$label empleado celular_1}:</div>
+  <div class="rnr-control style3">{$celular_1_value}</div>
+</div>
+{END celular_1_fieldblock}
+	{BEGIN telefono_1_fieldblock}
+<div data-fieldname="telefono_1" class="rnr-field style1 {$fielddispclass_telefono_1}">
+  <div class="rnr-label above">{$label empleado telefono_1}:</div>
+  <div class="rnr-control style3">{$telefono_1_value}</div>
+</div>
+{END telefono_1_fieldblock}
+	{BEGIN emergencia_persona_fieldblock}
+<div data-fieldname="emergencia_persona" class="rnr-field style1 {$fielddispclass_emergencia_persona}">
+  <div class="rnr-label above">{$label empleado emergencia_persona}:</div>
+  <div class="rnr-control style3">{$emergencia_persona_value}</div>
+</div>
+{END emergencia_persona_fieldblock}
+</td>
+<td>
+	{BEGIN emergencia_telefono_fieldblock}
+<div data-fieldname="emergencia_telefono" class="rnr-field style1 {$fielddispclass_emergencia_telefono}">
+  <div class="rnr-label above">{$label empleado emergencia_telefono}:</div>
+  <div class="rnr-control style3">{$emergencia_telefono_value}</div>
+</div>
+{END emergencia_telefono_fieldblock}
+	{BEGIN idestado_civil_fieldblock}
+<div data-fieldname="idestado_civil" class="rnr-field style1 {$fielddispclass_idestado_civil}">
+  <div class="rnr-label above">{$label empleado idestado_civil}:</div>
+  <div class="rnr-control style3">{$idestado_civil_value}</div>
+</div>
+{END idestado_civil_fieldblock}
+	{BEGIN cui_fieldblock}
+<div data-fieldname="cui" class="rnr-field style1 {$fielddispclass_cui}">
+  <div class="rnr-label above">{$label empleado cui}:</div>
+  <div class="rnr-control style3">{$cui_value}</div>
+</div>
+{END cui_fieldblock}
+	{BEGIN cui_observacion_fieldblock}
+<div data-fieldname="cui_observacion" class="rnr-field style1 {$fielddispclass_cui_observacion}">
+  <div class="rnr-label above">{$label empleado cui_observacion}:</div>
+  <div class="rnr-control style3">{$cui_observacion_value}</div>
+</div>
+{END cui_observacion_fieldblock}
+	{BEGIN fecha_nacimiento_fieldblock}
+<div data-fieldname="fecha_nacimiento" class="rnr-field style1 {$fielddispclass_fecha_nacimiento}">
+  <div class="rnr-label above">{$label empleado fecha_nacimiento}:</div>
+  <div class="rnr-control style3">{$fecha_nacimiento_value}</div>
+</div>
+{END fecha_nacimiento_fieldblock}
+	{BEGIN ultimo_gradoacademico_fieldblock}
+<div data-fieldname="ultimo_gradoacademico" class="rnr-field style1 {$fielddispclass_ultimo_gradoacademico}">
+  <div class="rnr-label above">{$label empleado ultimo_gradoacademico}:</div>
+  <div class="rnr-control style3">{$ultimo_gradoacademico_value}</div>
+</div>
+{END ultimo_gradoacademico_fieldblock}
+	{BEGIN estudiante_fieldblock}
+<div data-fieldname="estudiante" class="rnr-field style1 {$fielddispclass_estudiante}">
+  <div class="rnr-label above">{$label empleado estudiante}:</div>
+  <div class="rnr-control style3">{$estudiante_value}</div>
+</div>
+{END estudiante_fieldblock}
+	{BEGIN establecimiento_educativo_fieldblock}
+<div data-fieldname="establecimiento_educativo" class="rnr-field style1 {$fielddispclass_establecimiento_educativo}">
+  <div class="rnr-label above">{$label empleado establecimiento_educativo}:</div>
+  <div class="rnr-control style3">{$establecimiento_educativo_value}</div>
+</div>
+{END establecimiento_educativo_fieldblock}
+</td>
+<td>
+	{BEGIN carrera_fieldblock}
+<div data-fieldname="carrera" class="rnr-field style1 {$fielddispclass_carrera}">
+  <div class="rnr-label above">{$label empleado carrera}:</div>
+  <div class="rnr-control style3">{$carrera_value}</div>
+</div>
+{END carrera_fieldblock}
+	{BEGIN cursos_aprobados_fieldblock}
+<div data-fieldname="cursos_aprobados" class="rnr-field style1 {$fielddispclass_cursos_aprobados}">
+  <div class="rnr-label above">{$label empleado cursos_aprobados}:</div>
+  <div class="rnr-control style3">{$cursos_aprobados_value}</div>
+</div>
+{END cursos_aprobados_fieldblock}
+	{BEGIN idetnia_fieldblock}
+<div data-fieldname="idetnia" class="rnr-field style1 {$fielddispclass_idetnia}">
+  <div class="rnr-label above">{$label empleado idetnia}:</div>
+  <div class="rnr-control style3">{$idetnia_value}</div>
+</div>
+{END idetnia_fieldblock}
+	{BEGIN idrenglon_fieldblock}
+<div data-fieldname="idrenglon" class="rnr-field style1 {$fielddispclass_idrenglon}">
+  <div class="rnr-label above">{$label empleado idrenglon}:</div>
+  <div class="rnr-control style3">{$idrenglon_value}</div>
+</div>
+{END idrenglon_fieldblock}
+	{BEGIN idjefatura_fieldblock}
+<div data-fieldname="idjefatura" class="rnr-field style1 {$fielddispclass_idjefatura}">
+  <div class="rnr-label above">{$label empleado idjefatura}:</div>
+  <div class="rnr-control style3">{$idjefatura_value}</div>
+</div>
+{END idjefatura_fieldblock}
+	{BEGIN idpuesto_funcional_fieldblock}
+<div data-fieldname="idpuesto_funcional" class="rnr-field style1 {$fielddispclass_idpuesto_funcional}">
+  <div class="rnr-label above">{$label empleado idpuesto_funcional}:</div>
+  <div class="rnr-control style3">{$idpuesto_funcional_value}</div>
+</div>
+{END idpuesto_funcional_fieldblock}
+	{BEGIN idestatus_empleado_fieldblock}
+<div data-fieldname="idestatus_empleado" class="rnr-field style1 {$fielddispclass_idestatus_empleado}">
+  <div class="rnr-label above">{$label empleado idestatus_empleado}:</div>
+  <div class="rnr-control style3">{$idestatus_empleado_value}</div>
+</div>
+{END idestatus_empleado_fieldblock}
+	{BEGIN fotografia_fieldblock}
+<div data-fieldname="fotografia" class="rnr-field style1 {$fielddispclass_fotografia}">
+  <div class="rnr-label above">{$label empleado fotografia}:</div>
+  <div class="rnr-control style3">{$fotografia_value}</div>
+</div>
+{END fotografia_fieldblock}
+</td>
+</tr>
+</table></div>
+
+
+{BEGIN viewbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-viewbuttons {$brickclass_viewbuttons}"><div class="rnr-buttons-right">
+{BEGIN prev_button}
+<a href="#" class="rnr-button {$prevbutton_class}" {$prevbutton_attrs}>&lt;&lt;&lt;</a>
+{END prev_button}
+{BEGIN next_button}
+<a href="#" class="rnr-button {$nextbutton_class}" {$nextbutton_attrs}>&gt;&gt;&gt;</a>
+{END next_button}
+</div>
+<div class="rnr-buttons-left">
+{BEGIN back_button}
+<a href="#" class="rnr-button" {$backbutton_attrs}>Volver a la lista</a>
+{END back_button}
+{BEGIN close_button}
+<a href="#" class="rnr-button" {$closebutton_attrs}>Cerrar ventana</a>
+{END close_button}
+{BEGIN edit_page_button}
+<a href="#" class="rnr-button" {$edit_page_button_attrs}>Editar</a>
+{END edit_page_button}
+</div>
+</div>{END viewbuttons}
+
+
+</div>
+{END container_fields}
+
+</div>
+
+
+</div>
+{END container_fview}
+
+</div>
+
+
+</div>
+{END container_view}
+
+</div>
+
+
+
+</div>
+{END container_all}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

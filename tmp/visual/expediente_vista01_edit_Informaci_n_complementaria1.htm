@@ -1,0 +1,161 @@
+<div {$pageattrs}>
+  {BEGIN container_tabfields}
+    <DIV {$tabfields_chiddenattr} data-pageid="{$pageid}" data-container="tabfields" class="form">
+      <DIV class="container">
+        {BEGIN idrenglon_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_idrenglon}" data-fieldname="idrenglon" data-signal-error-for="idrenglon{$id}">
+            <LABEL class="control-label" for="{$labelfor_idrenglon}">
+              {BEGIN idrenglon_label}
+                {$label expediente_vista01 idrenglon}
+              {END idrenglon_label}
+            </label>
+            <DIV class>
+              {$idrenglon_editcontrol}
+            </div>
+            <DIV class="help-block" data-helpfor="idrenglon">
+              <DIV class="text-muted">
+                {$tooltip expediente_vista01 idrenglon}
+              </div>
+            </div>
+          </div>
+        {END idrenglon_tabfieldblock}
+        {BEGIN idproveedor_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_idproveedor}" data-fieldname="idproveedor" data-signal-error-for="idproveedor{$id}">
+            <LABEL class="control-label" for="{$labelfor_idproveedor}">
+              {BEGIN idproveedor_label}
+                {$label expediente_vista01 idproveedor}
+              {END idproveedor_label}
+            </label>
+            <DIV class>
+              {$idproveedor_editcontrol}
+            </div>
+            <DIV class="help-block" data-helpfor="idproveedor">
+              <DIV class="text-muted">
+                {$tooltip expediente_vista01 idproveedor}
+              </div>
+            </div>
+          </div>
+        {END idproveedor_tabfieldblock}
+        {BEGIN idforma_pago_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_idforma_pago}" data-fieldname="idforma_pago" data-signal-error-for="idforma_pago{$id}">
+            <LABEL class="control-label" for="{$labelfor_idforma_pago}">
+              {BEGIN idforma_pago_label}
+                {$label expediente_vista01 idforma_pago}
+              {END idforma_pago_label}
+            </label>
+            <DIV class>
+              {$idforma_pago_editcontrol}
+            </div>
+            <DIV class="help-block" data-helpfor="idforma_pago">
+              <DIV class="text-muted">
+                {$tooltip expediente_vista01 idforma_pago}
+              </div>
+            </div>
+          </div>
+        {END idforma_pago_tabfieldblock}
+        {BEGIN total_renglon_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_total_renglon}" data-fieldname="total_renglon" data-signal-error-for="total_renglon{$id}">
+            <LABEL class="control-label" for="{$labelfor_total_renglon}">
+              {BEGIN total_renglon_label}
+                {$label expediente_vista01 total_renglon}
+              {END total_renglon_label}
+            </label>
+            <DIV class>
+              {$total_renglon_editcontrol}
+            </div>
+            <DIV class="help-block" data-helpfor="total_renglon">
+              <DIV class="text-muted">
+                {$tooltip expediente_vista01 total_renglon}
+              </div>
+            </div>
+          </div>
+        {END total_renglon_tabfieldblock}
+        {BEGIN factura_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_factura}" data-fieldname="factura" data-signal-error-for="factura{$id}">
+            <LABEL class="control-label" for="{$labelfor_factura}">
+              {BEGIN factura_label}
+                {$label expediente_vista01 factura}
+              {END factura_label}
+            </label>
+            <DIV class>
+              {$factura_editcontrol}
+            </div>
+            <DIV class="help-block" data-helpfor="factura">
+              <DIV class="text-muted">
+                {$tooltip expediente_vista01 factura}
+              </div>
+            </div>
+          </div>
+        {END factura_tabfieldblock}
+        {BEGIN solicitud_cheque_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_solicitud_cheque}" data-fieldname="solicitud_cheque" data-signal-error-for="solicitud_cheque{$id}">
+            <LABEL class="control-label" for="{$labelfor_solicitud_cheque}">
+              {BEGIN solicitud_cheque_label}
+                {$label expediente_vista01 solicitud_cheque}
+              {END solicitud_cheque_label}
+            </label>
+            <DIV class>
+              {$solicitud_cheque_editcontrol}
+            </div>
+            <DIV class="help-block" data-helpfor="solicitud_cheque">
+              <DIV class="text-muted">
+                {$tooltip expediente_vista01 solicitud_cheque}
+              </div>
+            </div>
+          </div>
+        {END solicitud_cheque_tabfieldblock}
+        {BEGIN observaciones_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_observaciones}" data-fieldname="observaciones" data-signal-error-for="observaciones{$id}">
+            <LABEL class="control-label" for="{$labelfor_observaciones}">
+              {BEGIN observaciones_label}
+                {$label expediente_vista01 observaciones}
+              {END observaciones_label}
+            </label>
+            <DIV class>
+              {$observaciones_editcontrol}
+            </div>
+            <DIV class="help-block" data-helpfor="observaciones">
+              <DIV class="text-muted">
+                {$tooltip expediente_vista01 observaciones}
+              </div>
+            </div>
+          </div>
+        {END observaciones_tabfieldblock}
+        {BEGIN fecha_final_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_fecha_final}" data-fieldname="fecha_final" data-signal-error-for="fecha_final{$id}">
+            <LABEL class="control-label" for="{$labelfor_fecha_final}">
+              {BEGIN fecha_final_label}
+                {$label expediente_vista01 fecha_final}
+              {END fecha_final_label}
+            </label>
+            <DIV class>
+              {$fecha_final_editcontrol}
+            </div>
+            <DIV class="help-block" data-helpfor="fecha_final">
+              <DIV class="text-muted">
+                {$tooltip expediente_vista01 fecha_final}
+              </div>
+            </div>
+          </div>
+        {END fecha_final_tabfieldblock}
+        {BEGIN finalizado_tabfieldblock}
+          <DIV class="form-group col-md-4 {$fielddispclass_finalizado}" data-fieldname="finalizado" data-signal-error-for="finalizado{$id}">
+            <LABEL class="control-label" for="{$labelfor_finalizado}">
+              {BEGIN finalizado_label}
+                {$label expediente_vista01 finalizado}
+              {END finalizado_label}
+            </label>
+            <DIV class>
+              {$finalizado_editcontrol}
+            </div>
+            <DIV class="help-block" data-helpfor="finalizado">
+              <DIV class="text-muted">
+                {$tooltip expediente_vista01 finalizado}
+              </div>
+            </div>
+          </div>
+        {END finalizado_tabfieldblock}
+      </div>
+    </div>
+  {END container_tabfields}
+</div>

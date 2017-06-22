@@ -1,0 +1,32 @@
+body.page-preview
+{
+padding-top:10px; padding-left:10px;
+}
+.page-preview .rnr-c-1,
+  .rnr-pagewrapper .page-preview .rnr-c-1,
+  .rnr-pagewrapper .rnr-pagewrapper .page-preview .rnr-c-1
+{
+margin-bottom:5px;
+}
+.page-preview .rnr-b-addtabfields2_atop,
+  .rnr-pagewrapper .page-preview .rnr-b-addtabfields2_atop,
+  .rnr-pagewrapper .rnr-pagewrapper .page-preview .rnr-b-addtabfields2_atop
+{
+white-space: nowrap;
+}
+.page-preview .rnr-b-addtabfields2_atop,
+  .rnr-pagewrapper .page-preview .rnr-b-addtabfields2_atop,
+  .rnr-pagewrapper .rnr-pagewrapper .page-preview .rnr-b-addtabfields2_atop
+{
+text-align: right;
+}
+.page-preview .rnr-b-addtabfields2_atop > *,
+  .rnr-pagewrapper .page-preview .rnr-b-addtabfields2_atop > *,
+  .rnr-pagewrapper .rnr-pagewrapper .page-preview .rnr-b-addtabfields2_atop > *
+{
+
+}
+body.page-preview .rnr-bare
+{
+padding-right: 5px;
+}

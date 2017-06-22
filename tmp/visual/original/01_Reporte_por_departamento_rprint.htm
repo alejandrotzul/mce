@@ -1,0 +1,163 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-rprint" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel 01_Reporte_por_departamento rprint}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>Página <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+
+<style>
+	td.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary {background-color:#ffffbb;}
+	td.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary {background-color:#ffe0b0;}
+
+</style>
+
+<div id="grid_block{$id}" class="rnr-report-gridblock">
+			{BEGIN grid_block}
+<table {$report_print_hiddenattr} data-pageid="{$pageid}" data-brick="report_print" class="table table-striped table-bordered rnr-b-grid rnr-gridtable" cellpadding="0" >
+<thead>
+<tr class="rnr-toprow table-header style1">
+{BEGIN 01_Reporte_por_departamento_dtable_column}
+<th >&nbsp;</th>
+{END 01_Reporte_por_departamento_dtable_column}
+
+<th>{$label 01_Reporte_por_departamento idjefatura}</th>
+<th>{$label 01_Reporte_por_departamento ultimo_estatus}</th>
+<th>{$label 01_Reporte_por_departamento idempleado}</th>
+<th>{$label 01_Reporte_por_departamento fecha_pedido}</th>
+<th>{$label 01_Reporte_por_departamento fecha_ingresocompras}</th>
+<th>{$label 01_Reporte_por_departamento fecha_entregaanalista}</th>
+<th>{$label 01_Reporte_por_departamento numero_pedido}</th>
+<th>{$label 01_Reporte_por_departamento idmodalidad_compra}</th>
+<th>{$label 01_Reporte_por_departamento idrenglon}</th>
+<th>{$label 01_Reporte_por_departamento total_renglon}</th>
+<th>{$label 01_Reporte_por_departamento idproveedor}</th>
+</tr>
+</thead>
+<tbody>
+{BEGIN grid_row}
+<!-------------------------------------  data ----------------------------------------->
+{BEGIN row_data}
+<tr class="rnr-row style1" {$rowattrs}>
+<td class="rnr-nowrap" {$rowstyle} {$recordattrs}>
+	<!-------------------------------------  begin detail links for row ----------------------------------------->
+	
+			{BEGIN dtables_link}
+		
+							
+				
+					<a {$dtables_link_attrs}  title="Mostrar detalles">
+				<span class="badge seguimiento_expediente_badge" {$seguimiento_expediente_childnumber_attr}>
+					<span class="glyphicon glyphicon-th-list"></span> 
+					<span class="{$seguimiento_expediente_cntspan_class}" >{$seguimiento_expediente_childnumber}</span>
+				</span></a>
+		{END dtables_link}
+	
+	<!-------------------------------------  end detail links for row ----------------------------------------->
+</td>
+	<td {$recordattrs}>{$idjefatura_value}</td>
+	<td {$recordattrs}>{$ultimo_estatus_value}</td>
+	<td {$recordattrs}>{$idempleado_value}</td>
+	<td {$recordattrs}>{$fecha_pedido_value}</td>
+	<td {$recordattrs}>{$fecha_ingresocompras_value}</td>
+	<td {$recordattrs}>{$fecha_entregaanalista_value}</td>
+	<td {$recordattrs}>{$numero_pedido_value}</td>
+	<td {$recordattrs}>{$idmodalidad_compra_value}</td>
+	<td {$recordattrs}>{$idrenglon_value}</td>
+	<td {$recordattrs}>{$total_renglon_value}</td>
+	<td {$recordattrs}>{$idproveedor_value}</td>
+</tr>
+{END row_data}
+{END grid_row}
+</tbody>
+</table>
+{END grid_block}
+</div>
+
+
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,504 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel expediente1 add}</h2>
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>Volver a la lista</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>Ver</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>Editar</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+			{BEGIN idproveedor_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_idproveedor}" data-fieldname="idproveedor" data-signal-error-for="idproveedor{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_idproveedor}">
+		{BEGIN idproveedor_label}{$label expediente1 idproveedor}{END idproveedor_label}
+	</label>
+	<div class="col-md-6" >
+		{$idproveedor_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="idproveedor">
+		<div class="text-muted" >
+		{$tooltip expediente1 idproveedor}
+		</div>
+	</div>
+</div>
+</div>
+{END idproveedor_fieldblock}
+
+			{BEGIN idusuario_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_idusuario}" data-fieldname="idusuario" data-signal-error-for="idusuario{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_idusuario}">
+		{BEGIN idusuario_label}{$label expediente1 idusuario}{END idusuario_label}
+	</label>
+	<div class="col-md-6" >
+		{$idusuario_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="idusuario">
+		<div class="text-muted" >
+		{$tooltip expediente1 idusuario}
+		</div>
+	</div>
+</div>
+</div>
+{END idusuario_fieldblock}
+
+			{BEGIN fecha_pedido_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_fecha_pedido}" data-fieldname="fecha_pedido" data-signal-error-for="fecha_pedido{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_fecha_pedido}">
+		{BEGIN fecha_pedido_label}{$label expediente1 fecha_pedido}{END fecha_pedido_label}
+	</label>
+	<div class="col-md-6" >
+		{$fecha_pedido_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="fecha_pedido">
+		<div class="text-muted" >
+		{$tooltip expediente1 fecha_pedido}
+		</div>
+	</div>
+</div>
+</div>
+{END fecha_pedido_fieldblock}
+
+			{BEGIN fecha_ingresocompras_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_fecha_ingresocompras}" data-fieldname="fecha_ingresocompras" data-signal-error-for="fecha_ingresocompras{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_fecha_ingresocompras}">
+		{BEGIN fecha_ingresocompras_label}{$label expediente1 fecha_ingresocompras}{END fecha_ingresocompras_label}
+	</label>
+	<div class="col-md-6" >
+		{$fecha_ingresocompras_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="fecha_ingresocompras">
+		<div class="text-muted" >
+		{$tooltip expediente1 fecha_ingresocompras}
+		</div>
+	</div>
+</div>
+</div>
+{END fecha_ingresocompras_fieldblock}
+
+			{BEGIN fecha_entregaanalista_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_fecha_entregaanalista}" data-fieldname="fecha_entregaanalista" data-signal-error-for="fecha_entregaanalista{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_fecha_entregaanalista}">
+		{BEGIN fecha_entregaanalista_label}{$label expediente1 fecha_entregaanalista}{END fecha_entregaanalista_label}
+	</label>
+	<div class="col-md-6" >
+		{$fecha_entregaanalista_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="fecha_entregaanalista">
+		<div class="text-muted" >
+		{$tooltip expediente1 fecha_entregaanalista}
+		</div>
+	</div>
+</div>
+</div>
+{END fecha_entregaanalista_fieldblock}
+
+			{BEGIN analista_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_analista}" data-fieldname="analista" data-signal-error-for="analista{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_analista}">
+		{BEGIN analista_label}{$label expediente1 analista}{END analista_label}
+	</label>
+	<div class="col-md-6" >
+		{$analista_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="analista">
+		<div class="text-muted" >
+		{$tooltip expediente1 analista}
+		</div>
+	</div>
+</div>
+</div>
+{END analista_fieldblock}
+
+			{BEGIN observaciones_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_observaciones}" data-fieldname="observaciones" data-signal-error-for="observaciones{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_observaciones}">
+		{BEGIN observaciones_label}{$label expediente1 observaciones}{END observaciones_label}
+	</label>
+	<div class="col-md-6" >
+		{$observaciones_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="observaciones">
+		<div class="text-muted" >
+		{$tooltip expediente1 observaciones}
+		</div>
+	</div>
+</div>
+</div>
+{END observaciones_fieldblock}
+
+			{BEGIN fecha_estatus_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_fecha_estatus}" data-fieldname="fecha_estatus" data-signal-error-for="fecha_estatus{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_fecha_estatus}">
+		{BEGIN fecha_estatus_label}{$label expediente1 fecha_estatus}{END fecha_estatus_label}
+	</label>
+	<div class="col-md-6" >
+		{$fecha_estatus_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="fecha_estatus">
+		<div class="text-muted" >
+		{$tooltip expediente1 fecha_estatus}
+		</div>
+	</div>
+</div>
+</div>
+{END fecha_estatus_fieldblock}
+
+			{BEGIN idforma_pago_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_idforma_pago}" data-fieldname="idforma_pago" data-signal-error-for="idforma_pago{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_idforma_pago}">
+		{BEGIN idforma_pago_label}{$label expediente1 idforma_pago}{END idforma_pago_label}
+	</label>
+	<div class="col-md-6" >
+		{$idforma_pago_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="idforma_pago">
+		<div class="text-muted" >
+		{$tooltip expediente1 idforma_pago}
+		</div>
+	</div>
+</div>
+</div>
+{END idforma_pago_fieldblock}
+
+			{BEGIN solicitud_cheque_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_solicitud_cheque}" data-fieldname="solicitud_cheque" data-signal-error-for="solicitud_cheque{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_solicitud_cheque}">
+		{BEGIN solicitud_cheque_label}{$label expediente1 solicitud_cheque}{END solicitud_cheque_label}
+	</label>
+	<div class="col-md-6" >
+		{$solicitud_cheque_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="solicitud_cheque">
+		<div class="text-muted" >
+		{$tooltip expediente1 solicitud_cheque}
+		</div>
+	</div>
+</div>
+</div>
+{END solicitud_cheque_fieldblock}
+
+			{BEGIN dias_procesados_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_dias_procesados}" data-fieldname="dias_procesados" data-signal-error-for="dias_procesados{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_dias_procesados}">
+		{BEGIN dias_procesados_label}{$label expediente1 dias_procesados}{END dias_procesados_label}
+	</label>
+	<div class="col-md-6" >
+		{$dias_procesados_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="dias_procesados">
+		<div class="text-muted" >
+		{$tooltip expediente1 dias_procesados}
+		</div>
+	</div>
+</div>
+</div>
+{END dias_procesados_fieldblock}
+
+			{BEGIN margenes_tiempo_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_margenes_tiempo}" data-fieldname="margenes_tiempo" data-signal-error-for="margenes_tiempo{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_margenes_tiempo}">
+		{BEGIN margenes_tiempo_label}{$label expediente1 margenes_tiempo}{END margenes_tiempo_label}
+	</label>
+	<div class="col-md-6" >
+		{$margenes_tiempo_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="margenes_tiempo">
+		<div class="text-muted" >
+		{$tooltip expediente1 margenes_tiempo}
+		</div>
+	</div>
+</div>
+</div>
+{END margenes_tiempo_fieldblock}
+
+			{BEGIN dias_proceso_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_dias_proceso}" data-fieldname="dias_proceso" data-signal-error-for="dias_proceso{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_dias_proceso}">
+		{BEGIN dias_proceso_label}{$label expediente1 dias_proceso}{END dias_proceso_label}
+	</label>
+	<div class="col-md-6" >
+		{$dias_proceso_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="dias_proceso">
+		<div class="text-muted" >
+		{$tooltip expediente1 dias_proceso}
+		</div>
+	</div>
+</div>
+</div>
+{END dias_proceso_fieldblock}
+
+			{BEGIN idmodalidad_compra_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_idmodalidad_compra}" data-fieldname="idmodalidad_compra" data-signal-error-for="idmodalidad_compra{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_idmodalidad_compra}">
+		{BEGIN idmodalidad_compra_label}{$label expediente1 idmodalidad_compra}{END idmodalidad_compra_label}
+	</label>
+	<div class="col-md-6" >
+		{$idmodalidad_compra_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="idmodalidad_compra">
+		<div class="text-muted" >
+		{$tooltip expediente1 idmodalidad_compra}
+		</div>
+	</div>
+</div>
+</div>
+{END idmodalidad_compra_fieldblock}
+
+			{BEGIN idestatus_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_idestatus}" data-fieldname="idestatus" data-signal-error-for="idestatus{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_idestatus}">
+		{BEGIN idestatus_label}{$label expediente1 idestatus}{END idestatus_label}
+	</label>
+	<div class="col-md-6" >
+		{$idestatus_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="idestatus">
+		<div class="text-muted" >
+		{$tooltip expediente1 idestatus}
+		</div>
+	</div>
+</div>
+</div>
+{END idestatus_fieldblock}
+
+			{BEGIN iddireccion_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_iddireccion}" data-fieldname="iddireccion" data-signal-error-for="iddireccion{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_iddireccion}">
+		{BEGIN iddireccion_label}{$label expediente1 iddireccion}{END iddireccion_label}
+	</label>
+	<div class="col-md-6" >
+		{$iddireccion_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="iddireccion">
+		<div class="text-muted" >
+		{$tooltip expediente1 iddireccion}
+		</div>
+	</div>
+</div>
+</div>
+{END iddireccion_fieldblock}
+
+			{BEGIN idarea_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_idarea}" data-fieldname="idarea" data-signal-error-for="idarea{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_idarea}">
+		{BEGIN idarea_label}{$label expediente1 idarea}{END idarea_label}
+	</label>
+	<div class="col-md-6" >
+		{$idarea_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="idarea">
+		<div class="text-muted" >
+		{$tooltip expediente1 idarea}
+		</div>
+	</div>
+</div>
+</div>
+{END idarea_fieldblock}
+
+			{BEGIN numero_referencia_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_numero_referencia}" data-fieldname="numero_referencia" data-signal-error-for="numero_referencia{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_numero_referencia}">
+		{BEGIN numero_referencia_label}{$label expediente1 numero_referencia}{END numero_referencia_label}
+	</label>
+	<div class="col-md-6" >
+		{$numero_referencia_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="numero_referencia">
+		<div class="text-muted" >
+		{$tooltip expediente1 numero_referencia}
+		</div>
+	</div>
+</div>
+</div>
+{END numero_referencia_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>Guardar</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">Reiniciar</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">Volver a la lista</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">Cancelar</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

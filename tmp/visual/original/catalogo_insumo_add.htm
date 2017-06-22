@@ -1,0 +1,324 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel catalogo_insumo add}</h2>
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>Volver a la lista</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>Ver</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>Editar</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+			{BEGIN codigo_onu_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_codigo_onu}" data-fieldname="codigo_onu" data-signal-error-for="codigo_onu{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_codigo_onu}">
+		{BEGIN codigo_onu_label}{$label catalogo_insumo codigo_onu}{END codigo_onu_label}
+	</label>
+	<div class="col-md-6" >
+		{$codigo_onu_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="codigo_onu">
+		<div class="text-muted" >
+		{$tooltip catalogo_insumo codigo_onu}
+		</div>
+	</div>
+</div>
+</div>
+{END codigo_onu_fieldblock}
+
+			{BEGIN renglon_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_renglon}" data-fieldname="renglon" data-signal-error-for="renglon{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_renglon}">
+		{BEGIN renglon_label}{$label catalogo_insumo renglon}{END renglon_label}
+	</label>
+	<div class="col-md-6" >
+		{$renglon_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="renglon">
+		<div class="text-muted" >
+		{$tooltip catalogo_insumo renglon}
+		</div>
+	</div>
+</div>
+</div>
+{END renglon_fieldblock}
+
+			{BEGIN codigo_insumo_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_codigo_insumo}" data-fieldname="codigo_insumo" data-signal-error-for="codigo_insumo{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_codigo_insumo}">
+		{BEGIN codigo_insumo_label}{$label catalogo_insumo codigo_insumo}{END codigo_insumo_label}
+	</label>
+	<div class="col-md-6" >
+		{$codigo_insumo_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="codigo_insumo">
+		<div class="text-muted" >
+		{$tooltip catalogo_insumo codigo_insumo}
+		</div>
+	</div>
+</div>
+</div>
+{END codigo_insumo_fieldblock}
+
+			{BEGIN nombre_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_nombre}" data-fieldname="nombre" data-signal-error-for="nombre{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_nombre}">
+		{BEGIN nombre_label}{$label catalogo_insumo nombre}{END nombre_label}
+	</label>
+	<div class="col-md-6" >
+		{$nombre_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="nombre">
+		<div class="text-muted" >
+		{$tooltip catalogo_insumo nombre}
+		</div>
+	</div>
+</div>
+</div>
+{END nombre_fieldblock}
+
+			{BEGIN caracteristicas_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_caracteristicas}" data-fieldname="caracteristicas" data-signal-error-for="caracteristicas{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_caracteristicas}">
+		{BEGIN caracteristicas_label}{$label catalogo_insumo caracteristicas}{END caracteristicas_label}
+	</label>
+	<div class="col-md-6" >
+		{$caracteristicas_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="caracteristicas">
+		<div class="text-muted" >
+		{$tooltip catalogo_insumo caracteristicas}
+		</div>
+	</div>
+</div>
+</div>
+{END caracteristicas_fieldblock}
+
+			{BEGIN presentacion_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_presentacion}" data-fieldname="presentacion" data-signal-error-for="presentacion{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_presentacion}">
+		{BEGIN presentacion_label}{$label catalogo_insumo presentacion}{END presentacion_label}
+	</label>
+	<div class="col-md-6" >
+		{$presentacion_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="presentacion">
+		<div class="text-muted" >
+		{$tooltip catalogo_insumo presentacion}
+		</div>
+	</div>
+</div>
+</div>
+{END presentacion_fieldblock}
+
+			{BEGIN cantidad_unidad_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_cantidad_unidad}" data-fieldname="cantidad_unidad" data-signal-error-for="cantidad_unidad{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_cantidad_unidad}">
+		{BEGIN cantidad_unidad_label}{$label catalogo_insumo cantidad_unidad}{END cantidad_unidad_label}
+	</label>
+	<div class="col-md-6" >
+		{$cantidad_unidad_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="cantidad_unidad">
+		<div class="text-muted" >
+		{$tooltip catalogo_insumo cantidad_unidad}
+		</div>
+	</div>
+</div>
+</div>
+{END cantidad_unidad_fieldblock}
+
+			{BEGIN codigo_presentacion_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_codigo_presentacion}" data-fieldname="codigo_presentacion" data-signal-error-for="codigo_presentacion{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_codigo_presentacion}">
+		{BEGIN codigo_presentacion_label}{$label catalogo_insumo codigo_presentacion}{END codigo_presentacion_label}
+	</label>
+	<div class="col-md-6" >
+		{$codigo_presentacion_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="codigo_presentacion">
+		<div class="text-muted" >
+		{$tooltip catalogo_insumo codigo_presentacion}
+		</div>
+	</div>
+</div>
+</div>
+{END codigo_presentacion_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>Guardar</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">Reiniciar</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">Volver a la lista</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">Cancelar</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

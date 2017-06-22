@@ -1,0 +1,1138 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-list" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_top}
+<div {$top_chiddenattr} data-pageid="{$pageid}" data-container="top" class="container    "> 
+
+
+{BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default ">					
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-header   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-hidden-xs bs-navcontrolled" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main horizontal}
+
+{END menu_block}
+
+
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN more_list}
+<div {$morebutton_hiddenattr} data-pageid="{$pageid}" data-brick="morebutton" class="btn-group bs-navsection">
+	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<span class="glyphicon glyphicon-cog"></span>
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu">
+		
+				{BEGIN exportselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$exportselectedlink_attrs} {$exportselectedlink_span} >Export selected</a></li>
+		{END exportselected_link}
+		
+				{BEGIN deleteselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>Borrar articulos seleccionados</a></li>
+		{END deleteselected_link}
+		
+				<li role="separator" class="divider"></li>	
+
+				{BEGIN asearch_link}
+		<li><a href="empleado_search.php" {$advsearchlink_attrs}>Búsqueda avanzada</a></li>
+		{END asearch_link}
+
+				{BEGIN searchPanelTopButtons}
+		<li><a href=# id="showOptPanel{$id}">Mostrar panel de búsqueda</a></li>
+		{END searchPanelTopButtons}	
+		
+				
+				<li role="separator" class="divider"></li>	
+		
+				
+				{BEGIN export_link}
+		<li><a target="_blank" href="empleado_export.php"  {$exportlink_attrs}>Exportar resultados</a></li>
+		{END export_link}
+
+				{BEGIN import_link}
+		<li><a href="empleado_import.php?{$crosstable_attrs}"  {$importlink_attrs}>Importar</a></li>
+		{END import_link}
+
+				
+	</ul>  
+</div>
+
+{END more_list}
+
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>Conectar</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+	<span class="dropdown">
+		<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span>	{$username}</button>
+		<ul class="dropdown-menu">
+	{BEGIN logoutbutton}
+			<li><a href="#" {$logoutlink_attrs}>Desconectarse</a></li>
+	{END logoutbutton}
+
+	{BEGIN adminarea_link}
+	<li><a href="admin_rights_list.php" {$adminarealink_attrs}>Area Admin</a></li>
+	{END adminarea_link}
+
+
+
+	{BEGIN changepwd_link}
+	<li><a href="#" {$changepwdlink_attrs}>Cambiar contraseña</a></li>
+	{END changepwd_link}
+		</ul></span>{END loggedas_message}</span>
+
+
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+
+
+
+
+{BEGIN container_more_1}
+<div {$more_1_chiddenattr} data-pageid="{$pageid}" data-container="more_1" class=" navbar-right navbar-form   "> 
+
+{BEGIN searchform_block}
+<span {$search_hiddenattr} data-pageid="{$pageid}" data-brick="search" class="form-group">
+
+ <div  class="input-group">
+{BEGIN searchform_text}
+	<input type="search" class="form-control" {$searchfor_attrs} size="25">
+{END searchform_text}
+	<span class="input-group-btn">
+	{BEGIN searchform_showall}
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Mostrar todo">
+			<span class="glyphicon glyphicon-remove"></span>
+		</button>
+	{END searchform_showall}
+	{BEGIN searchform_search}
+	<button {$searchbutton_attrs} class="btn btn-primary" >
+		<span class="glyphicon glyphicon-search"></span>
+	</button>
+	{END searchform_search}
+	</span>
+</div>
+		
+</span>
+{END searchform_block}
+
+
+
+</div>
+{END container_more_1}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+
+
+
+
+
+
+{BEGIN container_breadcrumbs}
+<div {$breadcrumbs_chiddenattr} data-pageid="{$pageid}" data-container="breadcrumbs" class="    "> 
+
+
+
+
+{BEGIN container_bc}
+<div {$bc_chiddenattr} data-pageid="{$pageid}" data-container="bc" class="    "> 
+
+{BEGIN breadcrumbs}
+<ol class="breadcrumb">
+<li ><a href="{$home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumbs}
+
+
+
+</div>
+{END container_bc}
+
+
+
+
+
+
+</div>
+{END container_breadcrumbs}
+
+
+
+
+
+
+
+
+{BEGIN container_masterinfo}
+<div {$masterinfo_chiddenattr} data-pageid="{$pageid}" data-container="masterinfo" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+	{$master_heading}
+	</div>
+	<div class="panel-body">
+{$showmasterfile}
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_masterinfo}
+
+
+
+
+
+
+
+
+{BEGIN container_messagerow}
+<div {$messagerow_chiddenattr} data-pageid="{$pageid}" data-container="messagerow" class="row rnr-rowcontainer ">
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-12 "> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">{$message}</div>
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+</div>{END container_messagerow}
+
+
+
+
+
+
+
+
+{BEGIN container_gridcontrols}
+<div {$gridcontrols_chiddenattr} data-pageid="{$pageid}" data-container="gridcontrols" class="row rnr-rowcontainer bs-navcontrolled bs-hidden-xs">
+
+
+
+
+{BEGIN container_add_delete}
+<div {$add_delete_chiddenattr} data-pageid="{$pageid}" data-container="add_delete" class=" bottom-margin  col-md-6 "> 
+
+{BEGIN newrecord_controls_block}
+		{BEGIN add_link}
+		<a {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$addlink_attrs}>Añadir nuevo</a>
+	{END add_link}
+
+	
+{END newrecord_controls_block}
+
+
+{BEGIN record_controls_block}
+<span {$recordcontrol_hiddenattr} data-pageid="{$pageid}" data-brick="recordcontrol">
+		{BEGIN deleteselected_link}
+	<button type="button" class="btn btn-default bs-invisible-button" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>Borrar artículos seleccionados</button>
+	{END deleteselected_link}
+
+	</span>
+
+{END record_controls_block}
+
+
+
+</div>
+{END container_add_delete}
+
+
+
+
+
+
+
+
+{BEGIN container_gridinfo}
+<div {$gridinfo_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo" class=" bottom-margin text-right col-md-6 "> 
+
+{BEGIN details_found}
+<span {$details_found_hiddenattr} data-pageid="{$pageid}" data-brick="details_found" class="form-inline form-inline-always">
+	Displaying <span>{$firstrecord}</span> - <span>{$lastrecord}</span> of <span>{$records_found}</span>
+	<span>
+	{BEGIN recordspp_block}
+			{$recsPerPage}
+	{END recordspp_block}
+	</span>
+</span>
+{END details_found}
+
+
+{BEGIN print_friendly}
+<span {$printpanel_hiddenattr} data-pageid="{$pageid}" data-brick="printpanel" class="bs-printpanel" id="printpanelblock{$id}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="Página para imprimir">
+		<span class="glyphicon glyphicon-print" ></span>
+		<span class="caret"></span>
+    </button>
+	<ul class="dropdown-menu pull-right" >
+		<li>
+			<div class="container-fluid" id="print_friendly_scope{$id}">
+				<div class="row">
+					<div class="col-md-4">Alcance:</div>
+										{BEGIN print_friendly_all}
+					<div class="col-md-8">
+						<label for="printAll{$id}">
+							<input type="radio" id="printAll{$id}" data-href="empleado_print.php?all=1&amp;{$crosstable_attrs}" name="printScope">
+							Imprimir todas la páginas
+						</label>
+					</div>
+					{END print_friendly_all}
+				</div>
+				<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printPage{$id}">
+							<input type="radio" id="printPage{$id}" data-href="empleado_print.php?{$crosstable_attrs}" name="printScope" checked>
+							Imprimir está página
+						</label>
+					</div>
+				</div>
+								<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printSelection{$id}" style="color: gray;">
+							<input type="radio" id="printSelection{$id}" name="printScope" disabled="disabled">
+							Imprimir selección
+						</label>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+
+				<li>			
+		{BEGIN print_details}
+			<div class="rnr-printdetails">
+				<label for="printDetailsToggler{$id}">
+					<input type="checkbox" id="printDetailsToggler{$id}">
+					Imprimir detalles
+				</label>
+				<div class="rnr-printdetailstables"  id="printdetailstables{$id}" style="display:none;">
+					{BEGIN print_details_detalle_idioma}
+						
+							<div class="rnr-printdetialstable">
+								<label for="printDetailsdetalle_idioma{$id}">
+									<input type="checkbox" value="detalle_idioma" id="printDetailsdetalle_idioma{$id}" checked>
+									Idioma
+								</label>
+							</div>
+					{END print_details_detalle_idioma}
+					{BEGIN print_details_detalle_direcciondomicilio}
+						
+							<div class="rnr-printdetialstable">
+								<label for="printDetailsdetalle_direcciondomicilio{$id}">
+									<input type="checkbox" value="detalle_direcciondomicilio" id="printDetailsdetalle_direcciondomicilio{$id}" checked>
+									Dirección
+								</label>
+							</div>
+					{END print_details_detalle_direcciondomicilio}
+					{BEGIN print_details_detalle_familia}
+						
+							<div class="rnr-printdetialstable">
+								<label for="printDetailsdetalle_familia{$id}">
+									<input type="checkbox" value="detalle_familia" id="printDetailsdetalle_familia{$id}" checked>
+									Familia
+								</label>
+							</div>
+					{END print_details_detalle_familia}
+					{BEGIN print_details_detalle_estudio}
+						
+							<div class="rnr-printdetialstable">
+								<label for="printDetailsdetalle_estudio{$id}">
+									<input type="checkbox" value="detalle_estudio" id="printDetailsdetalle_estudio{$id}" checked>
+									Estudio
+								</label>
+							</div>
+					{END print_details_detalle_estudio}
+					{BEGIN print_details_usuario}
+						
+							<div class="rnr-printdetialstable">
+								<label for="printDetailsusuario{$id}">
+									<input type="checkbox" value="usuario" id="printDetailsusuario{$id}" checked>
+									Usuario
+								</label>
+							</div>
+					{END print_details_usuario}
+					{BEGIN print_details_detalle_antecedentelaboral}
+						
+							<div class="rnr-printdetialstable">
+								<label for="printDetailsdetalle_antecedentelaboral{$id}">
+									<input type="checkbox" value="detalle_antecedentelaboral" id="printDetailsdetalle_antecedentelaboral{$id}" checked>
+									Experiencia laboral
+								</label>
+							</div>
+					{END print_details_detalle_antecedentelaboral}
+				</div>
+			</div>
+		{END print_details}
+		</li>
+		<li class="divider" role="separator"></li>
+
+				<li>	
+			<div class="rnr-printdetails">
+				<label for="printPerPage{$id}">
+											Resultados por página:
+				</label>
+				<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+		<li class="rnr-printbutton">				
+			<button type="button" class="btn btn-primary" id="print_friendly_button{$id}" >Imprimir</button>			
+		</li>
+	</ul>	
+</span>
+
+{END print_friendly}
+
+
+
+</div>
+{END container_gridinfo}
+
+
+
+
+
+
+</div>{END container_gridcontrols}
+
+
+
+
+
+
+</div>
+{END container_top}
+
+
+		</div>
+		<div class="bs-middle bs-centered">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+
+{BEGIN container_filt}
+<div {$filt_chiddenattr} data-pageid="{$pageid}" data-container="filt" class="    "> 
+
+{BEGIN searchPanel}
+<div {$searchpanel_hiddenattr} data-pageid="{$pageid}" data-brick="searchpanel" class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} >
+	<!-- Search panel content -->
+	
+	<div class="panel-heading">
+		<div class="btn-group" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Buscar en
+			<span class="caret"></span>
+			</button>
+		</div>
+
+		
+		<div class="btn-group searchpanel-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"> 
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Mostrar opciones</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>todas las condiciones</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>algunas condiciones</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>esconder</a></li>
+			</ul>
+		</div>
+	
+		
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+
+
+	</div>
+	
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary" id="searchButton{$id}" {$searchbutton_attrs}>Buscar</button>
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs}>Mostrar todo</button>
+	</div>
+</div>
+
+
+{END searchPanel}
+
+
+
+
+</div>
+{END container_filt}
+
+
+			</div>
+			<div class="bs-center">
+				
+
+{BEGIN container_grid}
+<div {$grid_chiddenattr} data-pageid="{$pageid}" data-container="grid" class="    "> 
+
+{BEGIN grid_block}
+	<style>
+	.bs-gridcell[data-field=idempleado]:before {
+		content: "{$label empleado idempleado}";
+	}
+	.bs-gridcell[data-field=cui]:before {
+		content: "{$label empleado cui}";
+	}
+	.bs-gridcell[data-field=primer_nombre]:before {
+		content: "{$label empleado primer_nombre}";
+	}
+	.bs-gridcell[data-field=segundo_nombre]:before {
+		content: "{$label empleado segundo_nombre}";
+	}
+	.bs-gridcell[data-field=tercer_nombre]:before {
+		content: "{$label empleado tercer_nombre}";
+	}
+	.bs-gridcell[data-field=primer_apellido]:before {
+		content: "{$label empleado primer_apellido}";
+	}
+	.bs-gridcell[data-field=segundo_apellido]:before {
+		content: "{$label empleado segundo_apellido}";
+	}
+	.bs-gridcell[data-field=apellido_casada]:before {
+		content: "{$label empleado apellido_casada}";
+	}
+	.bs-gridcell[data-field=idjefatura]:before {
+		content: "{$label empleado idjefatura}";
+	}
+	.bs-gridcell[data-field=idpuesto_funcional]:before {
+		content: "{$label empleado idpuesto_funcional}";
+	}
+	.bs-gridcell[data-field=email]:before {
+		content: "{$label empleado email}";
+	}
+	.bs-gridcell[data-field=idrenglon]:before {
+		content: "{$label empleado idrenglon}";
+	}
+	.bs-gridcell[data-field=idgenero]:before {
+		content: "{$label empleado idgenero}";
+	}
+	.bs-gridcell[data-field=idtipo_sangre]:before {
+		content: "{$label empleado idtipo_sangre}";
+	}
+	.bs-gridcell[data-field=nit]:before {
+		content: "{$label empleado nit}";
+	}
+	.bs-gridcell[data-field=igss]:before {
+		content: "{$label empleado igss}";
+	}
+	.bs-gridcell[data-field=fecha_ingreso]:before {
+		content: "{$label empleado fecha_ingreso}";
+	}
+	.bs-gridcell[data-field=cuenta_bancaria]:before {
+		content: "{$label empleado cuenta_bancaria}";
+	}
+	.bs-gridcell[data-field=celular_1]:before {
+		content: "{$label empleado celular_1}";
+	}
+	.bs-gridcell[data-field=celular_2]:before {
+		content: "{$label empleado celular_2}";
+	}
+	.bs-gridcell[data-field=celular_3]:before {
+		content: "{$label empleado celular_3}";
+	}
+	.bs-gridcell[data-field=telefono_1]:before {
+		content: "{$label empleado telefono_1}";
+	}
+	.bs-gridcell[data-field=telefono_2]:before {
+		content: "{$label empleado telefono_2}";
+	}
+	.bs-gridcell[data-field=telefono_3]:before {
+		content: "{$label empleado telefono_3}";
+	}
+	.bs-gridcell[data-field=emergencia_persona]:before {
+		content: "{$label empleado emergencia_persona}";
+	}
+	.bs-gridcell[data-field=emergencia_telefono]:before {
+		content: "{$label empleado emergencia_telefono}";
+	}
+	.bs-gridcell[data-field=idestado_civil]:before {
+		content: "{$label empleado idestado_civil}";
+	}
+	.bs-gridcell[data-field=fecha_nacimiento]:before {
+		content: "{$label empleado fecha_nacimiento}";
+	}
+	.bs-gridcell[data-field=idestatus_empleado]:before {
+		content: "{$label empleado idestatus_empleado}";
+	}
+	.bs-gridcell[data-field=fotografia]:before {
+		content: "{$label empleado fotografia}";
+	}
+	.bs-gridcell[data-field=idetnia]:before {
+		content: "{$label empleado idetnia}";
+	}
+	.bs-gridcell[data-field=cui_observacion]:before {
+		content: "{$label empleado cui_observacion}";
+	}
+	.bs-gridcell[data-field=estado_civilobservacion]:before {
+		content: "{$label empleado estado_civilobservacion}";
+	}
+	.bs-gridcell[data-field=edad]:before {
+		content: "{$label empleado edad}";
+	}
+</style>
+<table {$grid_hiddenattr} data-pageid="{$pageid}" data-brick="grid" class="table {$grid_classes} bs-flexgrid rnr-b-grid rnr-gridtable" cellpadding="0" >
+	<thead>
+										{BEGIN grid_header}
+								<tr class="rnr-toprow {$gridHeader_class}" >
+									{BEGIN record_header}
+									{BEGIN listIcons_column}
+									<th iEditCont="all">&nbsp;</th>
+									{END listIcons_column}	
+
+																		{BEGIN checkbox_column}
+									<th class="">
+										<input type="checkbox" {$checkboxheader_attrs}>
+									</th>
+									{END checkbox_column}
+
+																		{BEGIN empleado_dtable_column}
+									<th >&nbsp;</th>
+									{END empleado_dtable_column}
+									
+									{BEGIN fotografia_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$fotografia_class}">
+									{BEGIN fotografia_fieldheader}
+																				<span {$fotografia_orderlinkattrs}>
+											{$label empleado fotografia}
+										</span>
+									{END fotografia_fieldheader}
+									</th>
+									{END fotografia_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN edad_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$edad_class}">
+									{BEGIN edad_fieldheader}
+																				<span {$edad_orderlinkattrs}>
+											{$label empleado edad}
+										</span>
+									{END edad_fieldheader}
+									</th>
+									{END edad_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN primer_nombre_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$primer_nombre_class}">
+									{BEGIN primer_nombre_fieldheader}
+																				<span {$primer_nombre_orderlinkattrs}>
+											{$label empleado primer_nombre}
+										</span>
+									{END primer_nombre_fieldheader}
+									</th>
+									{END primer_nombre_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN segundo_nombre_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$segundo_nombre_class}">
+									{BEGIN segundo_nombre_fieldheader}
+																				<span {$segundo_nombre_orderlinkattrs}>
+											{$label empleado segundo_nombre}
+										</span>
+									{END segundo_nombre_fieldheader}
+									</th>
+									{END segundo_nombre_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN tercer_nombre_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$tercer_nombre_class}">
+									{BEGIN tercer_nombre_fieldheader}
+																				<span {$tercer_nombre_orderlinkattrs}>
+											{$label empleado tercer_nombre}
+										</span>
+									{END tercer_nombre_fieldheader}
+									</th>
+									{END tercer_nombre_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN primer_apellido_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$primer_apellido_class}">
+									{BEGIN primer_apellido_fieldheader}
+																				<span {$primer_apellido_orderlinkattrs}>
+											{$label empleado primer_apellido}
+										</span>
+									{END primer_apellido_fieldheader}
+									</th>
+									{END primer_apellido_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN segundo_apellido_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$segundo_apellido_class}">
+									{BEGIN segundo_apellido_fieldheader}
+																				<span {$segundo_apellido_orderlinkattrs}>
+											{$label empleado segundo_apellido}
+										</span>
+									{END segundo_apellido_fieldheader}
+									</th>
+									{END segundo_apellido_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN apellido_casada_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$apellido_casada_class}">
+									{BEGIN apellido_casada_fieldheader}
+																				<span {$apellido_casada_orderlinkattrs}>
+											{$label empleado apellido_casada}
+										</span>
+									{END apellido_casada_fieldheader}
+									</th>
+									{END apellido_casada_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN cui_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$cui_class}">
+									{BEGIN cui_fieldheader}
+																				<span {$cui_orderlinkattrs}>
+											{$label empleado cui}
+										</span>
+									{END cui_fieldheader}
+									</th>
+									{END cui_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN email_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$email_class}">
+									{BEGIN email_fieldheader}
+																				<span {$email_orderlinkattrs}>
+											{$label empleado email}
+										</span>
+									{END email_fieldheader}
+									</th>
+									{END email_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN celular_1_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$celular_1_class}">
+									{BEGIN celular_1_fieldheader}
+																				<span {$celular_1_orderlinkattrs}>
+											{$label empleado celular_1}
+										</span>
+									{END celular_1_fieldheader}
+									</th>
+									{END celular_1_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN telefono_1_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$telefono_1_class}">
+									{BEGIN telefono_1_fieldheader}
+																				<span {$telefono_1_orderlinkattrs}>
+											{$label empleado telefono_1}
+										</span>
+									{END telefono_1_fieldheader}
+									</th>
+									{END telefono_1_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN idjefatura_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$idjefatura_class}">
+									{BEGIN idjefatura_fieldheader}
+																				<span {$idjefatura_orderlinkattrs}>
+											{$label empleado idjefatura}
+										</span>
+									{END idjefatura_fieldheader}
+									</th>
+									{END idjefatura_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN idpuesto_funcional_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$idpuesto_funcional_class}">
+									{BEGIN idpuesto_funcional_fieldheader}
+																				<span {$idpuesto_funcional_orderlinkattrs}>
+											{$label empleado idpuesto_funcional}
+										</span>
+									{END idpuesto_funcional_fieldheader}
+									</th>
+									{END idpuesto_funcional_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN endrecordheader_block}
+									<th class="rnr-cs">&nbsp;</th>
+									
+									{END endrecordheader_block}
+									
+									{END record_header}
+									
+								</tr>
+								{END grid_header}
+
+	</thead>
+	<tbody>	
+		{BEGIN grid_row}
+<tr class="{$rowclass} bs-gridrow" {$rowattrs} {$rowstyle}>
+	{BEGIN grid_record}
+	{BEGIN listIcons_column}
+	<td class="bs-gridicons" iEditCont="all" {$rowstyle} {$recordattrs}>
+		{BEGIN edit_column}
+	{BEGIN edit_link}
+			<a class="glyphicon glyphicon-pencil" {$editlink_attrs} title="Editar"></a>
+	{END edit_link}
+	{END edit_column}
+
+	
+	
+		{BEGIN view_column}
+	{BEGIN view_link}
+			<a class="glyphicon glyphicon-search" {$viewlink_attrs} title="Ver"></a>
+	{END view_link}
+	{END view_column}
+	</td>	
+	{END listIcons_column}	
+
+		{BEGIN checkbox_column}
+	<td  iEditCont="checkBox" class="bs-gridcheckbox" {$rowstyle} {$recordattrs}>
+	{BEGIN checkbox}
+	<input type="checkbox" {$checkbox_attrs}>
+	{END checkbox}
+	</td>
+	{END checkbox_column}
+
+		{BEGIN empleado_dtable_column}
+	<td class="rnr-nowrap bs-griddetails" {$rowstyle} {$recordattrs}>
+	
+			{BEGIN dtables_link}
+		
+							
+				
+							
+				
+							
+				
+							
+				
+										
+				
+				<a {$dtables_link_attrs} class="glyphicon glyphicon-th-list" title="Mostrar detalles"></a>
+								{BEGIN detalle_idioma_childcount}
+				<a {$detalle_idioma_link_attrs} class="{$detalle_idioma_dlink_class}" title="Idioma">
+					<span class="details-badge badge detalle_idioma_badge" {$detalle_idioma_childnumber_attr}>
+						{$detalle_idioma_childnumber}
+					</span></a>
+				{END detalle_idioma_childcount}
+								{BEGIN detalle_direcciondomicilio_childcount}
+				<a {$detalle_direcciondomicilio_link_attrs} class="{$detalle_direcciondomicilio_dlink_class}" title="Dirección">
+					<span class="details-badge badge detalle_direcciondomicilio_badge" {$detalle_direcciondomicilio_childnumber_attr}>
+						{$detalle_direcciondomicilio_childnumber}
+					</span></a>
+				{END detalle_direcciondomicilio_childcount}
+								{BEGIN detalle_familia_childcount}
+				<a {$detalle_familia_link_attrs} class="{$detalle_familia_dlink_class}" title="Familia">
+					<span class="details-badge badge detalle_familia_badge" {$detalle_familia_childnumber_attr}>
+						{$detalle_familia_childnumber}
+					</span></a>
+				{END detalle_familia_childcount}
+								{BEGIN detalle_estudio_childcount}
+				<a {$detalle_estudio_link_attrs} class="{$detalle_estudio_dlink_class}" title="Estudio">
+					<span class="details-badge badge detalle_estudio_badge" {$detalle_estudio_childnumber_attr}>
+						{$detalle_estudio_childnumber}
+					</span></a>
+				{END detalle_estudio_childcount}
+												{BEGIN detalle_antecedentelaboral_childcount}
+				<a {$detalle_antecedentelaboral_link_attrs} class="{$detalle_antecedentelaboral_dlink_class}" title="Experiencia laboral">
+					<span class="details-badge badge detalle_antecedentelaboral_badge" {$detalle_antecedentelaboral_childnumber_attr}>
+						{$detalle_antecedentelaboral_childnumber}
+					</span></a>
+				{END detalle_antecedentelaboral_childcount}
+		{END dtables_link}
+	
+	
+	</td>
+	{END empleado_dtable_column}
+
+
+	{BEGIN fotografia_fieldcolumn}
+	<td class="bs-gridcell {$fotografia_class}"  data-field=fotografia {$rowstyle} {$recordattrs}>
+		{$fotografia_value}
+	</td>
+{END fotografia_fieldcolumn}
+
+
+	{BEGIN edad_fieldcolumn}
+	<td class="bs-gridcell {$edad_class}"  data-field=edad {$rowstyle} {$recordattrs}>
+		{$edad_value}
+	</td>
+{END edad_fieldcolumn}
+
+
+	{BEGIN primer_nombre_fieldcolumn}
+	<td class="bs-gridcell {$primer_nombre_class}"  data-field=primer_nombre {$rowstyle} {$recordattrs}>
+		{$primer_nombre_value}
+	</td>
+{END primer_nombre_fieldcolumn}
+
+
+	{BEGIN segundo_nombre_fieldcolumn}
+	<td class="bs-gridcell {$segundo_nombre_class}"  data-field=segundo_nombre {$rowstyle} {$recordattrs}>
+		{$segundo_nombre_value}
+	</td>
+{END segundo_nombre_fieldcolumn}
+
+
+	{BEGIN tercer_nombre_fieldcolumn}
+	<td class="bs-gridcell {$tercer_nombre_class}"  data-field=tercer_nombre {$rowstyle} {$recordattrs}>
+		{$tercer_nombre_value}
+	</td>
+{END tercer_nombre_fieldcolumn}
+
+
+	{BEGIN primer_apellido_fieldcolumn}
+	<td class="bs-gridcell {$primer_apellido_class}"  data-field=primer_apellido {$rowstyle} {$recordattrs}>
+		{$primer_apellido_value}
+	</td>
+{END primer_apellido_fieldcolumn}
+
+
+	{BEGIN segundo_apellido_fieldcolumn}
+	<td class="bs-gridcell {$segundo_apellido_class}"  data-field=segundo_apellido {$rowstyle} {$recordattrs}>
+		{$segundo_apellido_value}
+	</td>
+{END segundo_apellido_fieldcolumn}
+
+
+	{BEGIN apellido_casada_fieldcolumn}
+	<td class="bs-gridcell {$apellido_casada_class}"  data-field=apellido_casada {$rowstyle} {$recordattrs}>
+		{$apellido_casada_value}
+	</td>
+{END apellido_casada_fieldcolumn}
+
+
+	{BEGIN cui_fieldcolumn}
+	<td class="bs-gridcell {$cui_class}"  data-field=cui {$rowstyle} {$recordattrs}>
+		{$cui_value}
+	</td>
+{END cui_fieldcolumn}
+
+
+	{BEGIN email_fieldcolumn}
+	<td class="bs-gridcell {$email_class}"  data-field=email {$rowstyle} {$recordattrs}>
+		{$email_value}
+	</td>
+{END email_fieldcolumn}
+
+
+	{BEGIN celular_1_fieldcolumn}
+	<td class="bs-gridcell {$celular_1_class}"  data-field=celular_1 {$rowstyle} {$recordattrs}>
+		{$celular_1_value}
+	</td>
+{END celular_1_fieldcolumn}
+
+
+	{BEGIN telefono_1_fieldcolumn}
+	<td class="bs-gridcell {$telefono_1_class}"  data-field=telefono_1 {$rowstyle} {$recordattrs}>
+		{$telefono_1_value}
+	</td>
+{END telefono_1_fieldcolumn}
+
+
+	{BEGIN idjefatura_fieldcolumn}
+	<td class="bs-gridcell {$idjefatura_class}"  data-field=idjefatura {$rowstyle} {$recordattrs}>
+		{$idjefatura_value}
+	</td>
+{END idjefatura_fieldcolumn}
+
+
+	{BEGIN idpuesto_funcional_fieldcolumn}
+	<td class="bs-gridcell {$idpuesto_funcional_class}"  data-field=idpuesto_funcional {$rowstyle} {$recordattrs}>
+		{$idpuesto_funcional_value}
+	</td>
+{END idpuesto_funcional_fieldcolumn}
+
+	{BEGIN endrecord_block}
+	<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+	{END endrecord_block}
+									
+	{END grid_record}
+
+</tr>
+{END grid_row}
+	</tbody>
+	<tfoot>
+										
+	</tfoot>
+</table>
+
+
+
+{END grid_block}
+
+
+
+</div>
+{END container_grid}
+
+
+
+{BEGIN container_pagination}
+<div {$pagination_chiddenattr} data-pageid="{$pageid}" data-container="pagination" class="  text-center col-md-12 "> 
+
+{BEGIN pagination_block}
+<div {$pagination_hiddenattr} data-pageid="{$pageid}" data-brick="pagination">
+{$pagination}
+</div>
+{END pagination_block}
+
+
+
+</div>
+{END container_pagination}
+
+
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

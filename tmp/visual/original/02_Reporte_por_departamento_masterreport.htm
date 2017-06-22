@@ -1,0 +1,115 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><span>{$pagetitlelabel 02_Reporte_por_departamento masterreport}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=jefatura]:before {
+		content: "{$label 02_Reporte_por_departamento jefatura}";
+	}
+	.bs-gridcell[data-field=area]:before {
+		content: "{$label 02_Reporte_por_departamento area}";
+	}
+	.bs-gridcell[data-field=direccion]:before {
+		content: "{$label 02_Reporte_por_departamento direccion}";
+	}
+	.bs-gridcell[data-field=Estatus]:before {
+		content: "{$label 02_Reporte_por_departamento Estatus}";
+	}
+	.bs-gridcell[data-field=idempleado]:before {
+		content: "{$label 02_Reporte_por_departamento idempleado}";
+	}
+	.bs-gridcell[data-field=fecha_pedido]:before {
+		content: "{$label 02_Reporte_por_departamento fecha_pedido}";
+	}
+	.bs-gridcell[data-field=fecha_ingresocompras]:before {
+		content: "{$label 02_Reporte_por_departamento fecha_ingresocompras}";
+	}
+	.bs-gridcell[data-field=fecha_entregaanalista]:before {
+		content: "{$label 02_Reporte_por_departamento fecha_entregaanalista}";
+	}
+	.bs-gridcell[data-field=numero_pedido]:before {
+		content: "{$label 02_Reporte_por_departamento numero_pedido}";
+	}
+	.bs-gridcell[data-field=idmodalidad_compra]:before {
+		content: "{$label 02_Reporte_por_departamento idmodalidad_compra}";
+	}
+	.bs-gridcell[data-field=idrenglon]:before {
+		content: "{$label 02_Reporte_por_departamento idrenglon}";
+	}
+	.bs-gridcell[data-field=total_renglon]:before {
+		content: "{$label 02_Reporte_por_departamento total_renglon}";
+	}
+	.bs-gridcell[data-field=idproveedor]:before {
+		content: "{$label 02_Reporte_por_departamento idproveedor}";
+	}
+	.bs-gridcell[data-field=producto_servicio]:before {
+		content: "{$label 02_Reporte_por_departamento producto_servicio}";
+	}
+	.bs-gridcell[data-field=expediente_finalizado]:before {
+		content: "{$label 02_Reporte_por_departamento expediente_finalizado}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$jefatura_class}">{$label 02_Reporte_por_departamento jefatura}</th>
+			<th class="{$area_class}">{$label 02_Reporte_por_departamento area}</th>
+			<th class="{$direccion_class}">{$label 02_Reporte_por_departamento direccion}</th>
+			<th class="{$Estatus_class}">{$label 02_Reporte_por_departamento Estatus}</th>
+			<th class="{$idempleado_class}">{$label 02_Reporte_por_departamento idempleado}</th>
+			<th class="{$fecha_pedido_class}">{$label 02_Reporte_por_departamento fecha_pedido}</th>
+			<th class="{$fecha_ingresocompras_class}">{$label 02_Reporte_por_departamento fecha_ingresocompras}</th>
+			<th class="{$fecha_entregaanalista_class}">{$label 02_Reporte_por_departamento fecha_entregaanalista}</th>
+			<th class="{$numero_pedido_class}">{$label 02_Reporte_por_departamento numero_pedido}</th>
+			<th class="{$idmodalidad_compra_class}">{$label 02_Reporte_por_departamento idmodalidad_compra}</th>
+			<th class="{$idrenglon_class}">{$label 02_Reporte_por_departamento idrenglon}</th>
+			<th class="{$total_renglon_class}">{$label 02_Reporte_por_departamento total_renglon}</th>
+			<th class="{$idproveedor_class}">{$label 02_Reporte_por_departamento idproveedor}</th>
+			<th class="{$producto_servicio_class}">{$label 02_Reporte_por_departamento producto_servicio}</th>
+			<th class="{$expediente_finalizado_class}">{$label 02_Reporte_por_departamento expediente_finalizado}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$jefatura_class} bs-gridcell" data-field=jefatura>{$jefatura_mastervalue}</td>
+			<td class="{$area_class} bs-gridcell" data-field=area>{$area_mastervalue}</td>
+			<td class="{$direccion_class} bs-gridcell" data-field=direccion>{$direccion_mastervalue}</td>
+			<td class="{$Estatus_class} bs-gridcell" data-field=Estatus>{$Estatus_mastervalue}</td>
+			<td class="{$idempleado_class} bs-gridcell" data-field=idempleado>{$idempleado_mastervalue}</td>
+			<td class="{$fecha_pedido_class} bs-gridcell" data-field=fecha_pedido>{$fecha_pedido_mastervalue}</td>
+			<td class="{$fecha_ingresocompras_class} bs-gridcell" data-field=fecha_ingresocompras>{$fecha_ingresocompras_mastervalue}</td>
+			<td class="{$fecha_entregaanalista_class} bs-gridcell" data-field=fecha_entregaanalista>{$fecha_entregaanalista_mastervalue}</td>
+			<td class="{$numero_pedido_class} bs-gridcell" data-field=numero_pedido>{$numero_pedido_mastervalue}</td>
+			<td class="{$idmodalidad_compra_class} bs-gridcell" data-field=idmodalidad_compra>{$idmodalidad_compra_mastervalue}</td>
+			<td class="{$idrenglon_class} bs-gridcell" data-field=idrenglon>{$idrenglon_mastervalue}</td>
+			<td class="{$total_renglon_class} bs-gridcell" data-field=total_renglon>{$total_renglon_mastervalue}</td>
+			<td class="{$idproveedor_class} bs-gridcell" data-field=idproveedor>{$idproveedor_mastervalue}</td>
+			<td class="{$producto_servicio_class} bs-gridcell" data-field=producto_servicio>{$producto_servicio_mastervalue}</td>
+			<td class="{$expediente_finalizado_class} bs-gridcell" data-field=expediente_finalizado>{$expediente_finalizado_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

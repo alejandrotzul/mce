@@ -1,0 +1,369 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+{BEGIN pdflink_block}
+<a href="#" class="pdflink btn btn-default" {$pdflink_attrs}>Vista PDF</a>
+{END pdflink_block}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div {$master_chiddenattr} data-pageid="{$pageid}" data-container="master" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+	{$master_heading}
+	</div>
+	<div class="panel-body">
+{$showmasterfile}
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_master}
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel expediente print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>Página <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN dias_restantes_fieldheadercolumn}
+			<th class="{$dias_restantes_class}" {$dias_restantes_style}>
+				{$label expediente dias_restantes}
+			</th>
+			{END dias_restantes_fieldheadercolumn}
+			{BEGIN estatus_fieldheadercolumn}
+			<th class="{$estatus_class}" {$estatus_style}>
+				{$label expediente estatus}
+			</th>
+			{END estatus_fieldheadercolumn}
+			{BEGIN producto_servicio_fieldheadercolumn}
+			<th class="{$producto_servicio_class}" {$producto_servicio_style}>
+				{$label expediente producto_servicio}
+			</th>
+			{END producto_servicio_fieldheadercolumn}
+			{BEGIN fecha_final_fieldheadercolumn}
+			<th class="{$fecha_final_class}" {$fecha_final_style}>
+				{$label expediente fecha_final}
+			</th>
+			{END fecha_final_fieldheadercolumn}
+			{BEGIN finalizado_fieldheadercolumn}
+			<th class="{$finalizado_class}" {$finalizado_style}>
+				{$label expediente finalizado}
+			</th>
+			{END finalizado_fieldheadercolumn}
+			{BEGIN vacio_fieldheadercolumn}
+			<th class="{$vacio_class}" {$vacio_style}>
+				{$label expediente vacio}
+			</th>
+			{END vacio_fieldheadercolumn}
+			{BEGIN idjefatura_fieldheadercolumn}
+			<th class="{$idjefatura_class}" {$idjefatura_style}>
+				{$label expediente idjefatura}
+			</th>
+			{END idjefatura_fieldheadercolumn}
+			{BEGIN numero_pedido_fieldheadercolumn}
+			<th class="{$numero_pedido_class}" {$numero_pedido_style}>
+				{$label expediente numero_pedido}
+			</th>
+			{END numero_pedido_fieldheadercolumn}
+			{BEGIN numero_referencia_fieldheadercolumn}
+			<th class="{$numero_referencia_class}" {$numero_referencia_style}>
+				{$label expediente numero_referencia}
+			</th>
+			{END numero_referencia_fieldheadercolumn}
+			{BEGIN idmodalidad_compra_fieldheadercolumn}
+			<th class="{$idmodalidad_compra_class}" {$idmodalidad_compra_style}>
+				{$label expediente idmodalidad_compra}
+			</th>
+			{END idmodalidad_compra_fieldheadercolumn}
+			{BEGIN fecha_pedido_fieldheadercolumn}
+			<th class="{$fecha_pedido_class}" {$fecha_pedido_style}>
+				{$label expediente fecha_pedido}
+			</th>
+			{END fecha_pedido_fieldheadercolumn}
+			{BEGIN fecha_ingresocompras_fieldheadercolumn}
+			<th class="{$fecha_ingresocompras_class}" {$fecha_ingresocompras_style}>
+				{$label expediente fecha_ingresocompras}
+			</th>
+			{END fecha_ingresocompras_fieldheadercolumn}
+			{BEGIN fecha_entregaanalista_fieldheadercolumn}
+			<th class="{$fecha_entregaanalista_class}" {$fecha_entregaanalista_style}>
+				{$label expediente fecha_entregaanalista}
+			</th>
+			{END fecha_entregaanalista_fieldheadercolumn}
+			{BEGIN idempleado_fieldheadercolumn}
+			<th class="{$idempleado_class}" {$idempleado_style}>
+				{$label expediente idempleado}
+			</th>
+			{END idempleado_fieldheadercolumn}
+			{BEGIN idrenglon_fieldheadercolumn}
+			<th class="{$idrenglon_class}" {$idrenglon_style}>
+				{$label expediente idrenglon}
+			</th>
+			{END idrenglon_fieldheadercolumn}
+			{BEGIN idproveedor_fieldheadercolumn}
+			<th class="{$idproveedor_class}" {$idproveedor_style}>
+				{$label expediente idproveedor}
+			</th>
+			{END idproveedor_fieldheadercolumn}
+			{BEGIN idforma_pago_fieldheadercolumn}
+			<th class="{$idforma_pago_class}" {$idforma_pago_style}>
+				{$label expediente idforma_pago}
+			</th>
+			{END idforma_pago_fieldheadercolumn}
+			{BEGIN total_renglon_fieldheadercolumn}
+			<th class="{$total_renglon_class}" {$total_renglon_style}>
+				{$label expediente total_renglon}
+			</th>
+			{END total_renglon_fieldheadercolumn}
+			{BEGIN factura_fieldheadercolumn}
+			<th class="{$factura_class}" {$factura_style}>
+				{$label expediente factura}
+			</th>
+			{END factura_fieldheadercolumn}
+			{BEGIN solicitud_cheque_fieldheadercolumn}
+			<th class="{$solicitud_cheque_class}" {$solicitud_cheque_style}>
+				{$label expediente solicitud_cheque}
+			</th>
+			{END solicitud_cheque_fieldheadercolumn}
+			{BEGIN observaciones_fieldheadercolumn}
+			<th class="{$observaciones_class}" {$observaciones_style}>
+				{$label expediente observaciones}
+			</th>
+			{END observaciones_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN dias_restantes_fieldcolumn}
+			<td  class="{$dias_restantes_class}" {$dias_restantes_style} {$recordattrs}>
+				{$dias_restantes_value}
+			</td>
+			{END dias_restantes_fieldcolumn}
+			{BEGIN estatus_fieldcolumn}
+			<td  class="{$estatus_class}" {$estatus_style} {$recordattrs}>
+				{$estatus_value}
+			</td>
+			{END estatus_fieldcolumn}
+			{BEGIN producto_servicio_fieldcolumn}
+			<td  class="{$producto_servicio_class}" {$producto_servicio_style} {$recordattrs}>
+				{$producto_servicio_value}
+			</td>
+			{END producto_servicio_fieldcolumn}
+			{BEGIN fecha_final_fieldcolumn}
+			<td  class="{$fecha_final_class}" {$fecha_final_style} {$recordattrs}>
+				{$fecha_final_value}
+			</td>
+			{END fecha_final_fieldcolumn}
+			{BEGIN finalizado_fieldcolumn}
+			<td  class="{$finalizado_class}" {$finalizado_style} {$recordattrs}>
+				{$finalizado_value}
+			</td>
+			{END finalizado_fieldcolumn}
+			{BEGIN vacio_fieldcolumn}
+			<td  class="{$vacio_class}" {$vacio_style} {$recordattrs}>
+				{$vacio_value}
+			</td>
+			{END vacio_fieldcolumn}
+			{BEGIN idjefatura_fieldcolumn}
+			<td  class="{$idjefatura_class}" {$idjefatura_style} {$recordattrs}>
+				{$idjefatura_value}
+			</td>
+			{END idjefatura_fieldcolumn}
+			{BEGIN numero_pedido_fieldcolumn}
+			<td  class="{$numero_pedido_class}" {$numero_pedido_style} {$recordattrs}>
+				{$numero_pedido_value}
+			</td>
+			{END numero_pedido_fieldcolumn}
+			{BEGIN numero_referencia_fieldcolumn}
+			<td  class="{$numero_referencia_class}" {$numero_referencia_style} {$recordattrs}>
+				{$numero_referencia_value}
+			</td>
+			{END numero_referencia_fieldcolumn}
+			{BEGIN idmodalidad_compra_fieldcolumn}
+			<td  class="{$idmodalidad_compra_class}" {$idmodalidad_compra_style} {$recordattrs}>
+				{$idmodalidad_compra_value}
+			</td>
+			{END idmodalidad_compra_fieldcolumn}
+			{BEGIN fecha_pedido_fieldcolumn}
+			<td  class="{$fecha_pedido_class}" {$fecha_pedido_style} {$recordattrs}>
+				{$fecha_pedido_value}
+			</td>
+			{END fecha_pedido_fieldcolumn}
+			{BEGIN fecha_ingresocompras_fieldcolumn}
+			<td  class="{$fecha_ingresocompras_class}" {$fecha_ingresocompras_style} {$recordattrs}>
+				{$fecha_ingresocompras_value}
+			</td>
+			{END fecha_ingresocompras_fieldcolumn}
+			{BEGIN fecha_entregaanalista_fieldcolumn}
+			<td  class="{$fecha_entregaanalista_class}" {$fecha_entregaanalista_style} {$recordattrs}>
+				{$fecha_entregaanalista_value}
+			</td>
+			{END fecha_entregaanalista_fieldcolumn}
+			{BEGIN idempleado_fieldcolumn}
+			<td  class="{$idempleado_class}" {$idempleado_style} {$recordattrs}>
+				{$idempleado_value}
+			</td>
+			{END idempleado_fieldcolumn}
+			{BEGIN idrenglon_fieldcolumn}
+			<td  class="{$idrenglon_class}" {$idrenglon_style} {$recordattrs}>
+				{$idrenglon_value}
+			</td>
+			{END idrenglon_fieldcolumn}
+			{BEGIN idproveedor_fieldcolumn}
+			<td  class="{$idproveedor_class}" {$idproveedor_style} {$recordattrs}>
+				{$idproveedor_value}
+			</td>
+			{END idproveedor_fieldcolumn}
+			{BEGIN idforma_pago_fieldcolumn}
+			<td  class="{$idforma_pago_class}" {$idforma_pago_style} {$recordattrs}>
+				{$idforma_pago_value}
+			</td>
+			{END idforma_pago_fieldcolumn}
+			{BEGIN total_renglon_fieldcolumn}
+			<td  class="{$total_renglon_class}" {$total_renglon_style} {$recordattrs}>
+				{$total_renglon_value}
+			</td>
+			{END total_renglon_fieldcolumn}
+			{BEGIN factura_fieldcolumn}
+			<td  class="{$factura_class}" {$factura_style} {$recordattrs}>
+				{$factura_value}
+			</td>
+			{END factura_fieldcolumn}
+			{BEGIN solicitud_cheque_fieldcolumn}
+			<td  class="{$solicitud_cheque_class}" {$solicitud_cheque_style} {$recordattrs}>
+				{$solicitud_cheque_value}
+			</td>
+			{END solicitud_cheque_fieldcolumn}
+			{BEGIN observaciones_fieldcolumn}
+			<td  class="{$observaciones_class}" {$observaciones_style} {$recordattrs}>
+				{$observaciones_value}
+			</td>
+			{END observaciones_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+	{BEGIN details_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+			{BEGIN details_record}
+				<td colspan="22">
+					{BEGIN details_table}
+						{$details}
+					{END details_table}
+				</td>
+				{BEGIN endrecord_block}
+				<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+				{END endrecord_block}
+			{END details_record}
+		</tr>
+	{END details_row}
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

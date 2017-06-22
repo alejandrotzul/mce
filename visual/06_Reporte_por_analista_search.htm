@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<HTML {$html_attrs}><HEAD>
+<META content="IE=Edge" http-equiv="X-UA-Compatible">
+<META name="viewport" content="width=device-width, initial-scale=1.0">
+<TITLE>{$pagetitle}</TITLE>
+<META content="text/html; charset=utf-8" http-equiv="Content-Type">
+<LINK rel="stylesheet" type="text/css" href="styles/default.css">{BEGIN rtlCSS}<LINK rel="stylesheet" type="text/css" href="styles/defaultRTL.css">{END rtlCSS}{BEGIN styleCSSFiles}<LINK rel="stylesheet" type="text/css" href="{$stylepath}">{END styleCSSFiles}
+<META name="GENERATOR" content="MSHTML 9.00.8112.16684"></HEAD>
+<BODY class="{$stylename} function-search" {$bodyattrs}>{BEGIN body}
+
+{$header}
+<STYLE>
+			{$containerCss}
+		</STYLE>
+
+<DIV class="bs-top">
+{BEGIN container_searchpage}<DIV class="container" data-container="searchpage" data-pageid="{$pageid}" {$searchpage_chiddenattr}>
+{BEGIN container_header}<DIV class="col-md-6 col-md-offset-3" data-container="header" data-pageid="{$pageid}" {$header_chiddenattr}>
+{BEGIN searchheader}<H2 data-brick="bssearchheader" data-pageid="{$pageid}" {$bssearchheader_hiddenattr}>
+{$pagetitlelabel 06_Reporte_por_analista search}</H2>{END searchheader}</DIV>{END container_header}</DIV>
+{END container_searchpage}{BEGIN container_fields}<DIV class="col-md-12" data-container="fields" data-pageid="{$pageid}" {$fields_chiddenattr}> 
+<DIV class="form-horizontal" role="form" data-brick="bssearchfields" data-pageid="{$pageid}" {$bssearchfields_hiddenattr}>
+<DIV class="container">
+<DIV class="form-group">
+<DIV class="col-md-12">	&nbsp;</DIV></DIV></DIV>
+{BEGIN idempleado_fieldblock}<DIV class="container {$fielddispclass_idempleado}" data-fieldname="idempleado">
+<DIV class="form-group">
+<DIV class="col-md-2">
+{$label 06_Reporte_por_analista idempleado}</DIV>
+<DIV class="col-md-2">{$searchtype_idempleado}</DIV>
+<DIV class="col-md-4">
+{$idempleado_editcontrol}</DIV>
+<DIV class="col-md-4">
+{$idempleado_editcontrol1}</DIV></DIV></DIV>
+{END idempleado_fieldblock}{BEGIN fecha_pedido_fieldblock}<DIV class="container {$fielddispclass_fecha_pedido}" data-fieldname="fecha_pedido">
+<DIV class="form-group">
+<DIV class="col-md-2">
+{$label 06_Reporte_por_analista fecha_pedido}</DIV>
+<DIV class="col-md-2">{$searchtype_fecha_pedido}</DIV>
+<DIV class="col-md-4">
+{$fecha_pedido_editcontrol}</DIV>
+<DIV class="col-md-4">
+{$fecha_pedido_editcontrol1}</DIV></DIV>
+</DIV>{END fecha_pedido_fieldblock}</DIV></DIV>
+{END container_fields}{BEGIN container_bottombuttons}<DIV class="container" data-container="bottombuttons" data-pageid="{$pageid}" {$bottombuttons_chiddenattr}>
+{BEGIN container_leftbuttons}<DIV style="width: 53.13%; height: 76px;" class="col-md-3 col-md-offset-4" data-container="leftbuttons" data-pageid="{$pageid}" {$leftbuttons_chiddenattr}>{BEGIN searchbuttons}{BEGIN search_button}<BUTTON class="btn btn-primary" {$searchbutton_attrs}>Buscar</BUTTON>{END search_button}{BEGIN reset_button}<BUTTON class="btn btn-default" {$resetbutton_attrs}>Reiniciar</BUTTON>{END reset_button}{BEGIN back_button}<BUTTON class="btn btn-default" {$backbutton_attrs}>Volver 
+a la lista</BUTTON>{END back_button}{END searchbuttons}</DIV>{END container_leftbuttons}</DIV>{END container_bottombuttons}</DIV>
+<DIV class="bs-middle">
+<DIV class="bs-topmiddle"></DIV>
+<DIV class="bs-left" {$blockattr_left}></DIV>
+<DIV class="bs-center"></DIV>
+<DIV class="bs-right"></DIV></DIV>
+<DIV class="bs-bottom"></DIV>
+{$footer}{END body}</BODY></HTML>

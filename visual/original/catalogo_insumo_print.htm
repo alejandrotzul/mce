@@ -1,0 +1,205 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+{BEGIN pdflink_block}
+<a href="#" class="pdflink btn btn-default" {$pdflink_attrs}>Vista PDF</a>
+{END pdflink_block}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel catalogo_insumo print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>Página <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN codigo_onu_fieldheadercolumn}
+			<th class="{$codigo_onu_class}" {$codigo_onu_style}>
+				{$label catalogo_insumo codigo_onu}
+			</th>
+			{END codigo_onu_fieldheadercolumn}
+			{BEGIN renglon_fieldheadercolumn}
+			<th class="{$renglon_class}" {$renglon_style}>
+				{$label catalogo_insumo renglon}
+			</th>
+			{END renglon_fieldheadercolumn}
+			{BEGIN codigo_insumo_fieldheadercolumn}
+			<th class="{$codigo_insumo_class}" {$codigo_insumo_style}>
+				{$label catalogo_insumo codigo_insumo}
+			</th>
+			{END codigo_insumo_fieldheadercolumn}
+			{BEGIN nombre_fieldheadercolumn}
+			<th class="{$nombre_class}" {$nombre_style}>
+				{$label catalogo_insumo nombre}
+			</th>
+			{END nombre_fieldheadercolumn}
+			{BEGIN caracteristicas_fieldheadercolumn}
+			<th class="{$caracteristicas_class}" {$caracteristicas_style}>
+				{$label catalogo_insumo caracteristicas}
+			</th>
+			{END caracteristicas_fieldheadercolumn}
+			{BEGIN presentacion_fieldheadercolumn}
+			<th class="{$presentacion_class}" {$presentacion_style}>
+				{$label catalogo_insumo presentacion}
+			</th>
+			{END presentacion_fieldheadercolumn}
+			{BEGIN cantidad_unidad_fieldheadercolumn}
+			<th class="{$cantidad_unidad_class}" {$cantidad_unidad_style}>
+				{$label catalogo_insumo cantidad_unidad}
+			</th>
+			{END cantidad_unidad_fieldheadercolumn}
+			{BEGIN codigo_presentacion_fieldheadercolumn}
+			<th class="{$codigo_presentacion_class}" {$codigo_presentacion_style}>
+				{$label catalogo_insumo codigo_presentacion}
+			</th>
+			{END codigo_presentacion_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN codigo_onu_fieldcolumn}
+			<td  class="{$codigo_onu_class}" {$codigo_onu_style} {$recordattrs}>
+				{$codigo_onu_value}
+			</td>
+			{END codigo_onu_fieldcolumn}
+			{BEGIN renglon_fieldcolumn}
+			<td  class="{$renglon_class}" {$renglon_style} {$recordattrs}>
+				{$renglon_value}
+			</td>
+			{END renglon_fieldcolumn}
+			{BEGIN codigo_insumo_fieldcolumn}
+			<td  class="{$codigo_insumo_class}" {$codigo_insumo_style} {$recordattrs}>
+				{$codigo_insumo_value}
+			</td>
+			{END codigo_insumo_fieldcolumn}
+			{BEGIN nombre_fieldcolumn}
+			<td  class="{$nombre_class}" {$nombre_style} {$recordattrs}>
+				{$nombre_value}
+			</td>
+			{END nombre_fieldcolumn}
+			{BEGIN caracteristicas_fieldcolumn}
+			<td  class="{$caracteristicas_class}" {$caracteristicas_style} {$recordattrs}>
+				{$caracteristicas_value}
+			</td>
+			{END caracteristicas_fieldcolumn}
+			{BEGIN presentacion_fieldcolumn}
+			<td  class="{$presentacion_class}" {$presentacion_style} {$recordattrs}>
+				{$presentacion_value}
+			</td>
+			{END presentacion_fieldcolumn}
+			{BEGIN cantidad_unidad_fieldcolumn}
+			<td  class="{$cantidad_unidad_class}" {$cantidad_unidad_style} {$recordattrs}>
+				{$cantidad_unidad_value}
+			</td>
+			{END cantidad_unidad_fieldcolumn}
+			{BEGIN codigo_presentacion_fieldcolumn}
+			<td  class="{$codigo_presentacion_class}" {$codigo_presentacion_style} {$recordattrs}>
+				{$codigo_presentacion_value}
+			</td>
+			{END codigo_presentacion_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

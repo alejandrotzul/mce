@@ -1,0 +1,135 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><span>{$pagetitlelabel expediente masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=idexpediente]:before {
+		content: "{$label expediente idexpediente}";
+	}
+	.bs-gridcell[data-field=numero_pedido]:before {
+		content: "{$label expediente numero_pedido}";
+	}
+	.bs-gridcell[data-field=numero_referencia]:before {
+		content: "{$label expediente numero_referencia}";
+	}
+	.bs-gridcell[data-field=iddireccion]:before {
+		content: "{$label expediente iddireccion}";
+	}
+	.bs-gridcell[data-field=idarea]:before {
+		content: "{$label expediente idarea}";
+	}
+	.bs-gridcell[data-field=descripcion_productoservicio]:before {
+		content: "{$label expediente descripcion_productoservicio}";
+	}
+	.bs-gridcell[data-field=idmodalidad_compra]:before {
+		content: "{$label expediente idmodalidad_compra}";
+	}
+	.bs-gridcell[data-field=fecha_pedido]:before {
+		content: "{$label expediente fecha_pedido}";
+	}
+	.bs-gridcell[data-field=fecha_ingresocompras]:before {
+		content: "{$label expediente fecha_ingresocompras}";
+	}
+	.bs-gridcell[data-field=fecha_entregaanalista]:before {
+		content: "{$label expediente fecha_entregaanalista}";
+	}
+	.bs-gridcell[data-field=idempleado]:before {
+		content: "{$label expediente idempleado}";
+	}
+	.bs-gridcell[data-field=idproveedor]:before {
+		content: "{$label expediente idproveedor}";
+	}
+	.bs-gridcell[data-field=total_renglon]:before {
+		content: "{$label expediente total_renglon}";
+	}
+	.bs-gridcell[data-field=idforma_pago]:before {
+		content: "{$label expediente idforma_pago}";
+	}
+	.bs-gridcell[data-field=solicitud_cheque]:before {
+		content: "{$label expediente solicitud_cheque}";
+	}
+	.bs-gridcell[data-field=observaciones]:before {
+		content: "{$label expediente observaciones}";
+	}
+	.bs-gridcell[data-field=idrenglon]:before {
+		content: "{$label expediente idrenglon}";
+	}
+	.bs-gridcell[data-field=factura]:before {
+		content: "{$label expediente factura}";
+	}
+	.bs-gridcell[data-field=dias_restantes]:before {
+		content: "{$label expediente dias_restantes}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$idexpediente_class}">{$label expediente idexpediente}</th>
+			<th class="{$numero_pedido_class}">{$label expediente numero_pedido}</th>
+			<th class="{$factura_class}">{$label expediente factura}</th>
+			<th class="{$idrenglon_class}">{$label expediente idrenglon}</th>
+			<th class="{$total_renglon_class}">{$label expediente total_renglon}</th>
+			<th class="{$descripcion_productoservicio_class}">{$label expediente descripcion_productoservicio}</th>
+			<th class="{$idempleado_class}">{$label expediente idempleado}</th>
+			<th class="{$dias_restantes_class}">{$label expediente dias_restantes}</th>
+			<th class="{$idproveedor_class}">{$label expediente idproveedor}</th>
+			<th class="{$fecha_pedido_class}">{$label expediente fecha_pedido}</th>
+			<th class="{$fecha_ingresocompras_class}">{$label expediente fecha_ingresocompras}</th>
+			<th class="{$fecha_entregaanalista_class}">{$label expediente fecha_entregaanalista}</th>
+			<th class="{$observaciones_class}">{$label expediente observaciones}</th>
+			<th class="{$idforma_pago_class}">{$label expediente idforma_pago}</th>
+			<th class="{$solicitud_cheque_class}">{$label expediente solicitud_cheque}</th>
+			<th class="{$idmodalidad_compra_class}">{$label expediente idmodalidad_compra}</th>
+			<th class="{$iddireccion_class}">{$label expediente iddireccion}</th>
+			<th class="{$idarea_class}">{$label expediente idarea}</th>
+			<th class="{$numero_referencia_class}">{$label expediente numero_referencia}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$idexpediente_class} bs-gridcell" data-field=idexpediente>{$idexpediente_mastervalue}</td>
+			<td class="{$numero_pedido_class} bs-gridcell" data-field=numero_pedido>{$numero_pedido_mastervalue}</td>
+			<td class="{$factura_class} bs-gridcell" data-field=factura>{$factura_mastervalue}</td>
+			<td class="{$idrenglon_class} bs-gridcell" data-field=idrenglon>{$idrenglon_mastervalue}</td>
+			<td class="{$total_renglon_class} bs-gridcell" data-field=total_renglon>{$total_renglon_mastervalue}</td>
+			<td class="{$descripcion_productoservicio_class} bs-gridcell" data-field=descripcion_productoservicio>{$descripcion_productoservicio_mastervalue}</td>
+			<td class="{$idempleado_class} bs-gridcell" data-field=idempleado>{$idempleado_mastervalue}</td>
+			<td class="{$dias_restantes_class} bs-gridcell" data-field=dias_restantes>{$dias_restantes_mastervalue}</td>
+			<td class="{$idproveedor_class} bs-gridcell" data-field=idproveedor>{$idproveedor_mastervalue}</td>
+			<td class="{$fecha_pedido_class} bs-gridcell" data-field=fecha_pedido>{$fecha_pedido_mastervalue}</td>
+			<td class="{$fecha_ingresocompras_class} bs-gridcell" data-field=fecha_ingresocompras>{$fecha_ingresocompras_mastervalue}</td>
+			<td class="{$fecha_entregaanalista_class} bs-gridcell" data-field=fecha_entregaanalista>{$fecha_entregaanalista_mastervalue}</td>
+			<td class="{$observaciones_class} bs-gridcell" data-field=observaciones>{$observaciones_mastervalue}</td>
+			<td class="{$idforma_pago_class} bs-gridcell" data-field=idforma_pago>{$idforma_pago_mastervalue}</td>
+			<td class="{$solicitud_cheque_class} bs-gridcell" data-field=solicitud_cheque>{$solicitud_cheque_mastervalue}</td>
+			<td class="{$idmodalidad_compra_class} bs-gridcell" data-field=idmodalidad_compra>{$idmodalidad_compra_mastervalue}</td>
+			<td class="{$iddireccion_class} bs-gridcell" data-field=iddireccion>{$iddireccion_mastervalue}</td>
+			<td class="{$idarea_class} bs-gridcell" data-field=idarea>{$idarea_mastervalue}</td>
+			<td class="{$numero_referencia_class} bs-gridcell" data-field=numero_referencia>{$numero_referencia_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

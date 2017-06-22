@@ -1,0 +1,150 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title></title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-rprint" {$bodyattrs}>
+	{BEGIN body}{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}<DIV class=" " align="right" data-container="pageheader" data-pageid="{$pageid}" {$pageheader_chiddenattr}>
+<TABLE style="width: 227px;" border="0" cellSpacing="0" cellPadding="0" width="75%">
+  <TBODY>
+  <TR style="height: 13px;">
+    <TD style="width: 116px;" class="runner-cc" rowSpan="1" colSpan="1">
+      {$event _01_R011}</TD>
+    <TD style="width: 111px;" rowSpan="1" colSpan="1">
+      {$event _01_R511}</TD></TR><FONT face="Arial"></FONT>
+  <TR style="height: 23px;"><FONT face="Arial"></FONT>
+    <TD style="width: 116px;" class="runner-cc" rowSpan="1" colSpan="1">
+      {$event _01_R111}</TD><FONT face="Arial"></FONT>
+    <TD style="width: 111px;" rowSpan="1" colSpan="1">
+      {$event _01_R311}</TD></TR><FONT face="Arial"></FONT>
+  <TR style="height: 23px;"><FONT face="Arial"></FONT>
+    <TD style="width: 116px;" class="runner-cc" rowSpan="1" colSpan="1">
+      {$event _01_R211}</TD><FONT face="Arial"></FONT>
+    <TD style="width: 111px;" rowSpan="1" colSpan="1">
+      {$event _01_R411}</TD></TR></TBODY></TABLE></div>
+{END container_pageheader}
+
+
+
+{BEGIN container_pageheader}<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}<H2 align="center" data-brick="printheader" data-pageid="{$pageid}" {$printheader_hiddenattr}>
+{$pagetitlelabel 03_Reporte_por_rengl_n rprint}</h2>
+
+{END printheader}
+
+
+</div>
+{END container_pageheader}{BEGIN container_grid}<style>
+	td.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary {background-color:#ffffbb;}
+	td.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary {background-color:#ffe0b0;}
+
+</style>
+
+<div id="grid_block{$id}" class="rnr-report-gridblock">
+			{BEGIN grid_block}<table {$report_print_hiddenattr} data-pageid="{$pageid}" data-brick="report_print" class="table table-striped table-bordered rnr-b-grid rnr-gridtable" cellpadding="0" >
+<thead>
+<tr class="rnr-toprow table-header style1">
+
+<th>{$label 03_Reporte_por_rengl_n idrenglon}</th>
+<th>{$label 03_Reporte_por_rengl_n jefatura}</th>
+<th>{$label 03_Reporte_por_rengl_n estatus}</th>
+<th>{$label 03_Reporte_por_rengl_n idempleado}</th>
+<th>{$label 03_Reporte_por_rengl_n fecha_pedido}</th>
+<th>{$label 03_Reporte_por_rengl_n fecha_ingresocompras}</th>
+<th>{$label 03_Reporte_por_rengl_n fecha_entregaanalista}</th>
+<th>{$label 03_Reporte_por_rengl_n numero_pedido}</th>
+<th>{$label 03_Reporte_por_rengl_n idmodalidad_compra}</th>
+<th>{$label 03_Reporte_por_rengl_n total_renglon}</th>
+<th>{$label 03_Reporte_por_rengl_n idproveedor}</th>
+</tr>
+</thead>
+<tbody>
+{BEGIN grid_row}{BEGIN row_data}<tr class="rnr-row style1" {$rowattrs}>
+<td class="rnr-nowrap" {$rowstyle} {$recordattrs}>
+	<!-------------------------------------  begin detail links for row ----------------------------------------->
+	
+			{BEGIN dtables_link}{END dtables_link}
+	
+	<!-------------------------------------  end detail links for row ----------------------------------------->
+</td>
+	<td {$recordattrs}>{$idrenglon_value}</td>
+	<td {$recordattrs}>{$jefatura_value}</td>
+	<td {$recordattrs}>{$estatus_value}</td>
+	<td {$recordattrs}>{$idempleado_value}</td>
+	<td {$recordattrs}>{$fecha_pedido_value}</td>
+	<td {$recordattrs}>{$fecha_ingresocompras_value}</td>
+	<td {$recordattrs}>{$fecha_entregaanalista_value}</td>
+	<td {$recordattrs}>{$numero_pedido_value}</td>
+	<td {$recordattrs}>{$idmodalidad_compra_value}</td>
+	<td {$recordattrs}>{$total_renglon_value}</td>
+	<td {$recordattrs}>{$idproveedor_value}</td>
+</tr>
+{END row_data}
+{END grid_row}
+</tbody>
+</table>
+<!-------------------------------------  data ----------------------------------------->
+  {END grid_block}
+</div>
+
+
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{BEGIN page_number}<DIV class="bs-bottom" align="right"><span>Página <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+</DIV>{END page_number}{END body}
+	</body>
+</html>

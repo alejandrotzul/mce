@@ -1,0 +1,107 @@
+<div {$pageattrs}>
+
+{BEGIN container_tabfields}
+<div {$tabfields_chiddenattr} data-pageid="{$pageid}" data-container="tabfields" class=" form   "> 
+
+
+<div class="container">
+{BEGIN idrenglon_tabfieldblock}
+	<div class="form-group col-md-6 {$fielddispclass_idrenglon}" data-fieldname="idrenglon" data-signal-error-for="idrenglon{$id}" >
+		<label class=" control-label" for="{$labelfor_idrenglon}">
+			{BEGIN idrenglon_label}{$label expediente idrenglon}{END idrenglon_label}
+		</label>
+		<div class="" >
+			{$idrenglon_editcontrol}
+		</div>
+		<div class="help-block " data-helpfor="idrenglon">
+			<div class="text-muted" >
+			{$tooltip expediente idrenglon}
+			</div>
+		</div>
+	</div>
+{END idrenglon_tabfieldblock}
+{BEGIN idproveedor_tabfieldblock}
+	<div class="form-group col-md-6 {$fielddispclass_idproveedor}" data-fieldname="idproveedor" data-signal-error-for="idproveedor{$id}" >
+		<label class=" control-label" for="{$labelfor_idproveedor}">
+			{BEGIN idproveedor_label}{$label expediente idproveedor}{END idproveedor_label}
+		</label>
+		<div class="" >
+			{$idproveedor_editcontrol}
+		</div>
+		<div class="help-block " data-helpfor="idproveedor">
+			<div class="text-muted" >
+			{$tooltip expediente idproveedor}
+			</div>
+		</div>
+	</div>
+{END idproveedor_tabfieldblock}
+{BEGIN idforma_pago_tabfieldblock}
+	<div class="form-group col-md-6 {$fielddispclass_idforma_pago}" data-fieldname="idforma_pago" data-signal-error-for="idforma_pago{$id}" >
+		<label class=" control-label" for="{$labelfor_idforma_pago}">
+			{BEGIN idforma_pago_label}{$label expediente idforma_pago}{END idforma_pago_label}
+		</label>
+		<div class="" >
+			{$idforma_pago_editcontrol}
+		</div>
+		<div class="help-block " data-helpfor="idforma_pago">
+			<div class="text-muted" >
+			{$tooltip expediente idforma_pago}
+			</div>
+		</div>
+	</div>
+{END idforma_pago_tabfieldblock}
+{BEGIN total_renglon_tabfieldblock}
+	<div class="form-group col-md-6 {$fielddispclass_total_renglon}" data-fieldname="total_renglon" data-signal-error-for="total_renglon{$id}" >
+		<label class=" control-label" for="{$labelfor_total_renglon}">
+			{BEGIN total_renglon_label}{$label expediente total_renglon}{END total_renglon_label}
+		</label>
+		<div class="" >
+			{$total_renglon_editcontrol}
+		</div>
+		<div class="help-block " data-helpfor="total_renglon">
+			<div class="text-muted" >
+			{$tooltip expediente total_renglon}
+			</div>
+		</div>
+	</div>
+{END total_renglon_tabfieldblock}
+{BEGIN factura_tabfieldblock}
+	<div class="form-group col-md-6 {$fielddispclass_factura}" data-fieldname="factura" data-signal-error-for="factura{$id}" >
+		<label class=" control-label" for="{$labelfor_factura}">
+			{BEGIN factura_label}{$label expediente factura}{END factura_label}
+		</label>
+		<div class="" >
+			{$factura_editcontrol}
+		</div>
+		<div class="help-block " data-helpfor="factura">
+			<div class="text-muted" >
+			{$tooltip expediente factura}
+			</div>
+		</div>
+	</div>
+{END factura_tabfieldblock}
+{BEGIN solicitud_cheque_tabfieldblock}
+	<div class="form-group col-md-6 {$fielddispclass_solicitud_cheque}" data-fieldname="solicitud_cheque" data-signal-error-for="solicitud_cheque{$id}" >
+		<label class=" control-label" for="{$labelfor_solicitud_cheque}">
+			{BEGIN solicitud_cheque_label}{$label expediente solicitud_cheque}{END solicitud_cheque_label}
+		</label>
+		<div class="" >
+			{$solicitud_cheque_editcontrol}
+		</div>
+		<div class="help-block " data-helpfor="solicitud_cheque">
+			<div class="text-muted" >
+			{$tooltip expediente solicitud_cheque}
+			</div>
+		</div>
+	</div>
+{END solicitud_cheque_tabfieldblock}
+</div>
+
+
+
+
+
+</div>
+{END container_tabfields}
+
+</div>

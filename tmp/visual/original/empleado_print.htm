@@ -1,0 +1,449 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+{BEGIN pdflink_block}
+<a href="#" class="pdflink btn btn-default" {$pdflink_attrs}>Vista PDF</a>
+{END pdflink_block}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div {$master_chiddenattr} data-pageid="{$pageid}" data-container="master" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+	{$master_heading}
+	</div>
+	<div class="panel-body">
+{$showmasterfile}
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_master}
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel empleado print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>Página <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN Edad_fieldheadercolumn}
+			<th class="{$Edad_class}" {$Edad_style}>
+				{$label empleado Edad}
+			</th>
+			{END Edad_fieldheadercolumn}
+			{BEGIN fotografia_fieldheadercolumn}
+			<th class="{$fotografia_class}" {$fotografia_style}>
+				{$label empleado fotografia}
+			</th>
+			{END fotografia_fieldheadercolumn}
+			{BEGIN primer_apellido_fieldheadercolumn}
+			<th class="{$primer_apellido_class}" {$primer_apellido_style}>
+				{$label empleado primer_apellido}
+			</th>
+			{END primer_apellido_fieldheadercolumn}
+			{BEGIN segundo_apellido_fieldheadercolumn}
+			<th class="{$segundo_apellido_class}" {$segundo_apellido_style}>
+				{$label empleado segundo_apellido}
+			</th>
+			{END segundo_apellido_fieldheadercolumn}
+			{BEGIN apellido_casada_fieldheadercolumn}
+			<th class="{$apellido_casada_class}" {$apellido_casada_style}>
+				{$label empleado apellido_casada}
+			</th>
+			{END apellido_casada_fieldheadercolumn}
+			{BEGIN primer_nombre_fieldheadercolumn}
+			<th class="{$primer_nombre_class}" {$primer_nombre_style}>
+				{$label empleado primer_nombre}
+			</th>
+			{END primer_nombre_fieldheadercolumn}
+			{BEGIN segundo_nombre_fieldheadercolumn}
+			<th class="{$segundo_nombre_class}" {$segundo_nombre_style}>
+				{$label empleado segundo_nombre}
+			</th>
+			{END segundo_nombre_fieldheadercolumn}
+			{BEGIN tercer_nombre_fieldheadercolumn}
+			<th class="{$tercer_nombre_class}" {$tercer_nombre_style}>
+				{$label empleado tercer_nombre}
+			</th>
+			{END tercer_nombre_fieldheadercolumn}
+			{BEGIN email_fieldheadercolumn}
+			<th class="{$email_class}" {$email_style}>
+				{$label empleado email}
+			</th>
+			{END email_fieldheadercolumn}
+			{BEGIN celular_1_fieldheadercolumn}
+			<th class="{$celular_1_class}" {$celular_1_style}>
+				{$label empleado celular_1}
+			</th>
+			{END celular_1_fieldheadercolumn}
+			{BEGIN telefono_1_fieldheadercolumn}
+			<th class="{$telefono_1_class}" {$telefono_1_style}>
+				{$label empleado telefono_1}
+			</th>
+			{END telefono_1_fieldheadercolumn}
+			{BEGIN idgenero_fieldheadercolumn}
+			<th class="{$idgenero_class}" {$idgenero_style}>
+				{$label empleado idgenero}
+			</th>
+			{END idgenero_fieldheadercolumn}
+			{BEGIN idetnia_fieldheadercolumn}
+			<th class="{$idetnia_class}" {$idetnia_style}>
+				{$label empleado idetnia}
+			</th>
+			{END idetnia_fieldheadercolumn}
+			{BEGIN idestado_civil_fieldheadercolumn}
+			<th class="{$idestado_civil_class}" {$idestado_civil_style}>
+				{$label empleado idestado_civil}
+			</th>
+			{END idestado_civil_fieldheadercolumn}
+			{BEGIN estado_civilobservacion_fieldheadercolumn}
+			<th class="{$estado_civilobservacion_class}" {$estado_civilobservacion_style}>
+				{$label empleado estado_civilobservacion}
+			</th>
+			{END estado_civilobservacion_fieldheadercolumn}
+			{BEGIN idtipo_sangre_fieldheadercolumn}
+			<th class="{$idtipo_sangre_class}" {$idtipo_sangre_style}>
+				{$label empleado idtipo_sangre}
+			</th>
+			{END idtipo_sangre_fieldheadercolumn}
+			{BEGIN fecha_nacimiento_fieldheadercolumn}
+			<th class="{$fecha_nacimiento_class}" {$fecha_nacimiento_style}>
+				{$label empleado fecha_nacimiento}
+			</th>
+			{END fecha_nacimiento_fieldheadercolumn}
+			{BEGIN cui_fieldheadercolumn}
+			<th class="{$cui_class}" {$cui_style}>
+				{$label empleado cui}
+			</th>
+			{END cui_fieldheadercolumn}
+			{BEGIN cui_observacion_fieldheadercolumn}
+			<th class="{$cui_observacion_class}" {$cui_observacion_style}>
+				{$label empleado cui_observacion}
+			</th>
+			{END cui_observacion_fieldheadercolumn}
+			{BEGIN igss_fieldheadercolumn}
+			<th class="{$igss_class}" {$igss_style}>
+				{$label empleado igss}
+			</th>
+			{END igss_fieldheadercolumn}
+			{BEGIN nit_fieldheadercolumn}
+			<th class="{$nit_class}" {$nit_style}>
+				{$label empleado nit}
+			</th>
+			{END nit_fieldheadercolumn}
+			{BEGIN emergencia_persona_fieldheadercolumn}
+			<th class="{$emergencia_persona_class}" {$emergencia_persona_style}>
+				{$label empleado emergencia_persona}
+			</th>
+			{END emergencia_persona_fieldheadercolumn}
+			{BEGIN emergencia_telefono_fieldheadercolumn}
+			<th class="{$emergencia_telefono_class}" {$emergencia_telefono_style}>
+				{$label empleado emergencia_telefono}
+			</th>
+			{END emergencia_telefono_fieldheadercolumn}
+			{BEGIN fecha_ingreso_fieldheadercolumn}
+			<th class="{$fecha_ingreso_class}" {$fecha_ingreso_style}>
+				{$label empleado fecha_ingreso}
+			</th>
+			{END fecha_ingreso_fieldheadercolumn}
+			{BEGIN idrenglon_fieldheadercolumn}
+			<th class="{$idrenglon_class}" {$idrenglon_style}>
+				{$label empleado idrenglon}
+			</th>
+			{END idrenglon_fieldheadercolumn}
+			{BEGIN idjefatura_fieldheadercolumn}
+			<th class="{$idjefatura_class}" {$idjefatura_style}>
+				{$label empleado idjefatura}
+			</th>
+			{END idjefatura_fieldheadercolumn}
+			{BEGIN idpuesto_funcional_fieldheadercolumn}
+			<th class="{$idpuesto_funcional_class}" {$idpuesto_funcional_style}>
+				{$label empleado idpuesto_funcional}
+			</th>
+			{END idpuesto_funcional_fieldheadercolumn}
+			{BEGIN cuenta_bancaria_fieldheadercolumn}
+			<th class="{$cuenta_bancaria_class}" {$cuenta_bancaria_style}>
+				{$label empleado cuenta_bancaria}
+			</th>
+			{END cuenta_bancaria_fieldheadercolumn}
+			{BEGIN idestatus_empleado_fieldheadercolumn}
+			<th class="{$idestatus_empleado_class}" {$idestatus_empleado_style}>
+				{$label empleado idestatus_empleado}
+			</th>
+			{END idestatus_empleado_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN Edad_fieldcolumn}
+			<td  class="{$Edad_class}" {$Edad_style} {$recordattrs}>
+				{$Edad_value}
+			</td>
+			{END Edad_fieldcolumn}
+			{BEGIN fotografia_fieldcolumn}
+			<td  class="{$fotografia_class}" {$fotografia_style} {$recordattrs}>
+				{$fotografia_value}
+			</td>
+			{END fotografia_fieldcolumn}
+			{BEGIN primer_apellido_fieldcolumn}
+			<td  class="{$primer_apellido_class}" {$primer_apellido_style} {$recordattrs}>
+				{$primer_apellido_value}
+			</td>
+			{END primer_apellido_fieldcolumn}
+			{BEGIN segundo_apellido_fieldcolumn}
+			<td  class="{$segundo_apellido_class}" {$segundo_apellido_style} {$recordattrs}>
+				{$segundo_apellido_value}
+			</td>
+			{END segundo_apellido_fieldcolumn}
+			{BEGIN apellido_casada_fieldcolumn}
+			<td  class="{$apellido_casada_class}" {$apellido_casada_style} {$recordattrs}>
+				{$apellido_casada_value}
+			</td>
+			{END apellido_casada_fieldcolumn}
+			{BEGIN primer_nombre_fieldcolumn}
+			<td  class="{$primer_nombre_class}" {$primer_nombre_style} {$recordattrs}>
+				{$primer_nombre_value}
+			</td>
+			{END primer_nombre_fieldcolumn}
+			{BEGIN segundo_nombre_fieldcolumn}
+			<td  class="{$segundo_nombre_class}" {$segundo_nombre_style} {$recordattrs}>
+				{$segundo_nombre_value}
+			</td>
+			{END segundo_nombre_fieldcolumn}
+			{BEGIN tercer_nombre_fieldcolumn}
+			<td  class="{$tercer_nombre_class}" {$tercer_nombre_style} {$recordattrs}>
+				{$tercer_nombre_value}
+			</td>
+			{END tercer_nombre_fieldcolumn}
+			{BEGIN email_fieldcolumn}
+			<td  class="{$email_class}" {$email_style} {$recordattrs}>
+				{$email_value}
+			</td>
+			{END email_fieldcolumn}
+			{BEGIN celular_1_fieldcolumn}
+			<td  class="{$celular_1_class}" {$celular_1_style} {$recordattrs}>
+				{$celular_1_value}
+			</td>
+			{END celular_1_fieldcolumn}
+			{BEGIN telefono_1_fieldcolumn}
+			<td  class="{$telefono_1_class}" {$telefono_1_style} {$recordattrs}>
+				{$telefono_1_value}
+			</td>
+			{END telefono_1_fieldcolumn}
+			{BEGIN idgenero_fieldcolumn}
+			<td  class="{$idgenero_class}" {$idgenero_style} {$recordattrs}>
+				{$idgenero_value}
+			</td>
+			{END idgenero_fieldcolumn}
+			{BEGIN idetnia_fieldcolumn}
+			<td  class="{$idetnia_class}" {$idetnia_style} {$recordattrs}>
+				{$idetnia_value}
+			</td>
+			{END idetnia_fieldcolumn}
+			{BEGIN idestado_civil_fieldcolumn}
+			<td  class="{$idestado_civil_class}" {$idestado_civil_style} {$recordattrs}>
+				{$idestado_civil_value}
+			</td>
+			{END idestado_civil_fieldcolumn}
+			{BEGIN estado_civilobservacion_fieldcolumn}
+			<td  class="{$estado_civilobservacion_class}" {$estado_civilobservacion_style} {$recordattrs}>
+				{$estado_civilobservacion_value}
+			</td>
+			{END estado_civilobservacion_fieldcolumn}
+			{BEGIN idtipo_sangre_fieldcolumn}
+			<td  class="{$idtipo_sangre_class}" {$idtipo_sangre_style} {$recordattrs}>
+				{$idtipo_sangre_value}
+			</td>
+			{END idtipo_sangre_fieldcolumn}
+			{BEGIN fecha_nacimiento_fieldcolumn}
+			<td  class="{$fecha_nacimiento_class}" {$fecha_nacimiento_style} {$recordattrs}>
+				{$fecha_nacimiento_value}
+			</td>
+			{END fecha_nacimiento_fieldcolumn}
+			{BEGIN cui_fieldcolumn}
+			<td  class="{$cui_class}" {$cui_style} {$recordattrs}>
+				{$cui_value}
+			</td>
+			{END cui_fieldcolumn}
+			{BEGIN cui_observacion_fieldcolumn}
+			<td  class="{$cui_observacion_class}" {$cui_observacion_style} {$recordattrs}>
+				{$cui_observacion_value}
+			</td>
+			{END cui_observacion_fieldcolumn}
+			{BEGIN igss_fieldcolumn}
+			<td  class="{$igss_class}" {$igss_style} {$recordattrs}>
+				{$igss_value}
+			</td>
+			{END igss_fieldcolumn}
+			{BEGIN nit_fieldcolumn}
+			<td  class="{$nit_class}" {$nit_style} {$recordattrs}>
+				{$nit_value}
+			</td>
+			{END nit_fieldcolumn}
+			{BEGIN emergencia_persona_fieldcolumn}
+			<td  class="{$emergencia_persona_class}" {$emergencia_persona_style} {$recordattrs}>
+				{$emergencia_persona_value}
+			</td>
+			{END emergencia_persona_fieldcolumn}
+			{BEGIN emergencia_telefono_fieldcolumn}
+			<td  class="{$emergencia_telefono_class}" {$emergencia_telefono_style} {$recordattrs}>
+				{$emergencia_telefono_value}
+			</td>
+			{END emergencia_telefono_fieldcolumn}
+			{BEGIN fecha_ingreso_fieldcolumn}
+			<td  class="{$fecha_ingreso_class}" {$fecha_ingreso_style} {$recordattrs}>
+				{$fecha_ingreso_value}
+			</td>
+			{END fecha_ingreso_fieldcolumn}
+			{BEGIN idrenglon_fieldcolumn}
+			<td  class="{$idrenglon_class}" {$idrenglon_style} {$recordattrs}>
+				{$idrenglon_value}
+			</td>
+			{END idrenglon_fieldcolumn}
+			{BEGIN idjefatura_fieldcolumn}
+			<td  class="{$idjefatura_class}" {$idjefatura_style} {$recordattrs}>
+				{$idjefatura_value}
+			</td>
+			{END idjefatura_fieldcolumn}
+			{BEGIN idpuesto_funcional_fieldcolumn}
+			<td  class="{$idpuesto_funcional_class}" {$idpuesto_funcional_style} {$recordattrs}>
+				{$idpuesto_funcional_value}
+			</td>
+			{END idpuesto_funcional_fieldcolumn}
+			{BEGIN cuenta_bancaria_fieldcolumn}
+			<td  class="{$cuenta_bancaria_class}" {$cuenta_bancaria_style} {$recordattrs}>
+				{$cuenta_bancaria_value}
+			</td>
+			{END cuenta_bancaria_fieldcolumn}
+			{BEGIN idestatus_empleado_fieldcolumn}
+			<td  class="{$idestatus_empleado_class}" {$idestatus_empleado_style} {$recordattrs}>
+				{$idestatus_empleado_value}
+			</td>
+			{END idestatus_empleado_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+	{BEGIN details_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+			{BEGIN details_record}
+				<td colspan="30">
+					{BEGIN details_table}
+						{$details}
+					{END details_table}
+				</td>
+				{BEGIN endrecord_block}
+				<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+				{END endrecord_block}
+			{END details_record}
+		</tr>
+	{END details_row}
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

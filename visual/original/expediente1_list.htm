@@ -1,0 +1,1095 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-list" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default ">					
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-header   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-navcontrolled bs-hidden-xs" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main horizontal}
+
+{END menu_block}
+
+
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN more_list}
+<div {$morebutton_hiddenattr} data-pageid="{$pageid}" data-brick="morebutton" class="btn-group bs-navsection">
+	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<span class="glyphicon glyphicon-cog"></span>
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu">
+		
+				
+				
+		
+				{BEGIN asearch_link}
+		<li><a href="expediente1_search.php" {$advsearchlink_attrs}>Búsqueda avanzada</a></li>
+		{END asearch_link}
+
+				{BEGIN searchPanelTopButtons}
+		<li><a href=# id="showOptPanel{$id}">Show search panel</a></li>
+		{END searchPanelTopButtons}	
+		
+				
+				<li role="separator" class="divider"></li>	
+		
+				
+				{BEGIN export_link}
+		<li><a target="_blank" href="expediente1_export.php"  {$exportlink_attrs}>Exportar resultados</a></li>
+		{END export_link}
+
+				{BEGIN import_link}
+		<li><a href="expediente1_import.php?{$crosstable_attrs}"  {$importlink_attrs}>Importar</a></li>
+		{END import_link}
+
+				
+	</ul>  
+</div>
+
+{END more_list}
+
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>Conectar</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+	<span class="dropdown">
+		<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span>	{$username}</button>
+		<ul class="dropdown-menu">
+	{BEGIN logoutbutton}
+			<li><a href="#" {$logoutlink_attrs}>Cerrar Sesión</a></li>
+	{END logoutbutton}
+
+	{BEGIN adminarea_link}
+	<li><a href="admin_rights_list.php" {$adminarealink_attrs}>Area Admin</a></li>
+	{END adminarea_link}
+
+
+
+		</ul></span>{END loggedas_message}</span>
+
+
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+
+
+
+
+{BEGIN container_more_1}
+<div {$more_1_chiddenattr} data-pageid="{$pageid}" data-container="more_1" class=" navbar-right navbar-form   "> 
+
+{BEGIN searchform_block}
+<span {$search_hiddenattr} data-pageid="{$pageid}" data-brick="search" class="form-group">
+
+ <div  class="input-group">
+{BEGIN searchform_text}
+	<input type="search" class="form-control" {$searchfor_attrs} size="25">
+{END searchform_text}
+	<span class="input-group-btn">
+	{BEGIN searchform_showall}
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Mostrar todo">
+			<span class="glyphicon glyphicon-remove"></span>
+		</button>
+	{END searchform_showall}
+	{BEGIN searchform_search}
+	<button {$searchbutton_attrs} class="btn btn-primary" >
+		<span class="glyphicon glyphicon-search"></span>
+	</button>
+	{END searchform_search}
+	</span>
+</div>
+		
+</span>
+{END searchform_block}
+
+
+
+</div>
+{END container_more_1}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+
+{BEGIN container_breadcrumbs}
+<div {$breadcrumbs_chiddenattr} data-pageid="{$pageid}" data-container="breadcrumbs" class="    "> 
+
+
+
+
+{BEGIN container_bc}
+<div {$bc_chiddenattr} data-pageid="{$pageid}" data-container="bc" class="    "> 
+
+{BEGIN breadcrumbs}
+<ol class="breadcrumb">
+<li ><a href="{$home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumbs}
+
+
+
+</div>
+{END container_bc}
+
+
+
+
+
+
+</div>
+{END container_breadcrumbs}
+
+
+
+{BEGIN container_masterinfo}
+<div {$masterinfo_chiddenattr} data-pageid="{$pageid}" data-container="masterinfo" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+	{$master_heading}
+	</div>
+	<div class="panel-body">
+{$showmasterfile}
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_masterinfo}
+
+
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+
+{BEGIN container_left}
+<div {$left_chiddenattr} data-pageid="{$pageid}" data-container="left" class="    "> 
+
+{BEGIN searchPanel}
+<div {$searchpanel_hiddenattr} data-pageid="{$pageid}" data-brick="searchpanel" class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} >
+	<!-- Search panel content -->
+	
+	<div class="panel-heading">
+		<div class="btn-group" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Search in
+			<span class="caret"></span>
+			</button>
+		</div>
+
+		
+		<div class="btn-group searchpanel-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"> 
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Mostrar opciones</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>all conditions</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>any condition</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>esconder</a></li>
+			</ul>
+		</div>
+	
+		
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+
+
+	</div>
+	
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary" id="searchButton{$id}" {$searchbutton_attrs}>Buscar</button>
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs}>Mostrar todo</button>
+	</div>
+</div>
+
+
+{END searchPanel}
+
+
+
+
+</div>
+{END container_left}
+
+
+			</div>
+			<div class="bs-center bs-screenwidth bs-minwidth">
+				
+
+{BEGIN container_messagerow}
+<div {$messagerow_chiddenattr} data-pageid="{$pageid}" data-container="messagerow" class="row rnr-rowcontainer ">
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-12 "> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">{$message}</div>
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+</div>{END container_messagerow}
+
+
+
+{BEGIN container_gridcontrols}
+<div {$gridcontrols_chiddenattr} data-pageid="{$pageid}" data-container="gridcontrols" class="row rnr-rowcontainer bs-navcontrolled bs-hidden-xs">
+
+
+
+
+{BEGIN container_add_delete}
+<div {$add_delete_chiddenattr} data-pageid="{$pageid}" data-container="add_delete" class=" bottom-margin  col-md-6 "> 
+
+{BEGIN newrecord_controls_block}
+		{BEGIN add_link}
+		<a {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$addlink_attrs}>Añadir nuevo</a>
+	{END add_link}
+
+	
+{END newrecord_controls_block}
+
+
+{BEGIN record_controls_block}
+<span {$recordcontrol_hiddenattr} data-pageid="{$pageid}" data-brick="recordcontrol">
+	
+	</span>
+
+{END record_controls_block}
+
+
+
+</div>
+{END container_add_delete}
+
+
+
+
+
+
+
+
+{BEGIN container_gridinfo}
+<div {$gridinfo_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo" class=" bottom-margin pull-right text-right col-md-6 "> 
+
+{BEGIN details_found}
+<span {$details_found_hiddenattr} data-pageid="{$pageid}" data-brick="details_found" class="form-inline form-inline-always">
+	Displaying <span>{$firstrecord}</span> - <span>{$lastrecord}</span> of <span>{$records_found}</span>
+	<span>
+	{BEGIN recordspp_block}
+			{$recsPerPage}
+	{END recordspp_block}
+	</span>
+</span>
+{END details_found}
+
+
+{BEGIN print_friendly}
+<span {$printpanel_hiddenattr} data-pageid="{$pageid}" data-brick="printpanel" class="bs-printpanel" id="printpanelblock{$id}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="Página para imprimir">
+		<span class="glyphicon glyphicon-print" ></span>
+		<span class="caret"></span>
+    </button>
+	<ul class="dropdown-menu pull-right" >
+		<li>
+			<div class="container-fluid" id="print_friendly_scope{$id}">
+				<div class="row">
+					<div class="col-md-4">Scope:</div>
+										{BEGIN print_friendly_all}
+					<div class="col-md-8">
+						<label for="printAll{$id}">
+							<input type="radio" id="printAll{$id}" data-href="expediente1_print.php?all=1&amp;{$crosstable_attrs}" name="printScope">
+							Print all pages
+						</label>
+					</div>
+					{END print_friendly_all}
+				</div>
+				<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printPage{$id}">
+							<input type="radio" id="printPage{$id}" data-href="expediente1_print.php?{$crosstable_attrs}" name="printScope" checked>
+							Print this page
+						</label>
+					</div>
+				</div>
+							</div>
+		</li>
+		<li class="divider" role="separator"></li>
+
+				<li>			
+		{BEGIN print_details}
+			<div class="rnr-printdetails">
+				<label for="printDetailsToggler{$id}">
+					<input type="checkbox" id="printDetailsToggler{$id}">
+					Print details
+				</label>
+				<div class="rnr-printdetailstables"  id="printdetailstables{$id}" style="display:none;">
+					{BEGIN print_details_seguimiento_expediente}
+						
+							<div class="rnr-printdetialstable">
+								<label for="printDetailsseguimiento_expediente{$id}">
+									<input type="checkbox" value="seguimiento_expediente" id="printDetailsseguimiento_expediente{$id}" checked>
+									Seguimiento Expediente
+								</label>
+							</div>
+					{END print_details_seguimiento_expediente}
+					{BEGIN print_details_detalle_expediente}
+						
+							<div class="rnr-printdetialstable">
+								<label for="printDetailsdetalle_expediente{$id}">
+									<input type="checkbox" value="detalle_expediente" id="printDetailsdetalle_expediente{$id}" checked>
+									Detalle Expediente
+								</label>
+							</div>
+					{END print_details_detalle_expediente}
+				</div>
+			</div>
+		{END print_details}
+		</li>
+		<li class="divider" role="separator"></li>
+
+				<li>	
+			<div class="rnr-printdetails">
+				<label for="printPerPage{$id}">
+											Resultados por página:
+				</label>
+				<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+		<li class="rnr-printbutton">				
+			<button type="button" class="btn btn-primary" id="print_friendly_button{$id}" >Print</button>			
+		</li>
+	</ul>	
+</span>
+
+{END print_friendly}
+
+
+
+</div>
+{END container_gridinfo}
+
+
+
+
+
+
+</div>{END container_gridcontrols}
+
+
+
+{BEGIN container_center}
+<div {$center_chiddenattr} data-pageid="{$pageid}" data-container="center" class="    "> 
+
+
+
+
+{BEGIN container_grid}
+<div {$grid_chiddenattr} data-pageid="{$pageid}" data-container="grid" class="bs-grid    "> 
+
+{BEGIN grid_block}
+	<style>
+	.bs-gridcell[data-field=idproveedor]:before {
+		content: "{$label expediente1 idproveedor}";
+	}
+	.bs-gridcell[data-field=idusuario]:before {
+		content: "{$label expediente1 idusuario}";
+	}
+	.bs-gridcell[data-field=fecha_pedido]:before {
+		content: "{$label expediente1 fecha_pedido}";
+	}
+	.bs-gridcell[data-field=fecha_ingresocompras]:before {
+		content: "{$label expediente1 fecha_ingresocompras}";
+	}
+	.bs-gridcell[data-field=fecha_entregaanalista]:before {
+		content: "{$label expediente1 fecha_entregaanalista}";
+	}
+	.bs-gridcell[data-field=analista]:before {
+		content: "{$label expediente1 analista}";
+	}
+	.bs-gridcell[data-field=observaciones]:before {
+		content: "{$label expediente1 observaciones}";
+	}
+	.bs-gridcell[data-field=fecha_estatus]:before {
+		content: "{$label expediente1 fecha_estatus}";
+	}
+	.bs-gridcell[data-field=idforma_pago]:before {
+		content: "{$label expediente1 idforma_pago}";
+	}
+	.bs-gridcell[data-field=solicitud_cheque]:before {
+		content: "{$label expediente1 solicitud_cheque}";
+	}
+	.bs-gridcell[data-field=dias_procesados]:before {
+		content: "{$label expediente1 dias_procesados}";
+	}
+	.bs-gridcell[data-field=margenes_tiempo]:before {
+		content: "{$label expediente1 margenes_tiempo}";
+	}
+	.bs-gridcell[data-field=dias_proceso]:before {
+		content: "{$label expediente1 dias_proceso}";
+	}
+	.bs-gridcell[data-field=idmodalidad_compra]:before {
+		content: "{$label expediente1 idmodalidad_compra}";
+	}
+	.bs-gridcell[data-field=idestatus]:before {
+		content: "{$label expediente1 idestatus}";
+	}
+	.bs-gridcell[data-field=iddireccion]:before {
+		content: "{$label expediente1 iddireccion}";
+	}
+	.bs-gridcell[data-field=idarea]:before {
+		content: "{$label expediente1 idarea}";
+	}
+	.bs-gridcell[data-field=numero_referencia]:before {
+		content: "{$label expediente1 numero_referencia}";
+	}
+	.bs-gridcell[data-field=idestatus1]:before {
+		content: "{$label expediente1 idestatus1}";
+	}
+	.bs-gridcell[data-field=idexpediente1]:before {
+		content: "{$label expediente1 idexpediente1}";
+	}
+	.bs-gridcell[data-field=idseguimiento_expediente]:before {
+		content: "{$label expediente1 idseguimiento_expediente}";
+	}
+</style>
+<table {$grid_hiddenattr} data-pageid="{$pageid}" data-brick="grid" class="table {$grid_classes} bs-flexgrid rnr-b-grid rnr-gridtable" cellpadding="0" >
+	<thead>
+										{BEGIN grid_header}
+								<tr class="rnr-toprow {$gridHeader_class}" >
+									{BEGIN record_header}
+									{BEGIN listIcons_column}
+									<th iEditCont="all">&nbsp;</th>
+									{END listIcons_column}	
+
+									
+																		{BEGIN expediente1_dtable_column}
+									<th >&nbsp;</th>
+									{END expediente1_dtable_column}
+									
+									{BEGIN idestatus1_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$idestatus1_class}">
+									{BEGIN idestatus1_fieldheader}
+																				<span {$idestatus1_orderlinkattrs}>
+											{$label expediente1 idestatus1}
+										</span>
+									{END idestatus1_fieldheader}
+									</th>
+									{END idestatus1_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN idexpediente1_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$idexpediente1_class}">
+									{BEGIN idexpediente1_fieldheader}
+																				<span {$idexpediente1_orderlinkattrs}>
+											{$label expediente1 idexpediente1}
+										</span>
+									{END idexpediente1_fieldheader}
+									</th>
+									{END idexpediente1_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN idseguimiento_expediente_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$idseguimiento_expediente_class}">
+									{BEGIN idseguimiento_expediente_fieldheader}
+																				<span {$idseguimiento_expediente_orderlinkattrs}>
+											{$label expediente1 idseguimiento_expediente}
+										</span>
+									{END idseguimiento_expediente_fieldheader}
+									</th>
+									{END idseguimiento_expediente_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN numero_referencia_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$numero_referencia_class}">
+									{BEGIN numero_referencia_fieldheader}
+																				<span {$numero_referencia_orderlinkattrs}>
+											{$label expediente1 numero_referencia}
+										</span>
+									{END numero_referencia_fieldheader}
+									</th>
+									{END numero_referencia_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN idproveedor_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$idproveedor_class}">
+									{BEGIN idproveedor_fieldheader}
+																				<span {$idproveedor_orderlinkattrs}>
+											{$label expediente1 idproveedor}
+										</span>
+									{END idproveedor_fieldheader}
+									</th>
+									{END idproveedor_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN idusuario_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$idusuario_class}">
+									{BEGIN idusuario_fieldheader}
+																				<span {$idusuario_orderlinkattrs}>
+											{$label expediente1 idusuario}
+										</span>
+									{END idusuario_fieldheader}
+									</th>
+									{END idusuario_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN fecha_pedido_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$fecha_pedido_class}">
+									{BEGIN fecha_pedido_fieldheader}
+																				<span {$fecha_pedido_orderlinkattrs}>
+											{$label expediente1 fecha_pedido}
+										</span>
+									{END fecha_pedido_fieldheader}
+									</th>
+									{END fecha_pedido_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN fecha_ingresocompras_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$fecha_ingresocompras_class}">
+									{BEGIN fecha_ingresocompras_fieldheader}
+																				<span {$fecha_ingresocompras_orderlinkattrs}>
+											{$label expediente1 fecha_ingresocompras}
+										</span>
+									{END fecha_ingresocompras_fieldheader}
+									</th>
+									{END fecha_ingresocompras_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN fecha_entregaanalista_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$fecha_entregaanalista_class}">
+									{BEGIN fecha_entregaanalista_fieldheader}
+																				<span {$fecha_entregaanalista_orderlinkattrs}>
+											{$label expediente1 fecha_entregaanalista}
+										</span>
+									{END fecha_entregaanalista_fieldheader}
+									</th>
+									{END fecha_entregaanalista_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN analista_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$analista_class}">
+									{BEGIN analista_fieldheader}
+																				<span {$analista_orderlinkattrs}>
+											{$label expediente1 analista}
+										</span>
+									{END analista_fieldheader}
+									</th>
+									{END analista_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN fecha_estatus_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$fecha_estatus_class}">
+									{BEGIN fecha_estatus_fieldheader}
+																				<span {$fecha_estatus_orderlinkattrs}>
+											{$label expediente1 fecha_estatus}
+										</span>
+									{END fecha_estatus_fieldheader}
+									</th>
+									{END fecha_estatus_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN idforma_pago_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$idforma_pago_class}">
+									{BEGIN idforma_pago_fieldheader}
+																				<span {$idforma_pago_orderlinkattrs}>
+											{$label expediente1 idforma_pago}
+										</span>
+									{END idforma_pago_fieldheader}
+									</th>
+									{END idforma_pago_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN solicitud_cheque_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$solicitud_cheque_class}">
+									{BEGIN solicitud_cheque_fieldheader}
+																				<span {$solicitud_cheque_orderlinkattrs}>
+											{$label expediente1 solicitud_cheque}
+										</span>
+									{END solicitud_cheque_fieldheader}
+									</th>
+									{END solicitud_cheque_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN dias_procesados_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$dias_procesados_class}">
+									{BEGIN dias_procesados_fieldheader}
+																				<span {$dias_procesados_orderlinkattrs}>
+											{$label expediente1 dias_procesados}
+										</span>
+									{END dias_procesados_fieldheader}
+									</th>
+									{END dias_procesados_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN margenes_tiempo_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$margenes_tiempo_class}">
+									{BEGIN margenes_tiempo_fieldheader}
+																				<span {$margenes_tiempo_orderlinkattrs}>
+											{$label expediente1 margenes_tiempo}
+										</span>
+									{END margenes_tiempo_fieldheader}
+									</th>
+									{END margenes_tiempo_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN dias_proceso_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$dias_proceso_class}">
+									{BEGIN dias_proceso_fieldheader}
+																				<span {$dias_proceso_orderlinkattrs}>
+											{$label expediente1 dias_proceso}
+										</span>
+									{END dias_proceso_fieldheader}
+									</th>
+									{END dias_proceso_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN idmodalidad_compra_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$idmodalidad_compra_class}">
+									{BEGIN idmodalidad_compra_fieldheader}
+																				<span {$idmodalidad_compra_orderlinkattrs}>
+											{$label expediente1 idmodalidad_compra}
+										</span>
+									{END idmodalidad_compra_fieldheader}
+									</th>
+									{END idmodalidad_compra_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN idestatus_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$idestatus_class}">
+									{BEGIN idestatus_fieldheader}
+																				<span {$idestatus_orderlinkattrs}>
+											{$label expediente1 idestatus}
+										</span>
+									{END idestatus_fieldheader}
+									</th>
+									{END idestatus_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN iddireccion_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$iddireccion_class}">
+									{BEGIN iddireccion_fieldheader}
+																				<span {$iddireccion_orderlinkattrs}>
+											{$label expediente1 iddireccion}
+										</span>
+									{END iddireccion_fieldheader}
+									</th>
+									{END iddireccion_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN idarea_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$idarea_class}">
+									{BEGIN idarea_fieldheader}
+																				<span {$idarea_orderlinkattrs}>
+											{$label expediente1 idarea}
+										</span>
+									{END idarea_fieldheader}
+									</th>
+									{END idarea_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN endrecordheader_block}
+									<th class="rnr-cs">&nbsp;</th>
+									
+									{END endrecordheader_block}
+									
+									{END record_header}
+									
+								</tr>
+								{END grid_header}
+
+	</thead>
+	<tbody>	
+		{BEGIN grid_row}
+<tr class="{$rowclass} bs-gridrow" {$rowattrs} {$rowstyle}>
+	{BEGIN grid_record}
+	{BEGIN listIcons_column}
+	<td class="bs-gridicons" iEditCont="all" {$rowstyle} {$recordattrs}>
+	
+	
+	
+		</td>	
+	{END listIcons_column}	
+
+	
+		{BEGIN expediente1_dtable_column}
+	<td class="rnr-nowrap bs-griddetails" {$rowstyle} {$recordattrs}>
+	
+			{BEGIN seguimiento_expediente_dtable_link}
+		<span>
+			<a {$seguimiento_expediente_dtablelink_attrs}>
+			Seguimiento Expediente
+							<span {$seguimiento_expediente_childnumber_attr} dir="ltr">
+				{BEGIN seguimiento_expediente_childcount}
+					({$seguimiento_expediente_childnumber})
+				{END seguimiento_expediente_childcount}</span>
+			</a>
+						<br/>
+		</span>
+		{END seguimiento_expediente_dtable_link}
+		{BEGIN detalle_expediente_dtable_link}
+		<span>
+			<a {$detalle_expediente_dtablelink_attrs}>
+			Detalle Expediente
+							<span {$detalle_expediente_childnumber_attr} dir="ltr">
+				{BEGIN detalle_expediente_childcount}
+					({$detalle_expediente_childnumber})
+				{END detalle_expediente_childcount}</span>
+			</a>
+						<br/>
+		</span>
+		{END detalle_expediente_dtable_link}
+
+	
+	</td>
+	{END expediente1_dtable_column}
+
+
+	{BEGIN idestatus1_fieldcolumn}
+	<td class="bs-gridcell {$idestatus1_class}"  data-field=idestatus1 {$rowstyle} {$recordattrs}>
+		{$idestatus1_value}
+	</td>
+{END idestatus1_fieldcolumn}
+
+
+	{BEGIN idexpediente1_fieldcolumn}
+	<td class="bs-gridcell {$idexpediente1_class}"  data-field=idexpediente1 {$rowstyle} {$recordattrs}>
+		{$idexpediente1_value}
+	</td>
+{END idexpediente1_fieldcolumn}
+
+
+	{BEGIN idseguimiento_expediente_fieldcolumn}
+	<td class="bs-gridcell {$idseguimiento_expediente_class}"  data-field=idseguimiento_expediente {$rowstyle} {$recordattrs}>
+		{$idseguimiento_expediente_value}
+	</td>
+{END idseguimiento_expediente_fieldcolumn}
+
+
+	{BEGIN numero_referencia_fieldcolumn}
+	<td class="bs-gridcell {$numero_referencia_class}"  data-field=numero_referencia {$rowstyle} {$recordattrs}>
+		{$numero_referencia_value}
+	</td>
+{END numero_referencia_fieldcolumn}
+
+
+	{BEGIN idproveedor_fieldcolumn}
+	<td class="bs-gridcell {$idproveedor_class}"  data-field=idproveedor {$rowstyle} {$recordattrs}>
+		{$idproveedor_value}
+	</td>
+{END idproveedor_fieldcolumn}
+
+
+	{BEGIN idusuario_fieldcolumn}
+	<td class="bs-gridcell {$idusuario_class}"  data-field=idusuario {$rowstyle} {$recordattrs}>
+		{$idusuario_value}
+	</td>
+{END idusuario_fieldcolumn}
+
+
+	{BEGIN fecha_pedido_fieldcolumn}
+	<td class="bs-gridcell {$fecha_pedido_class}"  data-field=fecha_pedido {$rowstyle} {$recordattrs}>
+		{$fecha_pedido_value}
+	</td>
+{END fecha_pedido_fieldcolumn}
+
+
+	{BEGIN fecha_ingresocompras_fieldcolumn}
+	<td class="bs-gridcell {$fecha_ingresocompras_class}"  data-field=fecha_ingresocompras {$rowstyle} {$recordattrs}>
+		{$fecha_ingresocompras_value}
+	</td>
+{END fecha_ingresocompras_fieldcolumn}
+
+
+	{BEGIN fecha_entregaanalista_fieldcolumn}
+	<td class="bs-gridcell {$fecha_entregaanalista_class}"  data-field=fecha_entregaanalista {$rowstyle} {$recordattrs}>
+		{$fecha_entregaanalista_value}
+	</td>
+{END fecha_entregaanalista_fieldcolumn}
+
+
+	{BEGIN analista_fieldcolumn}
+	<td class="bs-gridcell {$analista_class}"  data-field=analista {$rowstyle} {$recordattrs}>
+		{$analista_value}
+	</td>
+{END analista_fieldcolumn}
+
+
+	{BEGIN fecha_estatus_fieldcolumn}
+	<td class="bs-gridcell {$fecha_estatus_class}"  data-field=fecha_estatus {$rowstyle} {$recordattrs}>
+		{$fecha_estatus_value}
+	</td>
+{END fecha_estatus_fieldcolumn}
+
+
+	{BEGIN idforma_pago_fieldcolumn}
+	<td class="bs-gridcell {$idforma_pago_class}"  data-field=idforma_pago {$rowstyle} {$recordattrs}>
+		{$idforma_pago_value}
+	</td>
+{END idforma_pago_fieldcolumn}
+
+
+	{BEGIN solicitud_cheque_fieldcolumn}
+	<td class="bs-gridcell {$solicitud_cheque_class}"  data-field=solicitud_cheque {$rowstyle} {$recordattrs}>
+		{$solicitud_cheque_value}
+	</td>
+{END solicitud_cheque_fieldcolumn}
+
+
+	{BEGIN dias_procesados_fieldcolumn}
+	<td class="bs-gridcell {$dias_procesados_class}"  data-field=dias_procesados {$rowstyle} {$recordattrs}>
+		{$dias_procesados_value}
+	</td>
+{END dias_procesados_fieldcolumn}
+
+
+	{BEGIN margenes_tiempo_fieldcolumn}
+	<td class="bs-gridcell {$margenes_tiempo_class}"  data-field=margenes_tiempo {$rowstyle} {$recordattrs}>
+		{$margenes_tiempo_value}
+	</td>
+{END margenes_tiempo_fieldcolumn}
+
+
+	{BEGIN dias_proceso_fieldcolumn}
+	<td class="bs-gridcell {$dias_proceso_class}"  data-field=dias_proceso {$rowstyle} {$recordattrs}>
+		{$dias_proceso_value}
+	</td>
+{END dias_proceso_fieldcolumn}
+
+
+	{BEGIN idmodalidad_compra_fieldcolumn}
+	<td class="bs-gridcell {$idmodalidad_compra_class}"  data-field=idmodalidad_compra {$rowstyle} {$recordattrs}>
+		{$idmodalidad_compra_value}
+	</td>
+{END idmodalidad_compra_fieldcolumn}
+
+
+	{BEGIN idestatus_fieldcolumn}
+	<td class="bs-gridcell {$idestatus_class}"  data-field=idestatus {$rowstyle} {$recordattrs}>
+		{$idestatus_value}
+	</td>
+{END idestatus_fieldcolumn}
+
+
+	{BEGIN iddireccion_fieldcolumn}
+	<td class="bs-gridcell {$iddireccion_class}"  data-field=iddireccion {$rowstyle} {$recordattrs}>
+		{$iddireccion_value}
+	</td>
+{END iddireccion_fieldcolumn}
+
+
+	{BEGIN idarea_fieldcolumn}
+	<td class="bs-gridcell {$idarea_class}"  data-field=idarea {$rowstyle} {$recordattrs}>
+		{$idarea_value}
+	</td>
+{END idarea_fieldcolumn}
+
+	{BEGIN endrecord_block}
+	<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+	{END endrecord_block}
+									
+	{END grid_record}
+
+</tr>
+{END grid_row}
+	</tbody>
+	<tfoot>
+										
+	</tfoot>
+</table>
+
+
+
+{END grid_block}
+
+
+
+</div>
+{END container_grid}
+
+
+
+
+
+
+</div>
+{END container_center}
+
+
+
+{BEGIN container_pagination}
+<div {$pagination_chiddenattr} data-pageid="{$pageid}" data-container="pagination" class="  text-center col-md-12 "> 
+
+{BEGIN pagination_block}
+<div {$pagination_hiddenattr} data-pageid="{$pageid}" data-brick="pagination">
+{$pagination}
+</div>
+{END pagination_block}
+
+
+
+</div>
+{END container_pagination}
+
+
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

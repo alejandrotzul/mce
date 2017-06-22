@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<HTML {$html_attrs}><HEAD>
+<META content="IE=Edge" http-equiv="X-UA-Compatible">
+<META name="viewport" content="width=device-width, initial-scale=1.0"><TITLE>
+< DIV contentEditable=false id class='simple-xt-tag' style='background-image: 
+; display: inline-block;' ruleindex="24">pagetitle</DIV></TITLE>
+<META content="text/html; charset=utf-8" http-equiv="Content-Type">
+<LINK rel="stylesheet" type="text/css" href="styles/default.css">{BEGIN rtlCSS}<LINK rel="stylesheet" type="text/css" href="styles/defaultRTL.css">{END rtlCSS}{BEGIN styleCSSFiles}<LINK rel="stylesheet" type="text/css" href="{$stylepath}">{END styleCSSFiles}
+<META name="GENERATOR" content="MSHTML 9.00.8112.16684">
+</HEAD>
+<BODY class="{$stylename} function-rprint" {$bodyattrs}>{BEGIN body}
+
+{$header}
+<STYLE>
+        {$containerCss}
+      </STYLE>
+
+<DIV class="bs-top">
+{BEGIN container_pdf}<DIV class="col-md-12" data-container="pdf" data-pageid="{$pageid}" {$pdf_chiddenattr}>{BEGIN printbuttons}
+{BEGIN pdflink_block}<A class="pdflink btn btn-default" href="#" {$pdflink_attrs}> 
+Vista PDF</A>{END pdflink_block}{END printbuttons}</DIV>
+{END container_pdf}{BEGIN container_pageheader}<DIV class=" " data-container="pageheader" data-pageid="{$pageid}" {$pageheader_chiddenattr}>
+{BEGIN printheader}<H2 data-brick="printheader" data-pageid="{$pageid}" {$printheader_hiddenattr}>
+{$pagetitlelabel catalogo_insumo_Report1 rprint}</H2>{END printheader}{BEGIN page_number}<SPAN> Página<SPAN class="rp-pageno">
+{$pageno}</SPAN> /<SPAN class="rp-pagecount">
+{$pagecount}</SPAN></SPAN>{END page_number}</DIV>
+{END container_pageheader}{BEGIN container_grid}<STYLE>
+            td.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary {background-color:#ffffbb;}
+            td.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary {background-color:#ffe0b0;}
+          </STYLE>
+
+<DIV id="grid_block{$id}" class="rnr-report-gridblock">
+{BEGIN grid_block}<TABLE class="table table-striped table-bordered rnr-b-grid rnr-gridtable" cellPadding="0" data-brick="report_print" data-pageid="{$pageid}" {$report_print_hiddenattr}>
+  <THEAD>
+  <TR class="rnr-toprow table-header style1">
+    <TH>
+      {$label catalogo_insumo_Report1 idgrupo}
+    </TH>
+    <TH>
+      {$label catalogo_insumo_Report1 grupo}
+    </TH>
+    <TH>
+      {$label catalogo_insumo_Report1 descripcion}</TH></TR></THEAD>
+  <TBODY><!-------------------------------------  data ----------------------------------------->
+  {BEGIN grid_row}{BEGIN row_data}<TR class="rnr-row style1" {$rowattrs}>
+    <TD class="rnr-nowrap" {$rowstyle} {$recordattrs}><!-------------------------------------  begin detail links for row ----------------------------------------->{BEGIN dtables_link}<A class="glyphicon glyphicon-th-list" title="Mostrar detalles" {$dtables_link_attrs}>
+      </A><!-------------------------------------  end detail links for row ----------------------------------------->{END dtables_link}</TD>
+    <TD {$recordattrs}>
+      {$idgrupo_value}</TD>
+    <TD {$recordattrs}>
+      {$grupo_value}</TD>
+    <TD {$recordattrs}>
+      {$descripcion_value}</TD>
+  </TR>{END row_data}{END grid_row}</TBODY></TABLE>{END grid_block}</DIV>{END container_grid}</DIV>
+<DIV class="bs-middle">
+<DIV class="bs-topmiddle"></DIV>
+<DIV class="bs-left" {$blockattr_left}></DIV>
+<DIV class="bs-center"></DIV>
+<DIV class="bs-right"></DIV></DIV>
+<DIV class="bs-bottom"></DIV>
+{$footer}{END body}</BODY></HTML>

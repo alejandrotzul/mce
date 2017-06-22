@@ -1,0 +1,350 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel seguimiento_expediente search}</h2>
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN idseguimiento_expediente_fieldblock}		
+	<div class="container {$fielddispclass_idseguimiento_expediente}" data-fieldname="idseguimiento_expediente">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label seguimiento_expediente idseguimiento_expediente}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_idseguimiento_expediente}
+			</div>
+			<div class="col-md-4" >
+				{$idseguimiento_expediente_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$idseguimiento_expediente_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END idseguimiento_expediente_fieldblock}
+	{BEGIN idexpediente_fieldblock}		
+	<div class="container {$fielddispclass_idexpediente}" data-fieldname="idexpediente">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label seguimiento_expediente idexpediente}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_idexpediente}
+			</div>
+			<div class="col-md-4" >
+				{$idexpediente_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$idexpediente_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END idexpediente_fieldblock}
+	{BEGIN idestatus_fieldblock}		
+	<div class="container {$fielddispclass_idestatus}" data-fieldname="idestatus">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label seguimiento_expediente idestatus}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_idestatus}
+			</div>
+			<div class="col-md-4" >
+				{$idestatus_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$idestatus_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END idestatus_fieldblock}
+	{BEGIN fecha_estatus1_fieldblock}		
+	<div class="container {$fielddispclass_fecha_estatus1}" data-fieldname="fecha_estatus1">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label seguimiento_expediente fecha_estatus1}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_fecha_estatus1}
+			</div>
+			<div class="col-md-4" >
+				{$fecha_estatus1_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$fecha_estatus1_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END fecha_estatus1_fieldblock}
+	{BEGIN dias_habiles_fieldblock}		
+	<div class="container {$fielddispclass_dias_habiles}" data-fieldname="dias_habiles">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label seguimiento_expediente dias_habiles}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_dias_habiles}
+			</div>
+			<div class="col-md-4" >
+				{$dias_habiles_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$dias_habiles_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END dias_habiles_fieldblock}
+	{BEGIN agregar_fieldblock}		
+	<div class="container {$fielddispclass_agregar}" data-fieldname="agregar">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label seguimiento_expediente agregar}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_agregar}
+			</div>
+			<div class="col-md-4" >
+				{$agregar_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$agregar_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END agregar_fieldblock}
+	{BEGIN fecha_limite_fieldblock}		
+	<div class="container {$fielddispclass_fecha_limite}" data-fieldname="fecha_limite">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label seguimiento_expediente fecha_limite}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_fecha_limite}
+			</div>
+			<div class="col-md-4" >
+				{$fecha_limite_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$fecha_limite_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END fecha_limite_fieldblock}
+	{BEGIN dias_restantes_fieldblock}		
+	<div class="container {$fielddispclass_dias_restantes}" data-fieldname="dias_restantes">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label seguimiento_expediente dias_restantes}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_dias_restantes}
+			</div>
+			<div class="col-md-4" >
+				{$dias_restantes_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$dias_restantes_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END dias_restantes_fieldblock}
+	{BEGIN dias_agregados_fieldblock}		
+	<div class="container {$fielddispclass_dias_agregados}" data-fieldname="dias_agregados">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label seguimiento_expediente dias_agregados}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_dias_agregados}
+			</div>
+			<div class="col-md-4" >
+				{$dias_agregados_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$dias_agregados_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END dias_agregados_fieldblock}
+	{BEGIN finalizado_fieldblock}		
+	<div class="container {$fielddispclass_finalizado}" data-fieldname="finalizado">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label seguimiento_expediente finalizado}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_finalizado}
+			</div>
+			<div class="col-md-4" >
+				{$finalizado_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$finalizado_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END finalizado_fieldblock}
+	{BEGIN fecha_final_fieldblock}		
+	<div class="container {$fielddispclass_fecha_final}" data-fieldname="fecha_final">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label seguimiento_expediente fecha_final}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_fecha_final}
+			</div>
+			<div class="col-md-4" >
+				{$fecha_final_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$fecha_final_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END fecha_final_fieldblock}
+	{BEGIN tipo_estatus_fieldblock}		
+	<div class="container {$fielddispclass_tipo_estatus}" data-fieldname="tipo_estatus">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label seguimiento_expediente tipo_estatus}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_tipo_estatus}
+			</div>
+			<div class="col-md-4" >
+				{$tipo_estatus_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$tipo_estatus_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END tipo_estatus_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-4"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>Buscar</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>Reiniciar</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>Volver a la lista</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

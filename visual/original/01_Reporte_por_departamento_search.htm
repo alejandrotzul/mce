@@ -1,0 +1,332 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel 01_Reporte_por_departamento search}</h2>
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN ultimo_estatus_fieldblock}		
+	<div class="container {$fielddispclass_ultimo_estatus}" data-fieldname="ultimo_estatus">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label 01_Reporte_por_departamento ultimo_estatus}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_ultimo_estatus}
+			</div>
+			<div class="col-md-4" >
+				{$ultimo_estatus_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$ultimo_estatus_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END ultimo_estatus_fieldblock}
+	{BEGIN idjefatura_fieldblock}		
+	<div class="container {$fielddispclass_idjefatura}" data-fieldname="idjefatura">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label 01_Reporte_por_departamento idjefatura}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_idjefatura}
+			</div>
+			<div class="col-md-4" >
+				{$idjefatura_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$idjefatura_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END idjefatura_fieldblock}
+	{BEGIN idempleado_fieldblock}		
+	<div class="container {$fielddispclass_idempleado}" data-fieldname="idempleado">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label 01_Reporte_por_departamento idempleado}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_idempleado}
+			</div>
+			<div class="col-md-4" >
+				{$idempleado_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$idempleado_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END idempleado_fieldblock}
+	{BEGIN fecha_pedido_fieldblock}		
+	<div class="container {$fielddispclass_fecha_pedido}" data-fieldname="fecha_pedido">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label 01_Reporte_por_departamento fecha_pedido}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_fecha_pedido}
+			</div>
+			<div class="col-md-4" >
+				{$fecha_pedido_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$fecha_pedido_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END fecha_pedido_fieldblock}
+	{BEGIN fecha_ingresocompras_fieldblock}		
+	<div class="container {$fielddispclass_fecha_ingresocompras}" data-fieldname="fecha_ingresocompras">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label 01_Reporte_por_departamento fecha_ingresocompras}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_fecha_ingresocompras}
+			</div>
+			<div class="col-md-4" >
+				{$fecha_ingresocompras_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$fecha_ingresocompras_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END fecha_ingresocompras_fieldblock}
+	{BEGIN fecha_entregaanalista_fieldblock}		
+	<div class="container {$fielddispclass_fecha_entregaanalista}" data-fieldname="fecha_entregaanalista">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label 01_Reporte_por_departamento fecha_entregaanalista}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_fecha_entregaanalista}
+			</div>
+			<div class="col-md-4" >
+				{$fecha_entregaanalista_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$fecha_entregaanalista_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END fecha_entregaanalista_fieldblock}
+	{BEGIN numero_pedido_fieldblock}		
+	<div class="container {$fielddispclass_numero_pedido}" data-fieldname="numero_pedido">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label 01_Reporte_por_departamento numero_pedido}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_numero_pedido}
+			</div>
+			<div class="col-md-4" >
+				{$numero_pedido_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$numero_pedido_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END numero_pedido_fieldblock}
+	{BEGIN idmodalidad_compra_fieldblock}		
+	<div class="container {$fielddispclass_idmodalidad_compra}" data-fieldname="idmodalidad_compra">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label 01_Reporte_por_departamento idmodalidad_compra}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_idmodalidad_compra}
+			</div>
+			<div class="col-md-4" >
+				{$idmodalidad_compra_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$idmodalidad_compra_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END idmodalidad_compra_fieldblock}
+	{BEGIN idrenglon_fieldblock}		
+	<div class="container {$fielddispclass_idrenglon}" data-fieldname="idrenglon">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label 01_Reporte_por_departamento idrenglon}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_idrenglon}
+			</div>
+			<div class="col-md-4" >
+				{$idrenglon_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$idrenglon_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END idrenglon_fieldblock}
+	{BEGIN total_renglon_fieldblock}		
+	<div class="container {$fielddispclass_total_renglon}" data-fieldname="total_renglon">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label 01_Reporte_por_departamento total_renglon}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_total_renglon}
+			</div>
+			<div class="col-md-4" >
+				{$total_renglon_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$total_renglon_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END total_renglon_fieldblock}
+	{BEGIN idproveedor_fieldblock}		
+	<div class="container {$fielddispclass_idproveedor}" data-fieldname="idproveedor">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label 01_Reporte_por_departamento idproveedor}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_idproveedor}
+			</div>
+			<div class="col-md-4" >
+				{$idproveedor_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$idproveedor_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END idproveedor_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-4"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>Buscar</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>Reiniciar</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>Volver a la lista</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

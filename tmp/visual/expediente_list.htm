@@ -1,0 +1,879 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title></title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-list" {$bodyattrs}>
+	{BEGIN body}{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_top}<div {$top_chiddenattr} data-pageid="{$pageid}" data-container="top" class="container    "> 
+
+
+{BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default ">					
+
+
+
+{BEGIN container_hdr}<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-header   "> 
+
+{BEGIN logo_block}<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+{BEGIN collapse_block}<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-hidden-xs bs-navcontrolled" aria-expanded="false" >												   
+{BEGIN menu_block}{$menu main horizontal}
+
+{END menu_block}
+
+
+
+
+
+{BEGIN container_more}<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN more_list}<div {$morebutton_hiddenattr} data-pageid="{$pageid}" data-brick="morebutton" class="btn-group bs-navsection">
+	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<span class="glyphicon glyphicon-cog"></span>
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu">
+		
+				{BEGIN exportselected_link}<li class="massButton{$id} disabled"><a href="#" {$exportselectedlink_attrs} {$exportselectedlink_span} >Export selected</a></li>
+		{END exportselected_link}
+		
+				{BEGIN deleteselected_link}<li class="massButton{$id} disabled"><a href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>Borrar articulos seleccionados</a></li>
+		{END deleteselected_link}
+		
+				<li role="separator" class="divider"></li>	
+
+				{BEGIN asearch_link}<li><a href="expediente_search.php" {$advsearchlink_attrs}>Búsqueda avanzada</a></li>
+		{END asearch_link}
+
+				{BEGIN searchPanelTopButtons}<li><a href=# id="showOptPanel{$id}">Mostrar panel de búsqueda</a></li>
+		{END searchPanelTopButtons}	
+		
+				
+				<li role="separator" class="divider"></li>	
+		
+				
+				{BEGIN export_link}<li><a target="_blank" href="expediente_export.php"  {$exportlink_attrs}>Exportar resultados</a></li>
+		{END export_link}
+
+				{BEGIN import_link}<li><a href="expediente_import.php?{$crosstable_attrs}"  {$importlink_attrs}>Importar</a></li>
+		{END import_link}
+
+				
+	</ul>  
+</div>
+
+{END more_list}
+
+
+{BEGIN security_block}<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}<button class="btn btn-info" type="button" {$guestloginlink_attrs}>Conectar</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message}<span class="dropdown">
+		<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span>	{$username}</button>
+		<ul class="dropdown-menu">
+	{BEGIN logoutbutton}<li><a href="#" {$logoutlink_attrs}>Desconectarse</a></li>
+	{END logoutbutton}
+
+	{BEGIN adminarea_link}<li><a href="admin_rights_list.php" {$adminarealink_attrs}>Area Admin</a></li>
+	{END adminarea_link}
+
+
+
+	{BEGIN changepwd_link}<li><a href="#" {$changepwdlink_attrs}>Cambiar contraseña</a></li>
+	{END changepwd_link}
+		</ul></span>{END loggedas_message}</span>
+
+
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+
+
+
+
+{BEGIN container_more_1}<div {$more_1_chiddenattr} data-pageid="{$pageid}" data-container="more_1" class=" navbar-right navbar-form   "> 
+
+{BEGIN searchform_block}<span {$search_hiddenattr} data-pageid="{$pageid}" data-brick="search" class="form-group">
+
+ <div  class="input-group">
+{BEGIN searchform_text}<input type="search" class="form-control" {$searchfor_attrs} size="25">
+{END searchform_text}
+	<span class="input-group-btn">
+	{BEGIN searchform_showall}<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Mostrar todo">
+			<span class="glyphicon glyphicon-remove"></span>
+		</button>
+	{END searchform_showall}
+	{BEGIN searchform_search}<button {$searchbutton_attrs} class="btn btn-primary" >
+		<span class="glyphicon glyphicon-search"></span>
+	</button>
+	{END searchform_search}
+	</span>
+</div>
+		
+</span>
+{END searchform_block}
+
+
+
+</div>
+{END container_more_1}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+
+
+
+
+
+
+{BEGIN container_breadcrumbs}<div {$breadcrumbs_chiddenattr} data-pageid="{$pageid}" data-container="breadcrumbs" class="    "> 
+
+
+
+
+{BEGIN container_bc}<div {$bc_chiddenattr} data-pageid="{$pageid}" data-container="bc" class="    "> 
+
+{BEGIN breadcrumbs}<ol class="breadcrumb">
+<li ><a href="{$home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}<li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}<span>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumbs}
+
+
+
+</div>
+{END container_bc}
+
+
+
+
+
+
+</div>
+{END container_breadcrumbs}
+
+
+
+
+
+
+
+
+{BEGIN container_masterinfo}<div {$masterinfo_chiddenattr} data-pageid="{$pageid}" data-container="masterinfo" class="    "> 
+
+{BEGIN mastertable_block}<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+	{$master_heading}
+	</div>
+	<div class="panel-body">
+{$showmasterfile}
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_masterinfo}
+
+
+
+
+
+
+
+
+{BEGIN container_messagerow}<div {$messagerow_chiddenattr} data-pageid="{$pageid}" data-container="messagerow" class="row rnr-rowcontainer ">
+
+
+
+
+{BEGIN container_message}<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-12 "> 
+
+{BEGIN message_block}<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">{$message}</div>
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+</div>{END container_messagerow}
+
+
+
+
+
+
+
+
+{BEGIN container_gridcontrols}<div {$gridcontrols_chiddenattr} data-pageid="{$pageid}" data-container="gridcontrols" class="row rnr-rowcontainer bs-navcontrolled bs-hidden-xs">
+
+
+
+
+{BEGIN container_add_delete}<div {$add_delete_chiddenattr} data-pageid="{$pageid}" data-container="add_delete" class=" bottom-margin  col-md-6 "> 
+
+{BEGIN newrecord_controls_block}{BEGIN add_link}<a {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$addlink_attrs}>Añadir nuevo</a>
+	{END add_link}
+
+	
+{END newrecord_controls_block}
+
+
+{BEGIN record_controls_block}<span {$recordcontrol_hiddenattr} data-pageid="{$pageid}" data-brick="recordcontrol">
+		{BEGIN deleteselected_link}<button type="button" class="btn btn-default bs-invisible-button" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>Borrar artículos seleccionados</button>
+	{END deleteselected_link}
+
+	</span>
+
+{END record_controls_block}
+
+
+
+</div>
+{END container_add_delete}
+
+
+
+
+
+
+
+
+{BEGIN container_gridinfo}<div {$gridinfo_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo" class=" bottom-margin text-right col-md-6 "> 
+
+{BEGIN details_found}<span {$details_found_hiddenattr} data-pageid="{$pageid}" data-brick="details_found" class="form-inline form-inline-always">
+	Displaying <span>{$firstrecord}</span> - <span>{$lastrecord}</span> of <span>{$records_found}</span>
+	<span>
+	{BEGIN recordspp_block}{$recsPerPage}
+	{END recordspp_block}
+	</span>
+</span>
+{END details_found}
+
+
+{BEGIN print_friendly}<span {$printpanel_hiddenattr} data-pageid="{$pageid}" data-brick="printpanel" class="bs-printpanel" id="printpanelblock{$id}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="Página para imprimir">
+		<span class="glyphicon glyphicon-print" ></span>
+		<span class="caret"></span>
+    </button>
+	<ul class="dropdown-menu pull-right" >
+		<li>
+			<div class="container-fluid" id="print_friendly_scope{$id}">
+				<div class="row">
+					<div class="col-md-4">Alcance:</div>
+										{BEGIN print_friendly_all}<div class="col-md-8">
+						<label for="printAll{$id}">
+							<input type="radio" id="printAll{$id}" data-href="expediente_print.php?all=1&amp;{$crosstable_attrs}" name="printScope">
+							Imprimir todas la páginas
+						</label>
+					</div>
+					{END print_friendly_all}
+				</div>
+				<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printPage{$id}">
+							<input type="radio" id="printPage{$id}" data-href="expediente_print.php?{$crosstable_attrs}" name="printScope" checked>
+							Imprimir está página
+						</label>
+					</div>
+				</div>
+								<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printSelection{$id}" style="color: gray;">
+							<input type="radio" id="printSelection{$id}" name="printScope" disabled="disabled">
+							Imprimir selección
+						</label>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+
+				<li>			
+		{BEGIN print_details}<div class="rnr-printdetails">
+				<label for="printDetailsToggler{$id}">
+					<input type="checkbox" id="printDetailsToggler{$id}">
+					Imprimir detalles
+				</label>
+				<DIV style="display: none;" id="printdetailstables{$id}" class="rnr-printdetailstables">
+                                  {BEGIN print_details_seguimiento_expediente}<div class="rnr-printdetialstable">
+								<label for="printDetailsseguimiento_expediente{$id}">
+									<input type="checkbox" value="seguimiento_expediente" id="printDetailsseguimiento_expediente{$id}" checked>
+									Seguimiento Expediente
+								</label>
+							</div>
+					{END print_details_seguimiento_expediente}
+					{BEGIN print_details_detalle_expediente}<div class="rnr-printdetialstable">
+								<label for="printDetailsdetalle_expediente{$id}">
+									<input type="checkbox" value="detalle_expediente" id="printDetailsdetalle_expediente{$id}" checked>
+									Producto o servicio
+								</label>
+							</div>
+					{END print_details_detalle_expediente}
+				</div>
+			</div>
+		{END print_details}
+		</li>
+		<li class="divider" role="separator"></li>
+
+				<li>	
+			<div class="rnr-printdetails">
+				<label for="printPerPage{$id}">
+											Resultados por página:
+				</label>
+				<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+		<li class="rnr-printbutton">				
+			<button type="button" class="btn btn-primary" id="print_friendly_button{$id}" >Imprimir</button>			
+		</li>
+	</ul>	
+</span>
+
+{END print_friendly}
+
+
+
+</div>
+{END container_gridinfo}
+
+
+
+
+
+
+</div>{END container_gridcontrols}
+
+
+
+
+
+
+</div>
+{END container_top}
+
+
+		</div>
+		<div class="bs-middle bs-centered">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+
+{BEGIN container_filt}<div {$filt_chiddenattr} data-pageid="{$pageid}" data-container="filt" class="    "> 
+
+{BEGIN searchPanel}<div {$searchpanel_hiddenattr} data-pageid="{$pageid}" data-brick="searchpanel" class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} >
+	<!-- Search panel content -->
+	
+	<div class="panel-heading">
+		<div class="btn-group" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Buscar en
+			<span class="caret"></span>
+			</button>
+		</div>
+
+		
+		<div class="btn-group searchpanel-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"> 
+			</SPAN>
+                      </button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Mostrar opciones</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>todas las condiciones</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>algunas condiciones</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>esconder</a></li>
+			</ul>
+		</div>
+	
+		
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+
+
+	</div>
+	
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary" id="searchButton{$id}" {$searchbutton_attrs}>Buscar</button>
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs}>Mostrar todo</button>
+	</div>
+</div>
+
+
+{END searchPanel}
+
+
+
+
+</div>
+{END container_filt}
+
+
+			</div>
+			<div class="bs-center">
+				
+
+{BEGIN container_grid}<div {$grid_chiddenattr} data-pageid="{$pageid}" data-container="grid" class="    "> 
+
+{BEGIN grid_block}<style>
+	.bs-gridcell[data-field=idexpediente]:before {
+		content: "{$label expediente idexpediente}";
+	}
+	.bs-gridcell[data-field=numero_pedido]:before {
+		content: "{$label expediente numero_pedido}";
+	}
+	.bs-gridcell[data-field=numero_referencia]:before {
+		content: "{$label expediente numero_referencia}";
+	}
+	.bs-gridcell[data-field=iddireccion]:before {
+		content: "{$label expediente iddireccion}";
+	}
+	.bs-gridcell[data-field=idarea]:before {
+		content: "{$label expediente idarea}";
+	}
+	.bs-gridcell[data-field=descripcion_productoservicio]:before {
+		content: "{$label expediente descripcion_productoservicio}";
+	}
+	.bs-gridcell[data-field=idmodalidad_compra]:before {
+		content: "{$label expediente idmodalidad_compra}";
+	}
+	.bs-gridcell[data-field=fecha_pedido]:before {
+		content: "{$label expediente fecha_pedido}";
+	}
+	.bs-gridcell[data-field=fecha_ingresocompras]:before {
+		content: "{$label expediente fecha_ingresocompras}";
+	}
+	.bs-gridcell[data-field=fecha_entregaanalista]:before {
+		content: "{$label expediente fecha_entregaanalista}";
+	}
+	.bs-gridcell[data-field=idempleado]:before {
+		content: "{$label expediente idempleado}";
+	}
+	.bs-gridcell[data-field=idproveedor]:before {
+		content: "{$label expediente idproveedor}";
+	}
+	.bs-gridcell[data-field=total_renglon]:before {
+		content: "{$label expediente total_renglon}";
+	}
+	.bs-gridcell[data-field=idforma_pago]:before {
+		content: "{$label expediente idforma_pago}";
+	}
+	.bs-gridcell[data-field=solicitud_cheque]:before {
+		content: "{$label expediente solicitud_cheque}";
+	}
+	.bs-gridcell[data-field=observaciones]:before {
+		content: "{$label expediente observaciones}";
+	}
+	.bs-gridcell[data-field=idrenglon]:before {
+		content: "{$label expediente idrenglon}";
+	}
+	.bs-gridcell[data-field=factura]:before {
+		content: "{$label expediente factura}";
+	}
+	.bs-gridcell[data-field=dias_restantes]:before {
+		content: "{$label expediente dias_restantes}";
+	}
+	.bs-gridcell[data-field=estatus]:before {
+		content: "{$label expediente estatus}";
+	}
+	.bs-gridcell[data-field=fecha_final]:before {
+		content: "{$label expediente fecha_final}";
+	}
+	.bs-gridcell[data-field=finalizado]:before {
+		content: "{$label expediente finalizado}";
+	}
+	.bs-gridcell[data-field=fecha_finalizacion]:before {
+		content: "{$label expediente fecha_finalizacion}";
+	}
+	.bs-gridcell[data-field=expediente_finalizado]:before {
+		content: "{$label expediente expediente_finalizado}";
+	}
+	.bs-gridcell[data-field=idexpediente1]:before {
+		content: "{$label expediente idexpediente1}";
+	}
+	.bs-gridcell[data-field=semaforo]:before {
+		content: "{$label expediente semaforo}";
+	}
+	.bs-gridcell[data-field=vacio]:before {
+		content: "{$label expediente vacio}";
+	}
+	.bs-gridcell[data-field=idjefatura]:before {
+		content: "{$label expediente idjefatura}";
+	}
+	.bs-gridcell[data-field=producto_servicio]:before {
+		content: "{$label expediente producto_servicio}";
+	}
+	.bs-gridcell[data-field=jefatura]:before {
+		content: "{$label expediente jefatura}";
+	}
+	.bs-gridcell[data-field=dias_habiles]:before {
+		content: "{$label expediente dias_habiles}";
+	}
+	.bs-gridcell[data-field=tipo_estatus]:before {
+		content: "{$label expediente tipo_estatus}";
+	}
+	.bs-gridcell[data-field=orden]:before {
+		content: "{$label expediente orden}";
+	}
+</style>
+<TABLE style="width: 1191px;" class="table {$grid_classes} bs-flexgrid rnr-b-grid rnr-gridtable" border="0" cellSpacing="2" cellPadding="0" data-brick="grid" data-pageid="{$pageid}" {$grid_hiddenattr}>
+                  <thead>
+										{BEGIN grid_header}<tr class="rnr-toprow {$gridHeader_class}" >
+									{BEGIN record_header}{BEGIN listIcons_column}<TH style="width: 31px;" rowSpan="1" colSpan="1" iEditCont="all">
+                              &nbsp;
+                            </th>
+									{END listIcons_column}	
+
+																		{BEGIN checkbox_column}<TH style="width: 30px;" rowSpan="1" colSpan="1">
+                              <DIV align="center">
+                                <input type="checkbox" {$checkboxheader_attrs}>
+									</DIV>
+                            </th>
+									{END checkbox_column}
+
+																		{BEGIN numero_pedido_fieldheadercolumn}<TH style="width: 49px;" class="rnr-gridfieldlabel {$numero_pedido_class}" rowSpan="1" colSpan="1">
+                              <DIV align="center">
+                                {BEGIN numero_pedido_fieldheader}<span {$numero_pedido_orderlinkattrs}>
+											{$label expediente numero_pedido}
+										</span>
+									{END numero_pedido_fieldheader}
+									</DIV>
+                            </th>
+									{END numero_pedido_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN expediente_dtable_column}<TH style="width: 120px;" rowSpan="1" colSpan="1">
+                              &nbsp;
+                            </th>
+									{END expediente_dtable_column}
+                          {BEGIN dias_restantes_fieldheadercolumn}<TH style="width: 219px;" class="rnr-gridfieldlabel {$dias_restantes_class}" rowSpan="1" colSpan="1">
+                              <DIV aling="center">
+                                {BEGIN dias_restantes_fieldheader}<span {$dias_restantes_orderlinkattrs}>
+											{$label expediente dias_restantes}
+										</span>
+									{END dias_restantes_fieldheader}
+									</DIV>
+                            </th>
+									{END dias_restantes_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN producto_servicio_fieldheadercolumn}<th class="rnr-gridfieldlabel {$producto_servicio_class}">
+									{BEGIN producto_servicio_fieldheader}<span {$producto_servicio_orderlinkattrs}>
+											{$label expediente producto_servicio}
+										</span>
+									{END producto_servicio_fieldheader}
+									</th>
+									{END producto_servicio_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN idempleado_fieldheadercolumn}<TH style="width: 139px;" class="rnr-gridfieldlabel {$idempleado_class}" rowSpan="1" colSpan="1">
+                              <DIV align="center">
+                                {BEGIN idempleado_fieldheader}<span {$idempleado_orderlinkattrs}>
+											{$label expediente idempleado}
+										</span>
+									{END idempleado_fieldheader}
+									</DIV>
+                            </th>
+									{END idempleado_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN idjefatura_fieldheadercolumn}<TH style="width: 119px;" class="rnr-gridfieldlabel {$idjefatura_class}" rowSpan="1" colSpan="1">
+                              <DIV align="center">
+                                {BEGIN idjefatura_fieldheader}<span {$idjefatura_orderlinkattrs}>
+											{$label expediente idjefatura}
+										</span>
+									{END idjefatura_fieldheader}
+									</DIV>
+                            </th>
+									{END idjefatura_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN numero_referencia_fieldheadercolumn}<TH style="width: 119px;" class="rnr-gridfieldlabel {$numero_referencia_class}" rowSpan="1" colSpan="1">
+                              <DIV align="center">
+                                {BEGIN numero_referencia_fieldheader}<span {$numero_referencia_orderlinkattrs}>
+											{$label expediente numero_referencia}
+										</span>
+									{END numero_referencia_fieldheader}
+									<DIV>
+                                </DIV>
+                              </DIV>
+                            </th>
+									{END numero_referencia_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN fecha_entregaanalista_fieldheadercolumn}<TH style="width: 141px;" class="rnr-gridfieldlabel {$fecha_entregaanalista_class}" rowSpan="1" colSpan="1">
+                              <DIV align="center">
+                                {BEGIN fecha_entregaanalista_fieldheader}<span {$fecha_entregaanalista_orderlinkattrs}>
+											{$label expediente fecha_entregaanalista}
+										</span>
+									{END fecha_entregaanalista_fieldheader}
+									</DIV>
+                            </th>
+									{END fecha_entregaanalista_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN observaciones_fieldheadercolumn}<TH style="width: 204px;" class="rnr-gridfieldlabel {$observaciones_class}">
+                              {BEGIN observaciones_fieldheader}<span {$observaciones_orderlinkattrs}>
+											{$label expediente observaciones}
+										</span>
+									{END observaciones_fieldheader}
+									</th>
+									{END observaciones_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN endrecordheader_block}<TH style="width: 21px;" class="rnr-cs" rowSpan="1" colSpan="1">
+                              &nbsp;
+                            </th>
+									
+									{END endrecordheader_block}
+									
+									{END record_header}
+									
+								</tr>
+								{END grid_header}
+
+	</thead>
+	<tbody>	
+		{BEGIN grid_row}<TR style="height: 50px;" class="{$rowclass} bs-gridrow" {$rowattrs} {$rowstyle}>
+                        {BEGIN grid_record}{BEGIN listIcons_column}<TD style="width: 31px;" class="bs-gridicons" rowSpan="1" colSpan="1" iEditCont="all" {$rowstyle} {$recordattrs}>
+                              {BEGIN edit_column}<DIV align="center">
+                                  {BEGIN edit_link}<a class="glyphicon glyphicon-pencil" {$editlink_attrs} title="Editar"></a>
+	{END edit_link}
+	</DIV>
+                              {END edit_column}
+
+	
+	
+		</td>	
+	{END listIcons_column}	
+
+		{BEGIN checkbox_column}<TD style="width: 30px;" class="bs-gridcheckbox" rowSpan="1" colSpan="1" iEditCont="checkBox" {$rowstyle} {$recordattrs}>
+                              {BEGIN checkbox}<input type="checkbox" {$checkbox_attrs}>
+	{END checkbox}
+	</td>
+	{END checkbox_column}
+
+		{BEGIN numero_pedido_fieldcolumn}<TD style="width: 49px;" class="bs-gridcell {$numero_pedido_class}" rowSpan="1" colSpan="1" data-field="numero_pedido" {$rowstyle} {$recordattrs}>
+                              <DIV align="center">
+                                <DIV align="center">
+                                  {$numero_pedido_value}
+	</DIV>
+                              </DIV>
+                              <DIV align="center">
+                                &nbsp;
+                              </DIV>
+                            </td>
+{END numero_pedido_fieldcolumn}
+
+
+	{BEGIN expediente_dtable_column}<TD style="width: 120px;" class="rnr-nowrap bs-griddetails" rowSpan="1" colSpan="1" {$rowstyle} {$recordattrs}>
+                              {BEGIN dtables_link}<A title="Mostrar detalles" {$dtables_link_attrs}>
+                                  <SPAN class="badge seguimiento_expediente_badge" {$seguimiento_expediente_childnumber_attr}>
+                                    <SPAN class="glyphicon glyphicon-th-list">
+                                    </SPAN>
+                                    <SPAN class="{$seguimiento_expediente_cntspan_class}">
+                                      Estatus&nbsp;&nbsp;{$seguimiento_expediente_childnumber}
+                                    </SPAN>
+                                  </SPAN>
+                                </a>
+								{END dtables_link}
+	
+	
+	</td>
+	{END expediente_dtable_column}
+                          {BEGIN dias_restantes_fieldcolumn}<TD style="width: 219px;" class="bs-gridcell {$dias_restantes_class}" rowSpan="1" colSpan="1" data-field="dias_restantes" {$rowstyle} {$recordattrs}>
+                              <DIV align="center">
+                                <DIV align="left">
+                                  <DIV align="center">
+                                    {$dias_restantes_value}
+	</DIV>
+                                </DIV>
+                                <DIV align="center">
+                                  &nbsp;
+                                </DIV>
+                              </DIV>
+                            </td>
+{END dias_restantes_fieldcolumn}
+
+
+	{BEGIN producto_servicio_fieldcolumn}<td class="bs-gridcell {$producto_servicio_class}"  data-field=producto_servicio {$rowstyle} {$recordattrs}>
+		{$producto_servicio_value}
+	</td>
+{END producto_servicio_fieldcolumn}
+
+
+	{BEGIN idempleado_fieldcolumn}<TD style="width: 139px;" class="bs-gridcell {$idempleado_class}" rowSpan="1" colSpan="1" data-field="idempleado" {$rowstyle} {$recordattrs}>
+                              {$idempleado_value}
+	</td>
+{END idempleado_fieldcolumn}
+
+
+	{BEGIN idjefatura_fieldcolumn}<TD style="width: 119px;" class="bs-gridcell {$idjefatura_class}" rowSpan="1" colSpan="1" data-field="idjefatura" {$rowstyle} {$recordattrs}>
+                              {$idjefatura_value}
+	</td>
+{END idjefatura_fieldcolumn}
+
+
+	{BEGIN numero_referencia_fieldcolumn}<TD style="width: 119px;" class="bs-gridcell {$numero_referencia_class}" rowSpan="1" colSpan="1" data-field="numero_referencia" {$rowstyle} {$recordattrs}>
+                              {$numero_referencia_value}
+	</td>
+{END numero_referencia_fieldcolumn}
+
+
+	{BEGIN fecha_entregaanalista_fieldcolumn}<TD style="width: 141px;" class="bs-gridcell {$fecha_entregaanalista_class}" rowSpan="1" colSpan="1" data-field="fecha_entregaanalista" {$rowstyle} {$recordattrs}>
+                              {$fecha_entregaanalista_value}
+	</td>
+{END fecha_entregaanalista_fieldcolumn}
+
+
+	{BEGIN observaciones_fieldcolumn}<TD style="width: 204px;" class="bs-gridcell {$observaciones_class}" data-field="observaciones" {$rowstyle} {$recordattrs}>
+                              {$observaciones_value}
+	</td>
+{END observaciones_fieldcolumn}
+
+	{BEGIN endrecord_block}<TD style="width: 21px;" class="rnr-cs" rowSpan="1" colSpan="1" {$endrecordblock_attrs}>
+                              &nbsp;
+                            </td>
+	{END endrecord_block}
+									
+	{END grid_record}
+
+</tr>
+{END grid_row}
+	</tbody>
+	<tfoot>
+										
+	</tfoot>
+</table>
+
+
+
+{END grid_block}
+
+
+
+</div>
+{END container_grid}
+
+
+
+{BEGIN container_pagination}<div {$pagination_chiddenattr} data-pageid="{$pageid}" data-container="pagination" class="  text-center col-md-12 "> 
+
+{BEGIN pagination_block}<div {$pagination_hiddenattr} data-pageid="{$pageid}" data-brick="pagination">
+{$pagination}
+</div>
+{END pagination_block}
+
+
+
+</div>
+{END container_pagination}
+
+
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>
